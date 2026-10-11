@@ -1,0 +1,283 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>EUVD Mapper</title>
+  <style>
+    :root {
+      --ink: #12141a;
+      --paper: #f4f0e6;
+      --rule: #c9c1ae;
+      --muted: #5c584e;
+      --accent: #1d4f91;
+      --accent-ink: #f4f0e6;
+      --warn: #8a3b12;
+      --ok: #1f5c3a;
+      --chip: #e4ddd0;
+    }
+    * { box-sizing: border-box; }
+    html, body { margin: 0; padding: 0; }
+    body {
+      font-family: "Segoe UI", "Iowan Old Style", Palatino, Georgia, serif;
+      background: var(--paper);
+      color: var(--ink);
+      line-height: 1.45;
+    }
+    header, main, footer { max-width: 980px; margin: 0 auto; padding: 0 1.25rem; }
+    header { padding-top: 2rem; padding-bottom: 1rem; border-bottom: 2px solid var(--ink); }
+    header p { margin: 0.35rem 0 0; color: var(--muted); max-width: 40rem; }
+    h1 { font-size: 1.75rem; letter-spacing: 0.02em; margin: 0; }
+    h1 span { display: block; font-size: 0.8rem; font-weight: 600; letter-spacing: 0.16em; text-transform: uppercase; color: var(--accent); margin-bottom: 0.35rem; }
+    form {
+      display: grid;
+      grid-template-columns: 1.4fr 1fr 0.8fr auto;
+      gap: 0.75rem;
+      margin: 1.5rem 0 1rem;
+      align-items: end;
+    }
+    label { display: flex; flex-direction: column; gap: 0.3rem; font-size: 0.8rem; font-weight: 600; letter-spacing: 0.04em; text-transform: uppercase; color: var(--muted); }
+    input {
+      font: inherit;
+      padding: 0.55rem 0.65rem;
+      border: 1px solid var(--ink);
+      background: #fffdf8;
+      color: var(--ink);
+    }
+    button {
+      font: inherit;
+      font-weight: 650;
+      padding: 0.55rem 1rem;
+      border: 1px solid var(--ink);
+      background: var(--accent);
+      color: var(--accent-ink);
+      cursor: pointer;
+      height: 2.55rem;
+    }
+    button:hover { filter: brightness(1.08); }
+    .status { min-height: 1.4rem; color: var(--muted); font-size: 0.95rem; }
+    .status.error { color: var(--warn); }
+    table { width: 100%; border-collapse: collapse; margin: 1rem 0 2rem; font-size: 0.95rem; }
+    th, td { text-align: left; vertical-align: top; padding: 0.65rem 0.5rem; border-bottom: 1px solid var(--rule); }
+    th { font-size: 0.75rem; letter-spacing: 0.08em; text-transform: uppercase; color: var(--muted); }
+    .id a { color: var(--accent); font-weight: 650; text-decoration: none; }
+    .id a:hover { text-decoration: underline; }
+    .aliases { font-family: Consolas, "Cascadia Mono", monospace; font-size: 0.82rem; }
+    .desc { color: var(--ink); }
+    .chips { display: flex; flex-wrap: wrap; gap: 0.3rem; }
+    .chip { background: var(--chip); padding: 0.1rem 0.4rem; font-size: 0.78rem; }
+    .chip.match { background: #d7eadb; color: var(--ok); }
+    footer { border-top: 1px solid var(--rule); padding: 1.25rem 1.25rem 2.5rem; color: var(--muted); font-size: 0.9rem; }
+    footer a { color: var(--accent); }
+    @media (max-width: 760px) {
+      form { grid-template-columns: 1fr; }
+      button { width: 100%; }
+    }
+  </style>
+</head>
+<body>
+  <header>
+    <h1><span>ENISA EUVD</span> Component lookup</h1>
+    <p>Enter an open source product and optional version. Results come from committed EUVD snapshots in this repo (the live ENISA API blocks browser calls).</p>
+  </header>
+  <main>
+    <form id="lookup-form">
+      <label>Product
+        <input id="product" name="product" required placeholder="Apache Tomcat" value="Apache Tomcat" autocomplete="off">
+      </label>
+      <label>Vendor
+        <input id="vendor" name="vendor" placeholder="Apache Software Foundation" autocomplete="off">
+      </label>
+      <label>Version
+        <input id="version" name="version" placeholder="9.0.20" autocomplete="off">
+      </label>
+      <button type="submit">Look up</button>
+    </form>
+    <p class="status" id="status">Loading catalog…</p>
+    <div id="results"></div>
+  </main>
+  <footer>
+    <p>Shared workspace for Grok Build and 10thman-oss. Source: <a href="https://github.com/rkosinski941/euvd-mapper">github.com/rkosinski941/euvd-mapper</a>. Records: <a href="https://euvd.enisa.europa.eu/">ENISA EUVD</a>.</p>
+  </footer>
+  <script>
+    const statusEl = document.getElementById("status");
+    const resultsEl = document.getElementById("results");
+    let catalog = { products: [] };
+
+    function setStatus(text, isError) {
+      statusEl.textContent = text;
+      statusEl.classList.toggle("error", !!isError);
+    }
+
+    function parseVersion(text) {
+      const m = String(text || "").match(/(\d+)(?:\.(\d+))?(?:\.(\d+))?(?:\.(\d+))?/);
+      if (!m) return null;
+      return m.slice(1).map((n) => (n == null ? 0 : parseInt(n, 10)));
+    }
+
+    function cmpVer(a, b) {
+      for (let i = 0; i < 4; i++) {
+        const d = (a[i] || 0) - (b[i] || 0);
+        if (d) return d < 0 ? -1 : 1;
+      }
+      return 0;
+    }
+
+    // First-cut range check. 10thman-oss: replace with real matching.
+    function versionMightMatch(rangeText, version) {
+      if (!version) return true;
+      if (!rangeText) return true;
+      const hay = String(rangeText);
+      if (hay.toLowerCase().includes(version.toLowerCase())) return true;
+      const target = parseVersion(version);
+      if (!target) return true;
+      const range = hay.match(/(\d+(?:\.\d+){0,3})\s*(?:to|-|–|—)\s*(\d+(?:\.\d+){0,3})/i);
+      if (range) {
+        const lo = parseVersion(range[1]);
+        const hi = parseVersion(range[2]);
+        if (lo && hi) return cmpVer(target, lo) >= 0 && cmpVer(target, hi) <= 0;
+      }
+      return false;
+    }
+
+    function aliases(item) {
+      return String(item.aliases || "")
+        .split(/\s+/)
+        .map((s) => s.trim())
+        .filter(Boolean);
+    }
+
+    function productsOf(item) {
+      return item.enisaIdProduct || item.vulnerabilityProduct || [];
+    }
+
+    function recordMatches(item, product, vendor, version) {
+      const plist = productsOf(item);
+      const pLow = product.toLowerCase();
+      const vLow = (vendor || "").toLowerCase();
+      let anyProduct = false;
+      let versionHit = !version;
+      for (const entry of plist) {
+        const name = (entry.product && entry.product.name) || "";
+        const vend = (entry.product && entry.product.vendor && entry.product.vendor.name) || "";
+        const range = entry.product_version || "";
+        if (name.toLowerCase().includes(pLow) || pLow.includes(name.toLowerCase())) {
+          anyProduct = true;
+          if (vLow && vend && !vend.toLowerCase().includes(vLow) && vLow !== "n/a") continue;
+          if (versionMightMatch(range, version)) versionHit = true;
+        }
+      }
+      if (anyProduct) return version ? versionHit : true;
+      const blob = [item.description, item.aliases, item.id].join(" ").toLowerCase();
+      if (!blob.includes(pLow)) return false;
+      return version ? blob.includes(version.toLowerCase()) : true;
+    }
+
+    function euvdUrl(id) {
+      return "https://euvd.enisa.europa.eu/vulnerability/" + encodeURIComponent(id);
+    }
+
+    function render(items, meta) {
+      if (!items.length) {
+        resultsEl.innerHTML = "";
+        return;
+      }
+      const rows = items.map((item) => {
+        const plist = productsOf(item);
+        const chips = plist.map((entry) => {
+          const range = entry.product_version || (entry.product && entry.product.name) || "";
+          const hit = versionMightMatch(range, meta.version);
+          return `<span class="chip${hit && meta.version ? " match" : ""}">${escapeHtml(range)}</span>`;
+        }).join("");
+        const als = aliases(item).map((a) => `<div>${escapeHtml(a)}</div>`).join("");
+        const score = item.baseScore == null ? "—" : String(item.baseScore);
+        const epss = item.epss == null ? "—" : String(item.epss);
+        return `<tr>
+          <td class="id"><a href="${euvdUrl(item.id)}" target="_blank" rel="noopener">${escapeHtml(item.id)}</a></td>
+          <td class="aliases">${als || "—"}</td>
+          <td>${escapeHtml(score)}<div class="aliases">EPSS ${escapeHtml(epss)}</div></td>
+          <td><div class="chips">${chips || "—"}</div></td>
+          <td class="desc">${escapeHtml(clip(item.description || "", 280))}</td>
+        </tr>`;
+      }).join("");
+      resultsEl.innerHTML = `<table>
+        <thead><tr><th>EUVD</th><th>Aliases</th><th>Score</th><th>Affected versions</th><th>Description</th></tr></thead>
+        <tbody>${rows}</tbody>
+      </table>`;
+    }
+
+    function clip(s, n) {
+      return s.length > n ? s.slice(0, n - 1) + "…" : s;
+    }
+
+    function escapeHtml(s) {
+      return String(s).replace(/[&<>"']/g, (c) => ({
+        "&": "&amp;", "<": "&lt;", ">": "&gt;", '"': "&quot;", "'": "&#39;"
+      }[c]));
+    }
+
+    function itemsFromSnapshot(data) {
+      if (Array.isArray(data)) return data;
+      if (Array.isArray(data.items)) return data.items;
+      return [];
+    }
+
+    async function loadCatalog() {
+      const res = await fetch("data/catalog.json");
+      if (!res.ok) throw new Error("Could not read data/catalog.json");
+      catalog = await res.json();
+      const names = (catalog.products || []).map((p) => p.name).join(", ");
+      setStatus(names ? "Snapshots on disk: " + names : "Catalog is empty. Add a snapshot under data/products/.");
+    }
+
+    async function lookup(product, vendor, version) {
+      const products = catalog.products || [];
+      const pLow = product.toLowerCase();
+      const matches = products.filter((p) =>
+        (p.name || "").toLowerCase().includes(pLow) ||
+        (p.queryProduct || "").toLowerCase().includes(pLow) ||
+        pLow.includes((p.name || "").toLowerCase())
+      );
+      const use = matches.length ? matches : products;
+      if (!use.length) {
+        setStatus("No snapshots in the catalog yet.", true);
+        render([], {});
+        return;
+      }
+      let combined = [];
+      for (const entry of use) {
+        const res = await fetch("data/" + entry.file);
+        if (!res.ok) continue;
+        const data = await res.json();
+        combined = combined.concat(itemsFromSnapshot(data));
+      }
+      const filtered = combined.filter((item) => recordMatches(item, product, vendor, version));
+      const seen = new Set();
+      const uniq = [];
+      for (const item of filtered) {
+        if (seen.has(item.id)) continue;
+        seen.add(item.id);
+        uniq.push(item);
+      }
+      setStatus(
+        uniq.length
+          ? `${uniq.length} EUVD${uniq.length === 1 ? "" : "s"} for ${product}${version ? " " + version : ""} (from ${use.map((u) => u.name).join(", ")}).`
+          : `No EUVDs in the local snapshots matched ${product}${version ? " " + version : ""}.`
+      );
+      render(uniq, { version });
+    }
+
+    document.getElementById("lookup-form").addEventListener("submit", (ev) => {
+      ev.preventDefault();
+      const product = document.getElementById("product").value.trim();
+      const vendor = document.getElementById("vendor").value.trim();
+      const version = document.getElementById("version").value.trim();
+      if (!product) return;
+      setStatus("Searching snapshots…");
+      lookup(product, vendor, version).catch((err) => setStatus(err.message, true));
+    });
+
+    loadCatalog().catch((err) => setStatus(err.message, true));
+  </script>
+</body>
+</html>
