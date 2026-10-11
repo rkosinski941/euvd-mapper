@@ -57,15 +57,6 @@ class Version:
     pre_num: int = 0
     wildcard: bool = False
 
-    def label(self) -> str:
-        base = ".".join(str(n) for n in self.numbers)
-        if self.wildcard:
-            return base + ".x"
-        if self.pre_rank is None:
-            return base
-        name = next(k for k, v in _QUAL_RANK.items() if v == self.pre_rank and len(k) > 1)
-        return f"{base}-{name}{self.pre_num}"
-
 
 @dataclass(frozen=True)
 class _Token:
