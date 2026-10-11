@@ -1,0 +1,3692 @@
+{
+  "status": 200,
+  "url": "https://api.osv.dev/v1/query",
+  "method": "POST",
+  "payload": {
+    "vulns": [
+      {
+        "id": "GHSA-2gwj-7jmv-h26r",
+        "aliases": [
+          "BIT-django-2022-28346",
+          "CVE-2022-28346",
+          "PYSEC-2022-190"
+        ],
+        "summary": "SQL Injection in Django",
+        "affected": [
+          {
+            "package": {
+              "name": "django",
+              "ecosystem": "PyPI",
+              "purl": "pkg:pypi/django"
+            },
+            "ranges": [
+              {
+                "type": "ECOSYSTEM",
+                "events": [
+                  {
+                    "introduced": "2.2"
+                  },
+                  {
+                    "fixed": "2.2.28"
+                  }
+                ]
+              }
+            ]
+          },
+          {
+            "package": {
+              "name": "django",
+              "ecosystem": "PyPI",
+              "purl": "pkg:pypi/django"
+            },
+            "ranges": [
+              {
+                "type": "ECOSYSTEM",
+                "events": [
+                  {
+                    "introduced": "3.2"
+                  },
+                  {
+                    "fixed": "3.2.13"
+                  }
+                ]
+              }
+            ]
+          },
+          {
+            "package": {
+              "name": "django",
+              "ecosystem": "PyPI",
+              "purl": "pkg:pypi/django"
+            },
+            "ranges": [
+              {
+                "type": "ECOSYSTEM",
+                "events": [
+                  {
+                    "introduced": "4.0"
+                  },
+                  {
+                    "fixed": "4.0.4"
+                  }
+                ]
+              }
+            ]
+          }
+        ]
+      },
+      {
+        "id": "GHSA-2hrw-hx67-34x6",
+        "aliases": [
+          "BIT-django-2023-24580",
+          "CVE-2023-24580",
+          "PYSEC-2023-13"
+        ],
+        "summary": "Resource exhaustion in Django",
+        "affected": [
+          {
+            "package": {
+              "name": "django",
+              "ecosystem": "PyPI",
+              "purl": "pkg:pypi/django"
+            },
+            "ranges": [
+              {
+                "type": "ECOSYSTEM",
+                "events": [
+                  {
+                    "introduced": "3.2a1"
+                  },
+                  {
+                    "fixed": "3.2.18"
+                  }
+                ]
+              }
+            ]
+          },
+          {
+            "package": {
+              "name": "django",
+              "ecosystem": "PyPI",
+              "purl": "pkg:pypi/django"
+            },
+            "ranges": [
+              {
+                "type": "ECOSYSTEM",
+                "events": [
+                  {
+                    "introduced": "4.1a1"
+                  },
+                  {
+                    "fixed": "4.1.7"
+                  }
+                ]
+              }
+            ]
+          },
+          {
+            "package": {
+              "name": "django",
+              "ecosystem": "PyPI",
+              "purl": "pkg:pypi/django"
+            },
+            "ranges": [
+              {
+                "type": "ECOSYSTEM",
+                "events": [
+                  {
+                    "introduced": "4.0a1"
+                  },
+                  {
+                    "fixed": "4.0.10"
+                  }
+                ]
+              }
+            ]
+          }
+        ]
+      },
+      {
+        "id": "GHSA-3h9f-r86x-qvjx",
+        "aliases": [
+          "BIT-django-2026-48588",
+          "CVE-2026-48588",
+          "PYSEC-2026-2090"
+        ],
+        "summary": "Django: cache middleware may expose private responses when unrelated request cookies are present",
+        "affected": [
+          {
+            "package": {
+              "name": "django",
+              "ecosystem": "PyPI",
+              "purl": "pkg:pypi/django"
+            },
+            "ranges": [
+              {
+                "type": "ECOSYSTEM",
+                "events": [
+                  {
+                    "introduced": "0"
+                  },
+                  {
+                    "fixed": "5.2.16"
+                  }
+                ]
+              }
+            ]
+          },
+          {
+            "package": {
+              "name": "django",
+              "ecosystem": "PyPI",
+              "purl": "pkg:pypi/django"
+            },
+            "ranges": [
+              {
+                "type": "ECOSYSTEM",
+                "events": [
+                  {
+                    "introduced": "6.0.0"
+                  },
+                  {
+                    "fixed": "6.0.7"
+                  }
+                ]
+              }
+            ]
+          }
+        ]
+      },
+      {
+        "id": "GHSA-53qw-q765-4fww",
+        "aliases": [
+          "BIT-django-2021-45115",
+          "CVE-2021-45115",
+          "PYSEC-2022-1"
+        ],
+        "summary": "Denial-of-service in Django",
+        "affected": [
+          {
+            "package": {
+              "name": "django",
+              "ecosystem": "PyPI",
+              "purl": "pkg:pypi/django"
+            },
+            "ranges": [
+              {
+                "type": "ECOSYSTEM",
+                "events": [
+                  {
+                    "introduced": "2.2a1"
+                  },
+                  {
+                    "fixed": "2.2.26"
+                  }
+                ]
+              }
+            ]
+          },
+          {
+            "package": {
+              "name": "django",
+              "ecosystem": "PyPI",
+              "purl": "pkg:pypi/django"
+            },
+            "ranges": [
+              {
+                "type": "ECOSYSTEM",
+                "events": [
+                  {
+                    "introduced": "3.2a1"
+                  },
+                  {
+                    "fixed": "3.2.11"
+                  }
+                ]
+              }
+            ]
+          },
+          {
+            "package": {
+              "name": "django",
+              "ecosystem": "PyPI",
+              "purl": "pkg:pypi/django"
+            },
+            "ranges": [
+              {
+                "type": "ECOSYSTEM",
+                "events": [
+                  {
+                    "introduced": "4.0a1"
+                  },
+                  {
+                    "fixed": "4.0.1"
+                  }
+                ]
+              }
+            ]
+          }
+        ]
+      },
+      {
+        "id": "GHSA-68w8-qjq3-2gfm",
+        "aliases": [
+          "BIT-django-2021-33203",
+          "CVE-2021-33203",
+          "PYSEC-2021-98"
+        ],
+        "summary": "Path Traversal in Django",
+        "affected": [
+          {
+            "package": {
+              "name": "django",
+              "ecosystem": "PyPI",
+              "purl": "pkg:pypi/django"
+            },
+            "ranges": [
+              {
+                "type": "ECOSYSTEM",
+                "events": [
+                  {
+                    "introduced": "0"
+                  },
+                  {
+                    "fixed": "2.2.24"
+                  }
+                ]
+              }
+            ]
+          },
+          {
+            "package": {
+              "name": "django",
+              "ecosystem": "PyPI",
+              "purl": "pkg:pypi/django"
+            },
+            "ranges": [
+              {
+                "type": "ECOSYSTEM",
+                "events": [
+                  {
+                    "introduced": "3.0"
+                  },
+                  {
+                    "fixed": "3.1.12"
+                  }
+                ]
+              }
+            ]
+          },
+          {
+            "package": {
+              "name": "django",
+              "ecosystem": "PyPI",
+              "purl": "pkg:pypi/django"
+            },
+            "ranges": [
+              {
+                "type": "ECOSYSTEM",
+                "events": [
+                  {
+                    "introduced": "3.2"
+                  },
+                  {
+                    "fixed": "3.2.4"
+                  }
+                ]
+              }
+            ]
+          }
+        ]
+      },
+      {
+        "id": "GHSA-6cw3-g6wv-c2xv",
+        "aliases": [
+          "BIT-django-2022-23833",
+          "CVE-2022-23833",
+          "PYSEC-2022-20"
+        ],
+        "summary": "Infinite Loop in Django",
+        "affected": [
+          {
+            "package": {
+              "name": "django",
+              "ecosystem": "PyPI",
+              "purl": "pkg:pypi/django"
+            },
+            "ranges": [
+              {
+                "type": "ECOSYSTEM",
+                "events": [
+                  {
+                    "introduced": "2.2"
+                  },
+                  {
+                    "fixed": "2.2.27"
+                  }
+                ]
+              }
+            ]
+          },
+          {
+            "package": {
+              "name": "django",
+              "ecosystem": "PyPI",
+              "purl": "pkg:pypi/django"
+            },
+            "ranges": [
+              {
+                "type": "ECOSYSTEM",
+                "events": [
+                  {
+                    "introduced": "3.2"
+                  },
+                  {
+                    "fixed": "3.2.12"
+                  }
+                ]
+              }
+            ]
+          },
+          {
+            "package": {
+              "name": "django",
+              "ecosystem": "PyPI",
+              "purl": "pkg:pypi/django"
+            },
+            "ranges": [
+              {
+                "type": "ECOSYSTEM",
+                "events": [
+                  {
+                    "introduced": "4.0"
+                  },
+                  {
+                    "fixed": "4.0.2"
+                  }
+                ]
+              }
+            ]
+          }
+        ]
+      },
+      {
+        "id": "GHSA-6w2r-r2m5-xq5w",
+        "aliases": [
+          "BIT-django-2025-57833",
+          "CVE-2025-57833",
+          "PYSEC-2025-105"
+        ],
+        "summary": "Django is subject to SQL injection through its column aliases",
+        "affected": [
+          {
+            "package": {
+              "name": "django",
+              "ecosystem": "PyPI",
+              "purl": "pkg:pypi/django"
+            },
+            "ranges": [
+              {
+                "type": "ECOSYSTEM",
+                "events": [
+                  {
+                    "introduced": "0"
+                  },
+                  {
+                    "fixed": "4.2.24"
+                  }
+                ]
+              }
+            ]
+          },
+          {
+            "package": {
+              "name": "django",
+              "ecosystem": "PyPI",
+              "purl": "pkg:pypi/django"
+            },
+            "ranges": [
+              {
+                "type": "ECOSYSTEM",
+                "events": [
+                  {
+                    "introduced": "5.0a1"
+                  },
+                  {
+                    "fixed": "5.1.12"
+                  }
+                ]
+              }
+            ]
+          },
+          {
+            "package": {
+              "name": "django",
+              "ecosystem": "PyPI",
+              "purl": "pkg:pypi/django"
+            },
+            "ranges": [
+              {
+                "type": "ECOSYSTEM",
+                "events": [
+                  {
+                    "introduced": "5.2a1"
+                  },
+                  {
+                    "fixed": "5.2.6"
+                  }
+                ]
+              }
+            ]
+          }
+        ]
+      },
+      {
+        "id": "GHSA-7h4p-27mh-hmrw",
+        "aliases": [
+          "BIT-django-2023-41164",
+          "CVE-2023-41164",
+          "PYSEC-2023-225"
+        ],
+        "summary": "Django Denial of service vulnerability in django.utils.encoding.uri_to_iri",
+        "affected": [
+          {
+            "package": {
+              "name": "django",
+              "ecosystem": "PyPI",
+              "purl": "pkg:pypi/django"
+            },
+            "ranges": [
+              {
+                "type": "ECOSYSTEM",
+                "events": [
+                  {
+                    "introduced": "3.2"
+                  },
+                  {
+                    "fixed": "3.2.21"
+                  }
+                ]
+              }
+            ]
+          },
+          {
+            "package": {
+              "name": "django",
+              "ecosystem": "PyPI",
+              "purl": "pkg:pypi/django"
+            },
+            "ranges": [
+              {
+                "type": "ECOSYSTEM",
+                "events": [
+                  {
+                    "introduced": "4.1"
+                  },
+                  {
+                    "fixed": "4.1.11"
+                  }
+                ]
+              }
+            ]
+          },
+          {
+            "package": {
+              "name": "django",
+              "ecosystem": "PyPI",
+              "purl": "pkg:pypi/django"
+            },
+            "ranges": [
+              {
+                "type": "ECOSYSTEM",
+                "events": [
+                  {
+                    "introduced": "4.2"
+                  },
+                  {
+                    "fixed": "4.2.5"
+                  }
+                ]
+              }
+            ]
+          }
+        ]
+      },
+      {
+        "id": "GHSA-7xr5-9hcq-chf9",
+        "aliases": [
+          "BIT-django-2025-48432",
+          "CVE-2025-48432",
+          "PYSEC-2025-47"
+        ],
+        "summary": "Django Improper Output Neutralization for Logs vulnerability",
+        "affected": [
+          {
+            "package": {
+              "name": "django",
+              "ecosystem": "PyPI",
+              "purl": "pkg:pypi/django"
+            },
+            "ranges": [
+              {
+                "type": "ECOSYSTEM",
+                "events": [
+                  {
+                    "introduced": "5.2"
+                  },
+                  {
+                    "fixed": "5.2.2"
+                  }
+                ]
+              }
+            ]
+          },
+          {
+            "package": {
+              "name": "django",
+              "ecosystem": "PyPI",
+              "purl": "pkg:pypi/django"
+            },
+            "ranges": [
+              {
+                "type": "ECOSYSTEM",
+                "events": [
+                  {
+                    "introduced": "5.0a1"
+                  },
+                  {
+                    "fixed": "5.1.10"
+                  }
+                ]
+              }
+            ]
+          },
+          {
+            "package": {
+              "name": "django",
+              "ecosystem": "PyPI",
+              "purl": "pkg:pypi/django"
+            },
+            "ranges": [
+              {
+                "type": "ECOSYSTEM",
+                "events": [
+                  {
+                    "introduced": "0"
+                  },
+                  {
+                    "fixed": "4.2.22"
+                  }
+                ]
+              }
+            ]
+          }
+        ]
+      },
+      {
+        "id": "GHSA-8c5j-9r9f-c6w8",
+        "aliases": [
+          "BIT-django-2021-45116",
+          "CVE-2021-45116",
+          "PYSEC-2022-2"
+        ],
+        "summary": "Information disclosure in Django",
+        "affected": [
+          {
+            "package": {
+              "name": "django",
+              "ecosystem": "PyPI",
+              "purl": "pkg:pypi/django"
+            },
+            "ranges": [
+              {
+                "type": "ECOSYSTEM",
+                "events": [
+                  {
+                    "introduced": "2.2"
+                  },
+                  {
+                    "fixed": "2.2.26"
+                  }
+                ]
+              }
+            ]
+          },
+          {
+            "package": {
+              "name": "django",
+              "ecosystem": "PyPI",
+              "purl": "pkg:pypi/django"
+            },
+            "ranges": [
+              {
+                "type": "ECOSYSTEM",
+                "events": [
+                  {
+                    "introduced": "3.2"
+                  },
+                  {
+                    "fixed": "3.2.11"
+                  }
+                ]
+              }
+            ]
+          },
+          {
+            "package": {
+              "name": "django",
+              "ecosystem": "PyPI",
+              "purl": "pkg:pypi/django"
+            },
+            "ranges": [
+              {
+                "type": "ECOSYSTEM",
+                "events": [
+                  {
+                    "introduced": "4.0"
+                  },
+                  {
+                    "fixed": "4.0.1"
+                  }
+                ]
+              }
+            ]
+          }
+        ]
+      },
+      {
+        "id": "GHSA-8cjm-8mp7-r2xf",
+        "aliases": [
+          "BIT-django-2026-8404",
+          "CVE-2026-8404",
+          "PYSEC-2026-201"
+        ],
+        "summary": "Django: UpdateCacheMiddleware may disclose cached responses due to case-sensitive Cache-Control handling",
+        "affected": [
+          {
+            "package": {
+              "name": "django",
+              "ecosystem": "PyPI",
+              "purl": "pkg:pypi/django"
+            },
+            "ranges": [
+              {
+                "type": "ECOSYSTEM",
+                "events": [
+                  {
+                    "introduced": "0"
+                  },
+                  {
+                    "fixed": "5.2.15"
+                  }
+                ]
+              }
+            ]
+          },
+          {
+            "package": {
+              "name": "django",
+              "ecosystem": "PyPI",
+              "purl": "pkg:pypi/django"
+            },
+            "ranges": [
+              {
+                "type": "ECOSYSTEM",
+                "events": [
+                  {
+                    "introduced": "6.0.0"
+                  },
+                  {
+                    "fixed": "6.0.6"
+                  }
+                ]
+              }
+            ]
+          }
+        ]
+      },
+      {
+        "id": "GHSA-8qcx-xf44-272x",
+        "aliases": [
+          "BIT-django-2026-53878",
+          "CVE-2026-53878",
+          "PYSEC-2026-2092"
+        ],
+        "summary": "Django: DomainNameValidator permits newline characters that may enable HTTP header injection",
+        "affected": [
+          {
+            "package": {
+              "name": "django",
+              "ecosystem": "PyPI",
+              "purl": "pkg:pypi/django"
+            },
+            "ranges": [
+              {
+                "type": "ECOSYSTEM",
+                "events": [
+                  {
+                    "introduced": "0"
+                  },
+                  {
+                    "fixed": "5.2.16"
+                  }
+                ]
+              }
+            ]
+          },
+          {
+            "package": {
+              "name": "django",
+              "ecosystem": "PyPI",
+              "purl": "pkg:pypi/django"
+            },
+            "ranges": [
+              {
+                "type": "ECOSYSTEM",
+                "events": [
+                  {
+                    "introduced": "6.0.0"
+                  },
+                  {
+                    "fixed": "6.0.7"
+                  }
+                ]
+              }
+            ]
+          }
+        ]
+      },
+      {
+        "id": "GHSA-8x94-hmjh-97hq",
+        "aliases": [
+          "BIT-django-2022-36359",
+          "CVE-2022-36359",
+          "PYSEC-2022-245"
+        ],
+        "summary": "Django vulnerable to Reflected File Download attack",
+        "affected": [
+          {
+            "package": {
+              "name": "django",
+              "ecosystem": "PyPI",
+              "purl": "pkg:pypi/django"
+            },
+            "ranges": [
+              {
+                "type": "ECOSYSTEM",
+                "events": [
+                  {
+                    "introduced": "0"
+                  },
+                  {
+                    "fixed": "3.2.15"
+                  }
+                ]
+              }
+            ]
+          },
+          {
+            "package": {
+              "name": "django",
+              "ecosystem": "PyPI",
+              "purl": "pkg:pypi/django"
+            },
+            "ranges": [
+              {
+                "type": "ECOSYSTEM",
+                "events": [
+                  {
+                    "introduced": "4.0"
+                  },
+                  {
+                    "fixed": "4.0.7"
+                  }
+                ]
+              }
+            ]
+          }
+        ]
+      },
+      {
+        "id": "GHSA-923m-gv2p-w5qp",
+        "aliases": [
+          "BIT-django-2026-48587",
+          "CVE-2026-48587",
+          "PYSEC-2026-198"
+        ],
+        "summary": "Django: has_vary_header may expose cached responses when Vary values contain whitespace",
+        "affected": [
+          {
+            "package": {
+              "name": "django",
+              "ecosystem": "PyPI",
+              "purl": "pkg:pypi/django"
+            },
+            "ranges": [
+              {
+                "type": "ECOSYSTEM",
+                "events": [
+                  {
+                    "introduced": "0"
+                  },
+                  {
+                    "fixed": "5.2.15"
+                  }
+                ]
+              }
+            ]
+          },
+          {
+            "package": {
+              "name": "django",
+              "ecosystem": "PyPI",
+              "purl": "pkg:pypi/django"
+            },
+            "ranges": [
+              {
+                "type": "ECOSYSTEM",
+                "events": [
+                  {
+                    "introduced": "6.0.0"
+                  },
+                  {
+                    "fixed": "6.0.6"
+                  }
+                ]
+              }
+            ]
+          }
+        ]
+      },
+      {
+        "id": "GHSA-95rw-fx8r-36v6",
+        "aliases": [
+          "BIT-django-2022-22818",
+          "CVE-2022-22818",
+          "PYSEC-2022-19"
+        ],
+        "summary": "Cross-site Scripting in Django",
+        "affected": [
+          {
+            "package": {
+              "name": "django",
+              "ecosystem": "PyPI",
+              "purl": "pkg:pypi/django"
+            },
+            "ranges": [
+              {
+                "type": "ECOSYSTEM",
+                "events": [
+                  {
+                    "introduced": "2.2"
+                  },
+                  {
+                    "fixed": "2.2.27"
+                  }
+                ]
+              }
+            ]
+          },
+          {
+            "package": {
+              "name": "django",
+              "ecosystem": "PyPI",
+              "purl": "pkg:pypi/django"
+            },
+            "ranges": [
+              {
+                "type": "ECOSYSTEM",
+                "events": [
+                  {
+                    "introduced": "3.2"
+                  },
+                  {
+                    "fixed": "3.2.12"
+                  }
+                ]
+              }
+            ]
+          },
+          {
+            "package": {
+              "name": "django",
+              "ecosystem": "PyPI",
+              "purl": "pkg:pypi/django"
+            },
+            "ranges": [
+              {
+                "type": "ECOSYSTEM",
+                "events": [
+                  {
+                    "introduced": "4.0"
+                  },
+                  {
+                    "fixed": "4.0.2"
+                  }
+                ]
+              }
+            ]
+          }
+        ]
+      },
+      {
+        "id": "GHSA-crhf-3pfg-w68w",
+        "aliases": [
+          "BIT-django-2026-53877",
+          "CVE-2026-53877",
+          "PYSEC-2026-2091"
+        ],
+        "summary": " Django: GDALRaster may over-read heap memory when constructed from bytes",
+        "affected": [
+          {
+            "package": {
+              "name": "django",
+              "ecosystem": "PyPI",
+              "purl": "pkg:pypi/django"
+            },
+            "ranges": [
+              {
+                "type": "ECOSYSTEM",
+                "events": [
+                  {
+                    "introduced": "0"
+                  },
+                  {
+                    "fixed": "5.2.16"
+                  }
+                ]
+              }
+            ]
+          },
+          {
+            "package": {
+              "name": "django",
+              "ecosystem": "PyPI",
+              "purl": "pkg:pypi/django"
+            },
+            "ranges": [
+              {
+                "type": "ECOSYSTEM",
+                "events": [
+                  {
+                    "introduced": "6.0.0"
+                  },
+                  {
+                    "fixed": "6.0.7"
+                  }
+                ]
+              }
+            ]
+          }
+        ]
+      },
+      {
+        "id": "GHSA-frmv-pr5f-9mcr",
+        "aliases": [
+          "BIT-django-2025-64459",
+          "CVE-2025-64459",
+          "PYSEC-2025-108"
+        ],
+        "summary": "Django vulnerable to SQL injection via _connector keyword argument in QuerySet and Q objects.",
+        "affected": [
+          {
+            "package": {
+              "name": "django",
+              "ecosystem": "PyPI",
+              "purl": "pkg:pypi/django"
+            },
+            "ranges": [
+              {
+                "type": "ECOSYSTEM",
+                "events": [
+                  {
+                    "introduced": "5.2a1"
+                  },
+                  {
+                    "fixed": "5.2.8"
+                  }
+                ]
+              }
+            ]
+          },
+          {
+            "package": {
+              "name": "django",
+              "ecosystem": "PyPI",
+              "purl": "pkg:pypi/django"
+            },
+            "ranges": [
+              {
+                "type": "ECOSYSTEM",
+                "events": [
+                  {
+                    "introduced": "5.0a1"
+                  },
+                  {
+                    "fixed": "5.1.14"
+                  }
+                ]
+              }
+            ]
+          },
+          {
+            "package": {
+              "name": "django",
+              "ecosystem": "PyPI",
+              "purl": "pkg:pypi/django"
+            },
+            "ranges": [
+              {
+                "type": "ECOSYSTEM",
+                "events": [
+                  {
+                    "introduced": "0"
+                  },
+                  {
+                    "fixed": "4.2.26"
+                  }
+                ]
+              }
+            ]
+          }
+        ]
+      },
+      {
+        "id": "GHSA-h7pc-vwp9-298g",
+        "aliases": [
+          "BIT-django-2026-6873",
+          "CVE-2026-6873",
+          "PYSEC-2026-199"
+        ],
+        "summary": "Django: signed cookies are vulnerable to salt namespace collisions",
+        "affected": [
+          {
+            "package": {
+              "name": "django",
+              "ecosystem": "PyPI",
+              "purl": "pkg:pypi/django"
+            },
+            "ranges": [
+              {
+                "type": "ECOSYSTEM",
+                "events": [
+                  {
+                    "introduced": "0"
+                  },
+                  {
+                    "fixed": "5.2.15"
+                  }
+                ]
+              }
+            ]
+          },
+          {
+            "package": {
+              "name": "django",
+              "ecosystem": "PyPI",
+              "purl": "pkg:pypi/django"
+            },
+            "ranges": [
+              {
+                "type": "ECOSYSTEM",
+                "events": [
+                  {
+                    "introduced": "6.0.0"
+                  },
+                  {
+                    "fixed": "6.0.6"
+                  }
+                ]
+              }
+            ]
+          }
+        ]
+      },
+      {
+        "id": "GHSA-h8gc-pgj2-vjm3",
+        "aliases": [
+          "BIT-django-2023-43665",
+          "CVE-2023-43665",
+          "PYSEC-2023-226"
+        ],
+        "summary": "Django Denial-of-service in django.utils.text.Truncator",
+        "affected": [
+          {
+            "package": {
+              "name": "django",
+              "ecosystem": "PyPI",
+              "purl": "pkg:pypi/django"
+            },
+            "ranges": [
+              {
+                "type": "ECOSYSTEM",
+                "events": [
+                  {
+                    "introduced": "3.2a1"
+                  },
+                  {
+                    "fixed": "3.2.22"
+                  }
+                ]
+              }
+            ]
+          },
+          {
+            "package": {
+              "name": "django",
+              "ecosystem": "PyPI",
+              "purl": "pkg:pypi/django"
+            },
+            "ranges": [
+              {
+                "type": "ECOSYSTEM",
+                "events": [
+                  {
+                    "introduced": "4.1a1"
+                  },
+                  {
+                    "fixed": "4.1.12"
+                  }
+                ]
+              }
+            ]
+          },
+          {
+            "package": {
+              "name": "django",
+              "ecosystem": "PyPI",
+              "purl": "pkg:pypi/django"
+            },
+            "ranges": [
+              {
+                "type": "ECOSYSTEM",
+                "events": [
+                  {
+                    "introduced": "4.2a1"
+                  },
+                  {
+                    "fixed": "4.2.6"
+                  }
+                ]
+              }
+            ]
+          }
+        ]
+      },
+      {
+        "id": "GHSA-jh3w-4vvf-mjgr",
+        "aliases": [
+          "BIT-django-2023-36053",
+          "CVE-2023-36053",
+          "PYSEC-2023-100"
+        ],
+        "summary": "Django has regular expression denial of service vulnerability in EmailValidator/URLValidator",
+        "affected": [
+          {
+            "package": {
+              "name": "django",
+              "ecosystem": "PyPI",
+              "purl": "pkg:pypi/django"
+            },
+            "ranges": [
+              {
+                "type": "ECOSYSTEM",
+                "events": [
+                  {
+                    "introduced": "3.2a1"
+                  },
+                  {
+                    "fixed": "3.2.20"
+                  }
+                ]
+              }
+            ]
+          },
+          {
+            "package": {
+              "name": "django",
+              "ecosystem": "PyPI",
+              "purl": "pkg:pypi/django"
+            },
+            "ranges": [
+              {
+                "type": "ECOSYSTEM",
+                "events": [
+                  {
+                    "introduced": "4.0a1"
+                  },
+                  {
+                    "fixed": "4.1.10"
+                  }
+                ]
+              }
+            ]
+          },
+          {
+            "package": {
+              "name": "django",
+              "ecosystem": "PyPI",
+              "purl": "pkg:pypi/django"
+            },
+            "ranges": [
+              {
+                "type": "ECOSYSTEM",
+                "events": [
+                  {
+                    "introduced": "4.2a1"
+                  },
+                  {
+                    "fixed": "4.2.3"
+                  }
+                ]
+              }
+            ]
+          }
+        ]
+      },
+      {
+        "id": "GHSA-jrh2-hc4r-7jwx",
+        "aliases": [
+          "BIT-django-2021-45452",
+          "CVE-2021-45452",
+          "PYSEC-2022-3"
+        ],
+        "summary": "Directory-traversal in Django",
+        "affected": [
+          {
+            "package": {
+              "name": "django",
+              "ecosystem": "PyPI",
+              "purl": "pkg:pypi/django"
+            },
+            "ranges": [
+              {
+                "type": "ECOSYSTEM",
+                "events": [
+                  {
+                    "introduced": "2.2"
+                  },
+                  {
+                    "fixed": "2.2.26"
+                  }
+                ]
+              }
+            ]
+          },
+          {
+            "package": {
+              "name": "django",
+              "ecosystem": "PyPI",
+              "purl": "pkg:pypi/django"
+            },
+            "ranges": [
+              {
+                "type": "ECOSYSTEM",
+                "events": [
+                  {
+                    "introduced": "3.2"
+                  },
+                  {
+                    "fixed": "3.2.11"
+                  }
+                ]
+              }
+            ]
+          },
+          {
+            "package": {
+              "name": "django",
+              "ecosystem": "PyPI",
+              "purl": "pkg:pypi/django"
+            },
+            "ranges": [
+              {
+                "type": "ECOSYSTEM",
+                "events": [
+                  {
+                    "introduced": "4.0"
+                  },
+                  {
+                    "fixed": "4.0.1"
+                  }
+                ]
+              }
+            ]
+          }
+        ]
+      },
+      {
+        "id": "GHSA-p64x-8rxx-wf6q",
+        "aliases": [
+          "BIT-django-2022-34265",
+          "CVE-2022-34265",
+          "PYSEC-2022-213"
+        ],
+        "summary": "Django `Trunc()` and `Extract()` database functions vulnerable to SQL Injection",
+        "affected": [
+          {
+            "package": {
+              "name": "django",
+              "ecosystem": "PyPI",
+              "purl": "pkg:pypi/django"
+            },
+            "ranges": [
+              {
+                "type": "ECOSYSTEM",
+                "events": [
+                  {
+                    "introduced": "3.2a1"
+                  },
+                  {
+                    "fixed": "3.2.14"
+                  }
+                ]
+              }
+            ]
+          },
+          {
+            "package": {
+              "name": "django",
+              "ecosystem": "PyPI",
+              "purl": "pkg:pypi/django"
+            },
+            "ranges": [
+              {
+                "type": "ECOSYSTEM",
+                "events": [
+                  {
+                    "introduced": "4.0a1"
+                  },
+                  {
+                    "fixed": "4.0.6"
+                  }
+                ]
+              }
+            ]
+          }
+        ]
+      },
+      {
+        "id": "GHSA-p99v-5w3c-jqq9",
+        "aliases": [
+          "BIT-django-2021-33571",
+          "CVE-2021-33571",
+          "PYSEC-2021-99"
+        ],
+        "summary": "Django Access Control Bypass possibly leading to SSRF, RFI, and LFI attacks ",
+        "affected": [
+          {
+            "package": {
+              "name": "django",
+              "ecosystem": "PyPI",
+              "purl": "pkg:pypi/django"
+            },
+            "ranges": [
+              {
+                "type": "ECOSYSTEM",
+                "events": [
+                  {
+                    "introduced": "2.2a1"
+                  },
+                  {
+                    "fixed": "2.2.24"
+                  }
+                ]
+              }
+            ]
+          },
+          {
+            "package": {
+              "name": "django",
+              "ecosystem": "PyPI",
+              "purl": "pkg:pypi/django"
+            },
+            "ranges": [
+              {
+                "type": "ECOSYSTEM",
+                "events": [
+                  {
+                    "introduced": "3.0a1"
+                  },
+                  {
+                    "fixed": "3.1.12"
+                  }
+                ]
+              }
+            ]
+          },
+          {
+            "package": {
+              "name": "django",
+              "ecosystem": "PyPI",
+              "purl": "pkg:pypi/django"
+            },
+            "ranges": [
+              {
+                "type": "ECOSYSTEM",
+                "events": [
+                  {
+                    "introduced": "3.2a1"
+                  },
+                  {
+                    "fixed": "3.2.4"
+                  }
+                ]
+              }
+            ]
+          }
+        ]
+      },
+      {
+        "id": "GHSA-q238-5cxm-5c9h",
+        "aliases": [
+          "BIT-django-2026-15830",
+          "CVE-2026-15830",
+          "PYSEC-2026-3717"
+        ],
+        "summary": "Django GeoDjango vulnerable to denial of service through deeply nested geometry collections",
+        "affected": [
+          {
+            "package": {
+              "name": "django",
+              "ecosystem": "PyPI",
+              "purl": "pkg:pypi/django"
+            },
+            "ranges": [
+              {
+                "type": "ECOSYSTEM",
+                "events": [
+                  {
+                    "introduced": "0"
+                  },
+                  {
+                    "fixed": "5.2.17"
+                  }
+                ]
+              }
+            ]
+          },
+          {
+            "package": {
+              "name": "django",
+              "ecosystem": "PyPI",
+              "purl": "pkg:pypi/django"
+            },
+            "ranges": [
+              {
+                "type": "ECOSYSTEM",
+                "events": [
+                  {
+                    "introduced": "6.0a1"
+                  },
+                  {
+                    "fixed": "6.0.8"
+                  }
+                ]
+              }
+            ]
+          },
+          {
+            "package": {
+              "name": "django",
+              "ecosystem": "PyPI",
+              "purl": "pkg:pypi/django"
+            },
+            "ranges": [
+              {
+                "type": "ECOSYSTEM",
+                "events": [
+                  {
+                    "introduced": "6.1a1"
+                  },
+                  {
+                    "fixed": "6.1.1"
+                  }
+                ]
+              }
+            ]
+          }
+        ]
+      },
+      {
+        "id": "GHSA-q2jf-h9jm-m7p4",
+        "aliases": [
+          "BIT-django-2023-23969",
+          "CVE-2023-23969",
+          "PYSEC-2023-12"
+        ],
+        "summary": "Django contains Uncontrolled Resource Consumption via cached header",
+        "affected": [
+          {
+            "package": {
+              "name": "django",
+              "ecosystem": "PyPI",
+              "purl": "pkg:pypi/django"
+            },
+            "ranges": [
+              {
+                "type": "ECOSYSTEM",
+                "events": [
+                  {
+                    "introduced": "3.2a1"
+                  },
+                  {
+                    "fixed": "3.2.17"
+                  }
+                ]
+              }
+            ]
+          },
+          {
+            "package": {
+              "name": "django",
+              "ecosystem": "PyPI",
+              "purl": "pkg:pypi/django"
+            },
+            "ranges": [
+              {
+                "type": "ECOSYSTEM",
+                "events": [
+                  {
+                    "introduced": "4.0a1"
+                  },
+                  {
+                    "fixed": "4.0.9"
+                  }
+                ]
+              }
+            ]
+          },
+          {
+            "package": {
+              "name": "django",
+              "ecosystem": "PyPI",
+              "purl": "pkg:pypi/django"
+            },
+            "ranges": [
+              {
+                "type": "ECOSYSTEM",
+                "events": [
+                  {
+                    "introduced": "4.1a1"
+                  },
+                  {
+                    "fixed": "4.1.6"
+                  }
+                ]
+              }
+            ]
+          }
+        ]
+      },
+      {
+        "id": "GHSA-qm57-vhq3-3fwf",
+        "aliases": [
+          "BIT-django-2021-32052",
+          "CVE-2021-32052",
+          "PYSEC-2021-8"
+        ],
+        "summary": "Header injection possible in Django",
+        "affected": [
+          {
+            "package": {
+              "name": "django",
+              "ecosystem": "PyPI",
+              "purl": "pkg:pypi/django"
+            },
+            "ranges": [
+              {
+                "type": "ECOSYSTEM",
+                "events": [
+                  {
+                    "introduced": "2.2"
+                  },
+                  {
+                    "fixed": "2.2.22"
+                  }
+                ]
+              }
+            ]
+          },
+          {
+            "package": {
+              "name": "django",
+              "ecosystem": "PyPI",
+              "purl": "pkg:pypi/django"
+            },
+            "ranges": [
+              {
+                "type": "ECOSYSTEM",
+                "events": [
+                  {
+                    "introduced": "3.1"
+                  },
+                  {
+                    "fixed": "3.1.10"
+                  }
+                ]
+              }
+            ]
+          },
+          {
+            "package": {
+              "name": "django",
+              "ecosystem": "PyPI",
+              "purl": "pkg:pypi/django"
+            },
+            "ranges": [
+              {
+                "type": "ECOSYSTEM",
+                "events": [
+                  {
+                    "introduced": "3.2"
+                  },
+                  {
+                    "fixed": "3.2.2"
+                  }
+                ]
+              }
+            ]
+          }
+        ]
+      },
+      {
+        "id": "GHSA-qmf9-6jqf-j8fq",
+        "aliases": [
+          "BIT-django-2023-46695",
+          "CVE-2023-46695",
+          "PYSEC-2023-222"
+        ],
+        "summary": "Django potential denial of service vulnerability in UsernameField on Windows",
+        "affected": [
+          {
+            "package": {
+              "name": "django",
+              "ecosystem": "PyPI",
+              "purl": "pkg:pypi/django"
+            },
+            "ranges": [
+              {
+                "type": "ECOSYSTEM",
+                "events": [
+                  {
+                    "introduced": "3.2a1"
+                  },
+                  {
+                    "fixed": "3.2.23"
+                  }
+                ]
+              }
+            ]
+          },
+          {
+            "package": {
+              "name": "django",
+              "ecosystem": "PyPI",
+              "purl": "pkg:pypi/django"
+            },
+            "ranges": [
+              {
+                "type": "ECOSYSTEM",
+                "events": [
+                  {
+                    "introduced": "4.1a1"
+                  },
+                  {
+                    "fixed": "4.1.13"
+                  }
+                ]
+              }
+            ]
+          },
+          {
+            "package": {
+              "name": "django",
+              "ecosystem": "PyPI",
+              "purl": "pkg:pypi/django"
+            },
+            "ranges": [
+              {
+                "type": "ECOSYSTEM",
+                "events": [
+                  {
+                    "introduced": "4.2a1"
+                  },
+                  {
+                    "fixed": "4.2.7"
+                  }
+                ]
+              }
+            ]
+          }
+        ]
+      },
+      {
+        "id": "GHSA-qrw5-5h28-6cmg",
+        "aliases": [
+          "BIT-django-2022-41323",
+          "CVE-2022-41323",
+          "PYSEC-2022-304"
+        ],
+        "summary": "Django denial-of-service vulnerability in internationalized URLs",
+        "affected": [
+          {
+            "package": {
+              "name": "django",
+              "ecosystem": "PyPI",
+              "purl": "pkg:pypi/django"
+            },
+            "ranges": [
+              {
+                "type": "ECOSYSTEM",
+                "events": [
+                  {
+                    "introduced": "3.2"
+                  },
+                  {
+                    "fixed": "3.2.16"
+                  }
+                ]
+              }
+            ]
+          },
+          {
+            "package": {
+              "name": "django",
+              "ecosystem": "PyPI",
+              "purl": "pkg:pypi/django"
+            },
+            "ranges": [
+              {
+                "type": "ECOSYSTEM",
+                "events": [
+                  {
+                    "introduced": "4.0"
+                  },
+                  {
+                    "fixed": "4.0.8"
+                  }
+                ]
+              }
+            ]
+          },
+          {
+            "package": {
+              "name": "django",
+              "ecosystem": "PyPI",
+              "purl": "pkg:pypi/django"
+            },
+            "ranges": [
+              {
+                "type": "ECOSYSTEM",
+                "events": [
+                  {
+                    "introduced": "4.1"
+                  },
+                  {
+                    "fixed": "4.1.2"
+                  }
+                ]
+              }
+            ]
+          }
+        ]
+      },
+      {
+        "id": "GHSA-qw25-v68c-qjf3",
+        "aliases": [
+          "BIT-django-2025-64458",
+          "CVE-2025-64458",
+          "PYSEC-2025-107"
+        ],
+        "summary": "Django has a denial-of-service vulnerability in HttpResponseRedirect and HttpResponsePermanentRedirect on Windows",
+        "affected": [
+          {
+            "package": {
+              "name": "django",
+              "ecosystem": "PyPI",
+              "purl": "pkg:pypi/django"
+            },
+            "ranges": [
+              {
+                "type": "ECOSYSTEM",
+                "events": [
+                  {
+                    "introduced": "5.2a1"
+                  },
+                  {
+                    "fixed": "5.2.8"
+                  }
+                ]
+              }
+            ]
+          },
+          {
+            "package": {
+              "name": "django",
+              "ecosystem": "PyPI",
+              "purl": "pkg:pypi/django"
+            },
+            "ranges": [
+              {
+                "type": "ECOSYSTEM",
+                "events": [
+                  {
+                    "introduced": "5.0a1"
+                  },
+                  {
+                    "fixed": "5.1.14"
+                  }
+                ]
+              }
+            ]
+          },
+          {
+            "package": {
+              "name": "django",
+              "ecosystem": "PyPI",
+              "purl": "pkg:pypi/django"
+            },
+            "ranges": [
+              {
+                "type": "ECOSYSTEM",
+                "events": [
+                  {
+                    "introduced": "0"
+                  },
+                  {
+                    "fixed": "4.2.26"
+                  }
+                ]
+              }
+            ]
+          }
+        ]
+      },
+      {
+        "id": "GHSA-r3xc-prgr-mg9p",
+        "aliases": [
+          "BIT-django-2023-31047",
+          "CVE-2023-31047",
+          "PYSEC-2023-61"
+        ],
+        "summary": "Django bypasses validation when using one form field to upload multiple files",
+        "affected": [
+          {
+            "package": {
+              "name": "django",
+              "ecosystem": "PyPI",
+              "purl": "pkg:pypi/django"
+            },
+            "ranges": [
+              {
+                "type": "ECOSYSTEM",
+                "events": [
+                  {
+                    "introduced": "3.2a1"
+                  },
+                  {
+                    "fixed": "3.2.19"
+                  }
+                ]
+              }
+            ]
+          },
+          {
+            "package": {
+              "name": "django",
+              "ecosystem": "PyPI",
+              "purl": "pkg:pypi/django"
+            },
+            "ranges": [
+              {
+                "type": "ECOSYSTEM",
+                "events": [
+                  {
+                    "introduced": "4.0a1"
+                  },
+                  {
+                    "fixed": "4.1.9"
+                  }
+                ]
+              }
+            ]
+          },
+          {
+            "package": {
+              "name": "django",
+              "ecosystem": "PyPI",
+              "purl": "pkg:pypi/django"
+            },
+            "ranges": [
+              {
+                "type": "ECOSYSTEM",
+                "events": [
+                  {
+                    "introduced": "4.2a1"
+                  },
+                  {
+                    "fixed": "4.2.1"
+                  }
+                ]
+              }
+            ]
+          }
+        ]
+      },
+      {
+        "id": "GHSA-rrqc-c2jx-6jgv",
+        "aliases": [
+          "BIT-django-2024-45231",
+          "CVE-2024-45231",
+          "PYSEC-2026-1297"
+        ],
+        "summary": "Django allows enumeration of user e-mail addresses",
+        "affected": [
+          {
+            "package": {
+              "name": "django",
+              "ecosystem": "PyPI",
+              "purl": "pkg:pypi/django"
+            },
+            "ranges": [
+              {
+                "type": "ECOSYSTEM",
+                "events": [
+                  {
+                    "introduced": "5.1"
+                  },
+                  {
+                    "fixed": "5.1.1"
+                  }
+                ]
+              }
+            ]
+          },
+          {
+            "package": {
+              "name": "django",
+              "ecosystem": "PyPI",
+              "purl": "pkg:pypi/django"
+            },
+            "ranges": [
+              {
+                "type": "ECOSYSTEM",
+                "events": [
+                  {
+                    "introduced": "5.0"
+                  },
+                  {
+                    "fixed": "5.0.9"
+                  }
+                ]
+              }
+            ]
+          },
+          {
+            "package": {
+              "name": "django",
+              "ecosystem": "PyPI",
+              "purl": "pkg:pypi/django"
+            },
+            "ranges": [
+              {
+                "type": "ECOSYSTEM",
+                "events": [
+                  {
+                    "introduced": "0"
+                  },
+                  {
+                    "fixed": "4.2.16"
+                  }
+                ]
+              }
+            ]
+          }
+        ]
+      },
+      {
+        "id": "GHSA-rxjp-mfm9-w4wr",
+        "aliases": [
+          "BIT-django-2021-31542",
+          "CVE-2021-31542",
+          "PYSEC-2021-7"
+        ],
+        "summary": "Path Traversal in Django",
+        "affected": [
+          {
+            "package": {
+              "name": "django",
+              "ecosystem": "PyPI",
+              "purl": "pkg:pypi/django"
+            },
+            "ranges": [
+              {
+                "type": "ECOSYSTEM",
+                "events": [
+                  {
+                    "introduced": "2.2"
+                  },
+                  {
+                    "fixed": "2.2.21"
+                  }
+                ]
+              }
+            ]
+          },
+          {
+            "package": {
+              "name": "django",
+              "ecosystem": "PyPI",
+              "purl": "pkg:pypi/django"
+            },
+            "ranges": [
+              {
+                "type": "ECOSYSTEM",
+                "events": [
+                  {
+                    "introduced": "3.0"
+                  },
+                  {
+                    "fixed": "3.1.9"
+                  }
+                ]
+              }
+            ]
+          },
+          {
+            "package": {
+              "name": "django",
+              "ecosystem": "PyPI",
+              "purl": "pkg:pypi/django"
+            },
+            "ranges": [
+              {
+                "type": "ECOSYSTEM",
+                "events": [
+                  {
+                    "introduced": "3.2"
+                  },
+                  {
+                    "fixed": "3.2.1"
+                  }
+                ]
+              }
+            ]
+          }
+        ]
+      },
+      {
+        "id": "GHSA-v6rh-hp5x-86rv",
+        "aliases": [
+          "BIT-django-2021-44420",
+          "CVE-2021-44420",
+          "PYSEC-2021-439"
+        ],
+        "summary": "Potential bypass of an upstream access control based on URL paths in Django",
+        "affected": [
+          {
+            "package": {
+              "name": "django",
+              "ecosystem": "PyPI",
+              "purl": "pkg:pypi/django"
+            },
+            "ranges": [
+              {
+                "type": "ECOSYSTEM",
+                "events": [
+                  {
+                    "introduced": "2.2a1"
+                  },
+                  {
+                    "fixed": "2.2.25"
+                  }
+                ]
+              }
+            ]
+          },
+          {
+            "package": {
+              "name": "django",
+              "ecosystem": "PyPI",
+              "purl": "pkg:pypi/django"
+            },
+            "ranges": [
+              {
+                "type": "ECOSYSTEM",
+                "events": [
+                  {
+                    "introduced": "3.0a1"
+                  },
+                  {
+                    "fixed": "3.1.14"
+                  }
+                ]
+              }
+            ]
+          },
+          {
+            "package": {
+              "name": "django",
+              "ecosystem": "PyPI",
+              "purl": "pkg:pypi/django"
+            },
+            "ranges": [
+              {
+                "type": "ECOSYSTEM",
+                "events": [
+                  {
+                    "introduced": "3.2a1"
+                  },
+                  {
+                    "fixed": "3.2.10"
+                  }
+                ]
+              }
+            ]
+          }
+        ]
+      },
+      {
+        "id": "GHSA-vm8q-m57g-pff3",
+        "aliases": [
+          "BIT-django-2024-27351",
+          "CVE-2024-27351",
+          "PYSEC-2024-47"
+        ],
+        "summary": "Regular expression denial-of-service in Django",
+        "affected": [
+          {
+            "package": {
+              "name": "django",
+              "ecosystem": "PyPI",
+              "purl": "pkg:pypi/django"
+            },
+            "ranges": [
+              {
+                "type": "ECOSYSTEM",
+                "events": [
+                  {
+                    "introduced": "3.2"
+                  },
+                  {
+                    "fixed": "3.2.25"
+                  }
+                ]
+              }
+            ]
+          },
+          {
+            "package": {
+              "name": "django",
+              "ecosystem": "PyPI",
+              "purl": "pkg:pypi/django"
+            },
+            "ranges": [
+              {
+                "type": "ECOSYSTEM",
+                "events": [
+                  {
+                    "introduced": "4.2"
+                  },
+                  {
+                    "fixed": "4.2.11"
+                  }
+                ]
+              }
+            ]
+          },
+          {
+            "package": {
+              "name": "django",
+              "ecosystem": "PyPI",
+              "purl": "pkg:pypi/django"
+            },
+            "ranges": [
+              {
+                "type": "ECOSYSTEM",
+                "events": [
+                  {
+                    "introduced": "5.0"
+                  },
+                  {
+                    "fixed": "5.0.3"
+                  }
+                ]
+              }
+            ]
+          }
+        ]
+      },
+      {
+        "id": "GHSA-w24h-v9qh-8gxj",
+        "aliases": [
+          "BIT-django-2022-28347",
+          "CVE-2022-28347",
+          "PYSEC-2022-191"
+        ],
+        "summary": "SQL Injection in Django",
+        "affected": [
+          {
+            "package": {
+              "name": "django",
+              "ecosystem": "PyPI",
+              "purl": "pkg:pypi/django"
+            },
+            "ranges": [
+              {
+                "type": "ECOSYSTEM",
+                "events": [
+                  {
+                    "introduced": "2.2"
+                  },
+                  {
+                    "fixed": "2.2.28"
+                  }
+                ]
+              }
+            ]
+          },
+          {
+            "package": {
+              "name": "django",
+              "ecosystem": "PyPI",
+              "purl": "pkg:pypi/django"
+            },
+            "ranges": [
+              {
+                "type": "ECOSYSTEM",
+                "events": [
+                  {
+                    "introduced": "3.2"
+                  },
+                  {
+                    "fixed": "3.2.13"
+                  }
+                ]
+              }
+            ]
+          },
+          {
+            "package": {
+              "name": "django",
+              "ecosystem": "PyPI",
+              "purl": "pkg:pypi/django"
+            },
+            "ranges": [
+              {
+                "type": "ECOSYSTEM",
+                "events": [
+                  {
+                    "introduced": "4.0"
+                  },
+                  {
+                    "fixed": "4.0.4"
+                  }
+                ]
+              }
+            ]
+          }
+        ]
+      },
+      {
+        "id": "GHSA-wvqv-fj8w-qmhm",
+        "aliases": [
+          "BIT-django-2026-15307",
+          "CVE-2026-15307",
+          "PYSEC-2026-4035"
+        ],
+        "summary": "Django GeoDjango spatial lookups allow file writes and outbound requests through GDAL raster parsing",
+        "affected": [
+          {
+            "package": {
+              "name": "django",
+              "ecosystem": "PyPI",
+              "purl": "pkg:pypi/django"
+            },
+            "ranges": [
+              {
+                "type": "ECOSYSTEM",
+                "events": [
+                  {
+                    "introduced": "0"
+                  },
+                  {
+                    "fixed": "5.2.17"
+                  }
+                ]
+              }
+            ]
+          },
+          {
+            "package": {
+              "name": "django",
+              "ecosystem": "PyPI",
+              "purl": "pkg:pypi/django"
+            },
+            "ranges": [
+              {
+                "type": "ECOSYSTEM",
+                "events": [
+                  {
+                    "introduced": "6.0a1"
+                  },
+                  {
+                    "fixed": "6.0.8"
+                  }
+                ]
+              }
+            ]
+          }
+        ]
+      },
+      {
+        "id": "GHSA-xpfp-f569-q3p2",
+        "aliases": [
+          "BIT-django-2021-35042",
+          "CVE-2021-35042",
+          "PYSEC-2021-109"
+        ],
+        "summary": "SQL Injection in Django",
+        "affected": [
+          {
+            "package": {
+              "name": "django",
+              "ecosystem": "PyPI",
+              "purl": "pkg:pypi/django"
+            },
+            "ranges": [
+              {
+                "type": "ECOSYSTEM",
+                "events": [
+                  {
+                    "introduced": "3.2a1"
+                  },
+                  {
+                    "fixed": "3.2.5"
+                  }
+                ]
+              }
+            ]
+          },
+          {
+            "package": {
+              "name": "django",
+              "ecosystem": "PyPI",
+              "purl": "pkg:pypi/django"
+            },
+            "ranges": [
+              {
+                "type": "ECOSYSTEM",
+                "events": [
+                  {
+                    "introduced": "3.0a1"
+                  },
+                  {
+                    "fixed": "3.1.13"
+                  }
+                ]
+              }
+            ]
+          }
+        ]
+      },
+      {
+        "id": "GHSA-xxj9-f6rv-m3x4",
+        "aliases": [
+          "BIT-django-2024-24680",
+          "CVE-2024-24680",
+          "PYSEC-2024-28"
+        ],
+        "summary": "Django denial-of-service attack in the intcomma template filter",
+        "affected": [
+          {
+            "package": {
+              "name": "django",
+              "ecosystem": "PyPI",
+              "purl": "pkg:pypi/django"
+            },
+            "ranges": [
+              {
+                "type": "ECOSYSTEM",
+                "events": [
+                  {
+                    "introduced": "3.2"
+                  },
+                  {
+                    "fixed": "3.2.24"
+                  }
+                ]
+              }
+            ]
+          },
+          {
+            "package": {
+              "name": "django",
+              "ecosystem": "PyPI",
+              "purl": "pkg:pypi/django"
+            },
+            "ranges": [
+              {
+                "type": "ECOSYSTEM",
+                "events": [
+                  {
+                    "introduced": "4.2"
+                  },
+                  {
+                    "fixed": "4.2.10"
+                  }
+                ]
+              }
+            ]
+          },
+          {
+            "package": {
+              "name": "django",
+              "ecosystem": "PyPI",
+              "purl": "pkg:pypi/django"
+            },
+            "ranges": [
+              {
+                "type": "ECOSYSTEM",
+                "events": [
+                  {
+                    "introduced": "5.0"
+                  },
+                  {
+                    "fixed": "5.0.2"
+                  }
+                ]
+              }
+            ]
+          }
+        ]
+      },
+      {
+        "id": "PYSEC-2021-109",
+        "aliases": [
+          "BIT-django-2021-35042",
+          "CVE-2021-35042",
+          "GHSA-xpfp-f569-q3p2"
+        ],
+        "summary": null,
+        "affected": [
+          {
+            "package": {
+              "name": "django",
+              "ecosystem": "PyPI",
+              "purl": "pkg:pypi/django"
+            },
+            "ranges": [
+              {
+                "type": "ECOSYSTEM",
+                "events": [
+                  {
+                    "introduced": "3.1"
+                  },
+                  {
+                    "fixed": "3.1.13"
+                  },
+                  {
+                    "introduced": "3.2"
+                  },
+                  {
+                    "fixed": "3.2.5"
+                  }
+                ]
+              }
+            ]
+          }
+        ]
+      },
+      {
+        "id": "PYSEC-2021-439",
+        "aliases": [
+          "BIT-django-2021-44420",
+          "CVE-2021-44420",
+          "GHSA-v6rh-hp5x-86rv"
+        ],
+        "summary": null,
+        "affected": [
+          {
+            "package": {
+              "name": "django",
+              "ecosystem": "PyPI",
+              "purl": "pkg:pypi/django"
+            },
+            "ranges": [
+              {
+                "type": "ECOSYSTEM",
+                "events": [
+                  {
+                    "introduced": "2.2"
+                  },
+                  {
+                    "fixed": "2.2.25"
+                  },
+                  {
+                    "introduced": "3.1"
+                  },
+                  {
+                    "fixed": "3.1.14"
+                  },
+                  {
+                    "introduced": "3.2"
+                  },
+                  {
+                    "fixed": "3.2.10"
+                  }
+                ]
+              }
+            ]
+          }
+        ]
+      },
+      {
+        "id": "PYSEC-2021-7",
+        "aliases": [
+          "BIT-django-2021-31542",
+          "CVE-2021-31542",
+          "GHSA-rxjp-mfm9-w4wr"
+        ],
+        "summary": null,
+        "affected": [
+          {
+            "package": {
+              "name": "django",
+              "ecosystem": "PyPI",
+              "purl": "pkg:pypi/django"
+            },
+            "ranges": [
+              {
+                "type": "ECOSYSTEM",
+                "events": [
+                  {
+                    "introduced": "2.2"
+                  },
+                  {
+                    "fixed": "2.2.21"
+                  },
+                  {
+                    "introduced": "3.1"
+                  },
+                  {
+                    "fixed": "3.1.9"
+                  },
+                  {
+                    "introduced": "3.2"
+                  },
+                  {
+                    "fixed": "3.2.1"
+                  }
+                ]
+              }
+            ]
+          }
+        ]
+      },
+      {
+        "id": "PYSEC-2021-8",
+        "aliases": [
+          "BIT-django-2021-32052",
+          "CVE-2021-32052",
+          "GHSA-qm57-vhq3-3fwf"
+        ],
+        "summary": null,
+        "affected": [
+          {
+            "package": {
+              "name": "django",
+              "ecosystem": "PyPI",
+              "purl": "pkg:pypi/django"
+            },
+            "ranges": [
+              {
+                "type": "ECOSYSTEM",
+                "events": [
+                  {
+                    "introduced": "2.2"
+                  },
+                  {
+                    "fixed": "2.2.22"
+                  },
+                  {
+                    "introduced": "3.1"
+                  },
+                  {
+                    "fixed": "3.1.10"
+                  },
+                  {
+                    "introduced": "3.2"
+                  },
+                  {
+                    "fixed": "3.2.2"
+                  }
+                ]
+              }
+            ]
+          }
+        ]
+      },
+      {
+        "id": "PYSEC-2021-98",
+        "aliases": [
+          "BIT-django-2021-33203",
+          "CVE-2021-33203",
+          "GHSA-68w8-qjq3-2gfm"
+        ],
+        "summary": null,
+        "affected": [
+          {
+            "package": {
+              "name": "django",
+              "ecosystem": "PyPI",
+              "purl": "pkg:pypi/django"
+            },
+            "ranges": [
+              {
+                "type": "ECOSYSTEM",
+                "events": [
+                  {
+                    "introduced": "0"
+                  },
+                  {
+                    "fixed": "2.2.24"
+                  },
+                  {
+                    "introduced": "3.0"
+                  },
+                  {
+                    "fixed": "3.1.12"
+                  },
+                  {
+                    "introduced": "3.2"
+                  },
+                  {
+                    "fixed": "3.2.4"
+                  }
+                ]
+              }
+            ]
+          }
+        ]
+      },
+      {
+        "id": "PYSEC-2021-99",
+        "aliases": [
+          "BIT-django-2021-33571",
+          "CVE-2021-33571",
+          "GHSA-p99v-5w3c-jqq9"
+        ],
+        "summary": null,
+        "affected": [
+          {
+            "package": {
+              "name": "django",
+              "ecosystem": "PyPI",
+              "purl": "pkg:pypi/django"
+            },
+            "ranges": [
+              {
+                "type": "ECOSYSTEM",
+                "events": [
+                  {
+                    "introduced": "2.2"
+                  },
+                  {
+                    "fixed": "2.2.24"
+                  },
+                  {
+                    "introduced": "3.0"
+                  },
+                  {
+                    "fixed": "3.1.12"
+                  },
+                  {
+                    "introduced": "3.2"
+                  },
+                  {
+                    "fixed": "3.2.4"
+                  }
+                ]
+              }
+            ]
+          }
+        ]
+      },
+      {
+        "id": "PYSEC-2022-1",
+        "aliases": [
+          "BIT-django-2021-45115",
+          "CVE-2021-45115",
+          "GHSA-53qw-q765-4fww"
+        ],
+        "summary": null,
+        "affected": [
+          {
+            "package": {
+              "name": "django",
+              "ecosystem": "PyPI",
+              "purl": "pkg:pypi/django"
+            },
+            "ranges": [
+              {
+                "type": "ECOSYSTEM",
+                "events": [
+                  {
+                    "introduced": "2.2"
+                  },
+                  {
+                    "fixed": "2.2.26"
+                  },
+                  {
+                    "introduced": "3.2"
+                  },
+                  {
+                    "fixed": "3.2.11"
+                  },
+                  {
+                    "introduced": "4.0"
+                  },
+                  {
+                    "fixed": "4.0.1"
+                  }
+                ]
+              }
+            ]
+          }
+        ]
+      },
+      {
+        "id": "PYSEC-2022-19",
+        "aliases": [
+          "BIT-django-2022-22818",
+          "CVE-2022-22818",
+          "GHSA-95rw-fx8r-36v6"
+        ],
+        "summary": null,
+        "affected": [
+          {
+            "package": {
+              "name": "django",
+              "ecosystem": "PyPI",
+              "purl": "pkg:pypi/django"
+            },
+            "ranges": [
+              {
+                "type": "ECOSYSTEM",
+                "events": [
+                  {
+                    "introduced": "2.2"
+                  },
+                  {
+                    "fixed": "2.2.27"
+                  },
+                  {
+                    "introduced": "3.2"
+                  },
+                  {
+                    "fixed": "3.2.12"
+                  },
+                  {
+                    "introduced": "4.0"
+                  },
+                  {
+                    "fixed": "4.0.2"
+                  }
+                ]
+              }
+            ]
+          }
+        ]
+      },
+      {
+        "id": "PYSEC-2022-190",
+        "aliases": [
+          "BIT-django-2022-28346",
+          "CVE-2022-28346",
+          "GHSA-2gwj-7jmv-h26r"
+        ],
+        "summary": null,
+        "affected": [
+          {
+            "package": {
+              "name": "django",
+              "ecosystem": "PyPI",
+              "purl": "pkg:pypi/django"
+            },
+            "ranges": [
+              {
+                "type": "ECOSYSTEM",
+                "events": [
+                  {
+                    "introduced": "4.0"
+                  },
+                  {
+                    "fixed": "4.0.4"
+                  },
+                  {
+                    "introduced": "3.2"
+                  },
+                  {
+                    "fixed": "3.2.13"
+                  },
+                  {
+                    "introduced": "2.2"
+                  },
+                  {
+                    "fixed": "2.2.28"
+                  }
+                ]
+              }
+            ]
+          }
+        ]
+      },
+      {
+        "id": "PYSEC-2022-191",
+        "aliases": [
+          "BIT-django-2022-28347",
+          "CVE-2022-28347",
+          "GHSA-w24h-v9qh-8gxj"
+        ],
+        "summary": null,
+        "affected": [
+          {
+            "package": {
+              "name": "django",
+              "ecosystem": "PyPI",
+              "purl": "pkg:pypi/django"
+            },
+            "ranges": [
+              {
+                "type": "ECOSYSTEM",
+                "events": [
+                  {
+                    "introduced": "4.0"
+                  },
+                  {
+                    "fixed": "4.0.4"
+                  },
+                  {
+                    "introduced": "3.2"
+                  },
+                  {
+                    "fixed": "3.2.13"
+                  },
+                  {
+                    "introduced": "2.2"
+                  },
+                  {
+                    "fixed": "2.2.28"
+                  }
+                ]
+              }
+            ]
+          }
+        ]
+      },
+      {
+        "id": "PYSEC-2022-2",
+        "aliases": [
+          "BIT-django-2021-45116",
+          "CVE-2021-45116",
+          "GHSA-8c5j-9r9f-c6w8"
+        ],
+        "summary": null,
+        "affected": [
+          {
+            "package": {
+              "name": "django",
+              "ecosystem": "PyPI",
+              "purl": "pkg:pypi/django"
+            },
+            "ranges": [
+              {
+                "type": "ECOSYSTEM",
+                "events": [
+                  {
+                    "introduced": "2.2"
+                  },
+                  {
+                    "fixed": "2.2.26"
+                  },
+                  {
+                    "introduced": "3.2"
+                  },
+                  {
+                    "fixed": "3.2.11"
+                  },
+                  {
+                    "introduced": "4.0"
+                  },
+                  {
+                    "fixed": "4.0.1"
+                  }
+                ]
+              }
+            ]
+          }
+        ]
+      },
+      {
+        "id": "PYSEC-2022-20",
+        "aliases": [
+          "BIT-django-2022-23833",
+          "CVE-2022-23833",
+          "GHSA-6cw3-g6wv-c2xv"
+        ],
+        "summary": null,
+        "affected": [
+          {
+            "package": {
+              "name": "django",
+              "ecosystem": "PyPI",
+              "purl": "pkg:pypi/django"
+            },
+            "ranges": [
+              {
+                "type": "ECOSYSTEM",
+                "events": [
+                  {
+                    "introduced": "2.2"
+                  },
+                  {
+                    "fixed": "2.2.27"
+                  },
+                  {
+                    "introduced": "3.2"
+                  },
+                  {
+                    "fixed": "3.2.12"
+                  },
+                  {
+                    "introduced": "4.0"
+                  },
+                  {
+                    "fixed": "4.0.2"
+                  }
+                ]
+              }
+            ]
+          }
+        ]
+      },
+      {
+        "id": "PYSEC-2022-213",
+        "aliases": [
+          "BIT-django-2022-34265",
+          "CVE-2022-34265",
+          "GHSA-p64x-8rxx-wf6q"
+        ],
+        "summary": null,
+        "affected": [
+          {
+            "package": {
+              "name": "django",
+              "ecosystem": "PyPI",
+              "purl": "pkg:pypi/django"
+            },
+            "ranges": [
+              {
+                "type": "ECOSYSTEM",
+                "events": [
+                  {
+                    "introduced": "3.2"
+                  },
+                  {
+                    "fixed": "3.2.14"
+                  },
+                  {
+                    "introduced": "4.0"
+                  },
+                  {
+                    "fixed": "4.0.6"
+                  }
+                ]
+              }
+            ]
+          }
+        ]
+      },
+      {
+        "id": "PYSEC-2022-245",
+        "aliases": [
+          "BIT-django-2022-36359",
+          "CVE-2022-36359",
+          "GHSA-8x94-hmjh-97hq"
+        ],
+        "summary": null,
+        "affected": [
+          {
+            "package": {
+              "name": "django",
+              "ecosystem": "PyPI",
+              "purl": "pkg:pypi/django"
+            },
+            "ranges": [
+              {
+                "type": "ECOSYSTEM",
+                "events": [
+                  {
+                    "introduced": "3.2"
+                  },
+                  {
+                    "fixed": "3.2.15"
+                  },
+                  {
+                    "introduced": "4.0"
+                  },
+                  {
+                    "fixed": "4.0.7"
+                  }
+                ]
+              }
+            ]
+          }
+        ]
+      },
+      {
+        "id": "PYSEC-2022-3",
+        "aliases": [
+          "BIT-django-2021-45452",
+          "CVE-2021-45452",
+          "GHSA-jrh2-hc4r-7jwx"
+        ],
+        "summary": null,
+        "affected": [
+          {
+            "package": {
+              "name": "django",
+              "ecosystem": "PyPI",
+              "purl": "pkg:pypi/django"
+            },
+            "ranges": [
+              {
+                "type": "ECOSYSTEM",
+                "events": [
+                  {
+                    "introduced": "2.2"
+                  },
+                  {
+                    "fixed": "2.2.26"
+                  },
+                  {
+                    "introduced": "3.2"
+                  },
+                  {
+                    "fixed": "3.2.11"
+                  },
+                  {
+                    "introduced": "4.0"
+                  },
+                  {
+                    "fixed": "4.0.1"
+                  }
+                ]
+              }
+            ]
+          }
+        ]
+      },
+      {
+        "id": "PYSEC-2022-304",
+        "aliases": [
+          "BIT-django-2022-41323",
+          "CVE-2022-41323",
+          "GHSA-qrw5-5h28-6cmg"
+        ],
+        "summary": null,
+        "affected": [
+          {
+            "package": {
+              "name": "django",
+              "ecosystem": "PyPI",
+              "purl": "pkg:pypi/django"
+            },
+            "ranges": [
+              {
+                "type": "GIT",
+                "events": [
+                  {
+                    "introduced": "0"
+                  },
+                  {
+                    "fixed": "5b6b257fa7ec37ff27965358800c67e2dd11c924"
+                  }
+                ]
+              },
+              {
+                "type": "ECOSYSTEM",
+                "events": [
+                  {
+                    "introduced": "3.2"
+                  },
+                  {
+                    "fixed": "3.2.16"
+                  },
+                  {
+                    "introduced": "4.0"
+                  },
+                  {
+                    "fixed": "4.0.8"
+                  },
+                  {
+                    "introduced": "4.1"
+                  },
+                  {
+                    "fixed": "4.1.2"
+                  }
+                ]
+              }
+            ]
+          }
+        ]
+      },
+      {
+        "id": "PYSEC-2023-100",
+        "aliases": [
+          "BIT-django-2023-36053",
+          "CVE-2023-36053",
+          "GHSA-jh3w-4vvf-mjgr"
+        ],
+        "summary": null,
+        "affected": [
+          {
+            "package": {
+              "name": "django",
+              "ecosystem": "PyPI",
+              "purl": "pkg:pypi/django"
+            },
+            "ranges": [
+              {
+                "type": "ECOSYSTEM",
+                "events": [
+                  {
+                    "introduced": "4.2"
+                  },
+                  {
+                    "fixed": "4.2.3"
+                  },
+                  {
+                    "introduced": "4.0"
+                  },
+                  {
+                    "fixed": "4.1.10"
+                  },
+                  {
+                    "introduced": "3.2"
+                  },
+                  {
+                    "fixed": "3.2.20"
+                  }
+                ]
+              }
+            ]
+          }
+        ]
+      },
+      {
+        "id": "PYSEC-2023-12",
+        "aliases": [
+          "BIT-django-2023-23969",
+          "CVE-2023-23969",
+          "GHSA-q2jf-h9jm-m7p4"
+        ],
+        "summary": null,
+        "affected": [
+          {
+            "package": {
+              "name": "django",
+              "ecosystem": "PyPI",
+              "purl": "pkg:pypi/django"
+            },
+            "ranges": [
+              {
+                "type": "ECOSYSTEM",
+                "events": [
+                  {
+                    "introduced": "3.2"
+                  },
+                  {
+                    "fixed": "3.2.17"
+                  },
+                  {
+                    "introduced": "4.0"
+                  },
+                  {
+                    "fixed": "4.0.9"
+                  },
+                  {
+                    "introduced": "4.1"
+                  },
+                  {
+                    "fixed": "4.1.6"
+                  }
+                ]
+              }
+            ]
+          }
+        ]
+      },
+      {
+        "id": "PYSEC-2023-13",
+        "aliases": [
+          "BIT-django-2023-24580",
+          "CVE-2023-24580",
+          "GHSA-2hrw-hx67-34x6"
+        ],
+        "summary": null,
+        "affected": [
+          {
+            "package": {
+              "name": "django",
+              "ecosystem": "PyPI",
+              "purl": "pkg:pypi/django"
+            },
+            "ranges": [
+              {
+                "type": "ECOSYSTEM",
+                "events": [
+                  {
+                    "introduced": "3.2"
+                  },
+                  {
+                    "fixed": "3.2.18"
+                  },
+                  {
+                    "introduced": "4.0"
+                  },
+                  {
+                    "fixed": "4.0.10"
+                  },
+                  {
+                    "introduced": "4.1"
+                  },
+                  {
+                    "fixed": "4.1.7"
+                  }
+                ]
+              }
+            ]
+          }
+        ]
+      },
+      {
+        "id": "PYSEC-2023-222",
+        "aliases": [
+          "BIT-django-2023-46695",
+          "CVE-2023-46695",
+          "GHSA-qmf9-6jqf-j8fq"
+        ],
+        "summary": null,
+        "affected": [
+          {
+            "package": {
+              "name": "django",
+              "ecosystem": "PyPI",
+              "purl": "pkg:pypi/django"
+            },
+            "ranges": [
+              {
+                "type": "ECOSYSTEM",
+                "events": [
+                  {
+                    "introduced": "3.2"
+                  },
+                  {
+                    "fixed": "3.2.23"
+                  },
+                  {
+                    "introduced": "4.1"
+                  },
+                  {
+                    "fixed": "4.1.13"
+                  },
+                  {
+                    "introduced": "4.2"
+                  },
+                  {
+                    "fixed": "4.2.7"
+                  }
+                ]
+              }
+            ]
+          }
+        ]
+      },
+      {
+        "id": "PYSEC-2023-225",
+        "aliases": [
+          "BIT-django-2023-41164",
+          "CVE-2023-41164",
+          "GHSA-7h4p-27mh-hmrw"
+        ],
+        "summary": null,
+        "affected": [
+          {
+            "package": {
+              "name": "django",
+              "ecosystem": "PyPI",
+              "purl": "pkg:pypi/django"
+            },
+            "ranges": [
+              {
+                "type": "ECOSYSTEM",
+                "events": [
+                  {
+                    "introduced": "3.2"
+                  },
+                  {
+                    "fixed": "3.2.21"
+                  },
+                  {
+                    "introduced": "4.1"
+                  },
+                  {
+                    "fixed": "4.1.11"
+                  },
+                  {
+                    "introduced": "4.2"
+                  },
+                  {
+                    "fixed": "4.2.5"
+                  }
+                ]
+              }
+            ]
+          }
+        ]
+      },
+      {
+        "id": "PYSEC-2023-226",
+        "aliases": [
+          "BIT-django-2023-43665",
+          "CVE-2023-43665",
+          "GHSA-h8gc-pgj2-vjm3"
+        ],
+        "summary": null,
+        "affected": [
+          {
+            "package": {
+              "name": "django",
+              "ecosystem": "PyPI",
+              "purl": "pkg:pypi/django"
+            },
+            "ranges": [
+              {
+                "type": "ECOSYSTEM",
+                "events": [
+                  {
+                    "introduced": "3.2"
+                  },
+                  {
+                    "fixed": "3.2.22"
+                  },
+                  {
+                    "introduced": "4.1"
+                  },
+                  {
+                    "fixed": "4.1.12"
+                  },
+                  {
+                    "introduced": "4.2"
+                  },
+                  {
+                    "fixed": "4.2.6"
+                  }
+                ]
+              }
+            ]
+          }
+        ]
+      },
+      {
+        "id": "PYSEC-2023-61",
+        "aliases": [
+          "BIT-django-2023-31047",
+          "CVE-2023-31047",
+          "GHSA-r3xc-prgr-mg9p"
+        ],
+        "summary": null,
+        "affected": [
+          {
+            "package": {
+              "name": "django",
+              "ecosystem": "PyPI",
+              "purl": "pkg:pypi/django"
+            },
+            "ranges": [
+              {
+                "type": "ECOSYSTEM",
+                "events": [
+                  {
+                    "introduced": "3.2"
+                  },
+                  {
+                    "fixed": "3.2.19"
+                  },
+                  {
+                    "introduced": "4.0"
+                  },
+                  {
+                    "fixed": "4.1.9"
+                  },
+                  {
+                    "introduced": "4.2"
+                  },
+                  {
+                    "fixed": "4.2.1"
+                  }
+                ]
+              }
+            ]
+          }
+        ]
+      },
+      {
+        "id": "PYSEC-2024-28",
+        "aliases": [
+          "BIT-django-2024-24680",
+          "CVE-2024-24680",
+          "GHSA-xxj9-f6rv-m3x4"
+        ],
+        "summary": null,
+        "affected": [
+          {
+            "package": {
+              "name": "django",
+              "ecosystem": "PyPI",
+              "purl": "pkg:pypi/django"
+            },
+            "ranges": [
+              {
+                "type": "ECOSYSTEM",
+                "events": [
+                  {
+                    "introduced": "3.2"
+                  },
+                  {
+                    "fixed": "3.2.24"
+                  },
+                  {
+                    "introduced": "4.2"
+                  },
+                  {
+                    "fixed": "4.2.10"
+                  },
+                  {
+                    "introduced": "5.0"
+                  },
+                  {
+                    "fixed": "5.0.2"
+                  }
+                ]
+              }
+            ]
+          }
+        ]
+      },
+      {
+        "id": "PYSEC-2024-47",
+        "aliases": [
+          "BIT-django-2024-27351",
+          "CVE-2024-27351",
+          "GHSA-vm8q-m57g-pff3"
+        ],
+        "summary": null,
+        "affected": [
+          {
+            "package": {
+              "name": "django",
+              "ecosystem": "PyPI",
+              "purl": "pkg:pypi/django"
+            },
+            "ranges": [
+              {
+                "type": "ECOSYSTEM",
+                "events": [
+                  {
+                    "introduced": "3.2"
+                  },
+                  {
+                    "fixed": "3.2.25"
+                  },
+                  {
+                    "introduced": "4.2"
+                  },
+                  {
+                    "fixed": "4.2.11"
+                  },
+                  {
+                    "introduced": "5.0"
+                  },
+                  {
+                    "fixed": "5.0.3"
+                  }
+                ]
+              }
+            ]
+          }
+        ]
+      },
+      {
+        "id": "PYSEC-2026-1297",
+        "aliases": [
+          "BIT-django-2024-45231",
+          "CVE-2024-45231",
+          "GHSA-rrqc-c2jx-6jgv"
+        ],
+        "summary": "Django allows enumeration of user e-mail addresses",
+        "affected": [
+          {
+            "package": {
+              "name": "django",
+              "ecosystem": "PyPI",
+              "purl": "pkg:pypi/django"
+            },
+            "ranges": [
+              {
+                "type": "ECOSYSTEM",
+                "events": [
+                  {
+                    "introduced": "0"
+                  },
+                  {
+                    "fixed": "4.2.16"
+                  },
+                  {
+                    "introduced": "5.0"
+                  },
+                  {
+                    "fixed": "5.0.9"
+                  },
+                  {
+                    "introduced": "5.1"
+                  },
+                  {
+                    "fixed": "5.1.1"
+                  }
+                ]
+              }
+            ]
+          }
+        ]
+      },
+      {
+        "id": "PYSEC-2026-3717",
+        "aliases": [
+          "BIT-django-2026-15830",
+          "CVE-2026-15830",
+          "GHSA-q238-5cxm-5c9h"
+        ],
+        "summary": null,
+        "affected": [
+          {
+            "package": {
+              "name": "django",
+              "ecosystem": "PyPI",
+              "purl": "pkg:pypi/django"
+            },
+            "ranges": [
+              {
+                "type": "ECOSYSTEM",
+                "events": [
+                  {
+                    "introduced": "0"
+                  },
+                  {
+                    "fixed": "5.2.17"
+                  },
+                  {
+                    "introduced": "6.0"
+                  },
+                  {
+                    "fixed": "6.0.8"
+                  }
+                ]
+              }
+            ]
+          }
+        ]
+      },
+      {
+        "id": "PYSEC-2026-4035",
+        "aliases": [
+          "BIT-django-2026-15307",
+          "CVE-2026-15307",
+          "GHSA-wvqv-fj8w-qmhm"
+        ],
+        "summary": "Django GeoDjango spatial lookups allow file writes and outbound requests through GDAL raster parsing",
+        "affected": [
+          {
+            "package": {
+              "name": "django",
+              "ecosystem": "PyPI",
+              "purl": "pkg:pypi/django"
+            },
+            "ranges": [
+              {
+                "type": "ECOSYSTEM",
+                "events": [
+                  {
+                    "introduced": "0"
+                  },
+                  {
+                    "fixed": "5.2.17"
+                  },
+                  {
+                    "introduced": "6.0a1"
+                  },
+                  {
+                    "fixed": "6.0.8"
+                  }
+                ]
+              }
+            ]
+          }
+        ]
+      }
+    ]
+  }
+}

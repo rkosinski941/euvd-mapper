@@ -1,0 +1,5268 @@
+{
+  "status": 200,
+  "url": "https://api.osv.dev/v1/query",
+  "method": "POST",
+  "payload": {
+    "vulns": [
+      {
+        "id": "GHSA-23hv-mwm6-g8jf",
+        "aliases": [
+          "BIT-tomcat-2025-55668",
+          "CVE-2025-55668"
+        ],
+        "summary": "Apache Tomcat Session Fixation vulnerability",
+        "affected": [
+          {
+            "package": {
+              "name": "org.apache.tomcat:tomcat-catalina",
+              "ecosystem": "Maven",
+              "purl": "pkg:maven/org.apache.tomcat/tomcat-catalina"
+            },
+            "ranges": [
+              {
+                "type": "ECOSYSTEM",
+                "events": [
+                  {
+                    "introduced": "11.0.0-M1"
+                  },
+                  {
+                    "fixed": "11.0.8"
+                  }
+                ]
+              }
+            ]
+          },
+          {
+            "package": {
+              "name": "org.apache.tomcat:tomcat-catalina",
+              "ecosystem": "Maven",
+              "purl": "pkg:maven/org.apache.tomcat/tomcat-catalina"
+            },
+            "ranges": [
+              {
+                "type": "ECOSYSTEM",
+                "events": [
+                  {
+                    "introduced": "10.1.0-M1"
+                  },
+                  {
+                    "fixed": "10.1.42"
+                  }
+                ]
+              }
+            ]
+          },
+          {
+            "package": {
+              "name": "org.apache.tomcat:tomcat-catalina",
+              "ecosystem": "Maven",
+              "purl": "pkg:maven/org.apache.tomcat/tomcat-catalina"
+            },
+            "ranges": [
+              {
+                "type": "ECOSYSTEM",
+                "events": [
+                  {
+                    "introduced": "9.0.0.M1"
+                  },
+                  {
+                    "fixed": "9.0.106"
+                  }
+                ]
+              }
+            ]
+          },
+          {
+            "package": {
+              "name": "org.apache.tomcat.embed:tomcat-embed-core",
+              "ecosystem": "Maven",
+              "purl": "pkg:maven/org.apache.tomcat.embed/tomcat-embed-core"
+            },
+            "ranges": [
+              {
+                "type": "ECOSYSTEM",
+                "events": [
+                  {
+                    "introduced": "11.0.0-M1"
+                  },
+                  {
+                    "fixed": "11.0.8"
+                  }
+                ]
+              }
+            ]
+          },
+          {
+            "package": {
+              "name": "org.apache.tomcat.embed:tomcat-embed-core",
+              "ecosystem": "Maven",
+              "purl": "pkg:maven/org.apache.tomcat.embed/tomcat-embed-core"
+            },
+            "ranges": [
+              {
+                "type": "ECOSYSTEM",
+                "events": [
+                  {
+                    "introduced": "10.1.0-M1"
+                  },
+                  {
+                    "fixed": "10.1.42"
+                  }
+                ]
+              }
+            ]
+          },
+          {
+            "package": {
+              "name": "org.apache.tomcat.embed:tomcat-embed-core",
+              "ecosystem": "Maven",
+              "purl": "pkg:maven/org.apache.tomcat.embed/tomcat-embed-core"
+            },
+            "ranges": [
+              {
+                "type": "ECOSYSTEM",
+                "events": [
+                  {
+                    "introduced": "9.0.0.M1"
+                  },
+                  {
+                    "fixed": "9.0.106"
+                  }
+                ]
+              }
+            ]
+          }
+        ]
+      },
+      {
+        "id": "GHSA-2c9m-w27f-53rm",
+        "aliases": [
+          "BIT-tomcat-2023-28708",
+          "CVE-2023-28708"
+        ],
+        "summary": "Apache Tomcat vulnerable to Unprotected Transport of Credentials",
+        "affected": [
+          {
+            "package": {
+              "name": "org.apache.tomcat:tomcat-catalina",
+              "ecosystem": "Maven",
+              "purl": "pkg:maven/org.apache.tomcat/tomcat-catalina"
+            },
+            "ranges": [
+              {
+                "type": "ECOSYSTEM",
+                "events": [
+                  {
+                    "introduced": "11.0.0-M1"
+                  },
+                  {
+                    "fixed": "11.0.0-M3"
+                  }
+                ]
+              }
+            ]
+          },
+          {
+            "package": {
+              "name": "org.apache.tomcat:tomcat-catalina",
+              "ecosystem": "Maven",
+              "purl": "pkg:maven/org.apache.tomcat/tomcat-catalina"
+            },
+            "ranges": [
+              {
+                "type": "ECOSYSTEM",
+                "events": [
+                  {
+                    "introduced": "10.1.0-M1"
+                  },
+                  {
+                    "fixed": "10.1.6"
+                  }
+                ]
+              }
+            ]
+          },
+          {
+            "package": {
+              "name": "org.apache.tomcat:tomcat-catalina",
+              "ecosystem": "Maven",
+              "purl": "pkg:maven/org.apache.tomcat/tomcat-catalina"
+            },
+            "ranges": [
+              {
+                "type": "ECOSYSTEM",
+                "events": [
+                  {
+                    "introduced": "9.0.0-M1"
+                  },
+                  {
+                    "fixed": "9.0.72"
+                  }
+                ]
+              }
+            ]
+          },
+          {
+            "package": {
+              "name": "org.apache.tomcat:tomcat-catalina",
+              "ecosystem": "Maven",
+              "purl": "pkg:maven/org.apache.tomcat/tomcat-catalina"
+            },
+            "ranges": [
+              {
+                "type": "ECOSYSTEM",
+                "events": [
+                  {
+                    "introduced": "8.5.0"
+                  },
+                  {
+                    "fixed": "8.5.86"
+                  }
+                ]
+              }
+            ]
+          }
+        ]
+      },
+      {
+        "id": "GHSA-344f-f5vg-2jfj",
+        "aliases": [
+          "BIT-tomcat-2020-9484",
+          "CVE-2020-9484"
+        ],
+        "summary": "Potential remote code execution in Apache Tomcat",
+        "affected": [
+          {
+            "package": {
+              "name": "org.apache.tomcat:tomcat-catalina",
+              "ecosystem": "Maven",
+              "purl": "pkg:maven/org.apache.tomcat/tomcat-catalina"
+            },
+            "ranges": [
+              {
+                "type": "ECOSYSTEM",
+                "events": [
+                  {
+                    "introduced": "10.0.0-M1"
+                  },
+                  {
+                    "fixed": "10.0.0-M5"
+                  }
+                ]
+              }
+            ]
+          },
+          {
+            "package": {
+              "name": "org.apache.tomcat:tomcat-catalina",
+              "ecosystem": "Maven",
+              "purl": "pkg:maven/org.apache.tomcat/tomcat-catalina"
+            },
+            "ranges": [
+              {
+                "type": "ECOSYSTEM",
+                "events": [
+                  {
+                    "introduced": "9.0.0"
+                  },
+                  {
+                    "fixed": "9.0.35"
+                  }
+                ]
+              }
+            ]
+          },
+          {
+            "package": {
+              "name": "org.apache.tomcat:tomcat-catalina",
+              "ecosystem": "Maven",
+              "purl": "pkg:maven/org.apache.tomcat/tomcat-catalina"
+            },
+            "ranges": [
+              {
+                "type": "ECOSYSTEM",
+                "events": [
+                  {
+                    "introduced": "8.0.0"
+                  },
+                  {
+                    "fixed": "8.5.55"
+                  }
+                ]
+              }
+            ]
+          },
+          {
+            "package": {
+              "name": "org.apache.tomcat:tomcat-catalina",
+              "ecosystem": "Maven",
+              "purl": "pkg:maven/org.apache.tomcat/tomcat-catalina"
+            },
+            "ranges": [
+              {
+                "type": "ECOSYSTEM",
+                "events": [
+                  {
+                    "introduced": "7.0.0"
+                  },
+                  {
+                    "fixed": "7.0.104"
+                  }
+                ]
+              }
+            ]
+          },
+          {
+            "package": {
+              "name": "org.apache.tomcat.embed:tomcat-embed-core",
+              "ecosystem": "Maven",
+              "purl": "pkg:maven/org.apache.tomcat.embed/tomcat-embed-core"
+            },
+            "ranges": [
+              {
+                "type": "ECOSYSTEM",
+                "events": [
+                  {
+                    "introduced": "10.0.0-M1"
+                  },
+                  {
+                    "fixed": "10.0.0-M5"
+                  }
+                ]
+              }
+            ]
+          },
+          {
+            "package": {
+              "name": "org.apache.tomcat.embed:tomcat-embed-core",
+              "ecosystem": "Maven",
+              "purl": "pkg:maven/org.apache.tomcat.embed/tomcat-embed-core"
+            },
+            "ranges": [
+              {
+                "type": "ECOSYSTEM",
+                "events": [
+                  {
+                    "introduced": "9.0.0"
+                  },
+                  {
+                    "fixed": "9.0.35"
+                  }
+                ]
+              }
+            ]
+          },
+          {
+            "package": {
+              "name": "org.apache.tomcat.embed:tomcat-embed-core",
+              "ecosystem": "Maven",
+              "purl": "pkg:maven/org.apache.tomcat.embed/tomcat-embed-core"
+            },
+            "ranges": [
+              {
+                "type": "ECOSYSTEM",
+                "events": [
+                  {
+                    "introduced": "8.0.0"
+                  },
+                  {
+                    "fixed": "8.5.55"
+                  }
+                ]
+              }
+            ]
+          },
+          {
+            "package": {
+              "name": "org.apache.tomcat.embed:tomcat-embed-core",
+              "ecosystem": "Maven",
+              "purl": "pkg:maven/org.apache.tomcat.embed/tomcat-embed-core"
+            },
+            "ranges": [
+              {
+                "type": "ECOSYSTEM",
+                "events": [
+                  {
+                    "introduced": "7.0.0"
+                  },
+                  {
+                    "fixed": "7.0.104"
+                  }
+                ]
+              }
+            ]
+          }
+        ]
+      },
+      {
+        "id": "GHSA-5j33-cvvr-w245",
+        "aliases": [
+          "BIT-tomcat-2024-50379",
+          "CVE-2024-50379"
+        ],
+        "summary": "Apache Tomcat Time-of-check Time-of-use (TOCTOU) Race Condition vulnerability",
+        "affected": [
+          {
+            "package": {
+              "name": "org.apache.tomcat:tomcat-catalina",
+              "ecosystem": "Maven",
+              "purl": "pkg:maven/org.apache.tomcat/tomcat-catalina"
+            },
+            "ranges": [
+              {
+                "type": "ECOSYSTEM",
+                "events": [
+                  {
+                    "introduced": "11.0.0-M1"
+                  },
+                  {
+                    "fixed": "11.0.2"
+                  }
+                ]
+              }
+            ]
+          },
+          {
+            "package": {
+              "name": "org.apache.tomcat:tomcat-catalina",
+              "ecosystem": "Maven",
+              "purl": "pkg:maven/org.apache.tomcat/tomcat-catalina"
+            },
+            "ranges": [
+              {
+                "type": "ECOSYSTEM",
+                "events": [
+                  {
+                    "introduced": "10.1.0-M1"
+                  },
+                  {
+                    "fixed": "10.1.34"
+                  }
+                ]
+              }
+            ]
+          },
+          {
+            "package": {
+              "name": "org.apache.tomcat:tomcat-catalina",
+              "ecosystem": "Maven",
+              "purl": "pkg:maven/org.apache.tomcat/tomcat-catalina"
+            },
+            "ranges": [
+              {
+                "type": "ECOSYSTEM",
+                "events": [
+                  {
+                    "introduced": "9.0.0.M1"
+                  },
+                  {
+                    "fixed": "9.0.98"
+                  }
+                ]
+              }
+            ]
+          },
+          {
+            "package": {
+              "name": "org.apache.tomcat.embed:tomcat-embed-core",
+              "ecosystem": "Maven",
+              "purl": "pkg:maven/org.apache.tomcat.embed/tomcat-embed-core"
+            },
+            "ranges": [
+              {
+                "type": "ECOSYSTEM",
+                "events": [
+                  {
+                    "introduced": "11.0.0-M1"
+                  },
+                  {
+                    "fixed": "11.0.2"
+                  }
+                ]
+              }
+            ]
+          },
+          {
+            "package": {
+              "name": "org.apache.tomcat.embed:tomcat-embed-core",
+              "ecosystem": "Maven",
+              "purl": "pkg:maven/org.apache.tomcat.embed/tomcat-embed-core"
+            },
+            "ranges": [
+              {
+                "type": "ECOSYSTEM",
+                "events": [
+                  {
+                    "introduced": "10.1.0-M1"
+                  },
+                  {
+                    "fixed": "10.1.34"
+                  }
+                ]
+              }
+            ]
+          },
+          {
+            "package": {
+              "name": "org.apache.tomcat.embed:tomcat-embed-core",
+              "ecosystem": "Maven",
+              "purl": "pkg:maven/org.apache.tomcat.embed/tomcat-embed-core"
+            },
+            "ranges": [
+              {
+                "type": "ECOSYSTEM",
+                "events": [
+                  {
+                    "introduced": "9.0.0.M1"
+                  },
+                  {
+                    "fixed": "9.0.98"
+                  }
+                ]
+              }
+            ]
+          },
+          {
+            "package": {
+              "name": "org.apache.tomcat:tomcat-catalina",
+              "ecosystem": "Maven",
+              "purl": "pkg:maven/org.apache.tomcat/tomcat-catalina"
+            },
+            "ranges": [
+              {
+                "type": "ECOSYSTEM",
+                "events": [
+                  {
+                    "introduced": "8.5.0"
+                  },
+                  {
+                    "last_affected": "8.5.100"
+                  }
+                ]
+              }
+            ]
+          },
+          {
+            "package": {
+              "name": "org.apache.tomcat.embed:tomcat-embed-core",
+              "ecosystem": "Maven",
+              "purl": "pkg:maven/org.apache.tomcat.embed/tomcat-embed-core"
+            },
+            "ranges": [
+              {
+                "type": "ECOSYSTEM",
+                "events": [
+                  {
+                    "introduced": "8.5.0"
+                  },
+                  {
+                    "last_affected": "8.5.100"
+                  }
+                ]
+              }
+            ]
+          }
+        ]
+      },
+      {
+        "id": "GHSA-5m62-pw8w-7w9f",
+        "aliases": [
+          "BIT-tomcat-2026-43515",
+          "CVE-2026-43515"
+        ],
+        "summary": "Apache Tomcat - Security constraints not correctly applied",
+        "affected": [
+          {
+            "package": {
+              "name": "org.apache.tomcat.embed:tomcat-embed-core",
+              "ecosystem": "Maven",
+              "purl": "pkg:maven/org.apache.tomcat.embed/tomcat-embed-core"
+            },
+            "ranges": [
+              {
+                "type": "ECOSYSTEM",
+                "events": [
+                  {
+                    "introduced": "0"
+                  },
+                  {
+                    "fixed": "9.0.118"
+                  }
+                ]
+              }
+            ]
+          },
+          {
+            "package": {
+              "name": "org.apache.tomcat.embed:tomcat-embed-core",
+              "ecosystem": "Maven",
+              "purl": "pkg:maven/org.apache.tomcat.embed/tomcat-embed-core"
+            },
+            "ranges": [
+              {
+                "type": "ECOSYSTEM",
+                "events": [
+                  {
+                    "introduced": "10.1.0-M1"
+                  },
+                  {
+                    "fixed": "10.1.55"
+                  }
+                ]
+              }
+            ]
+          },
+          {
+            "package": {
+              "name": "org.apache.tomcat.embed:tomcat-embed-core",
+              "ecosystem": "Maven",
+              "purl": "pkg:maven/org.apache.tomcat.embed/tomcat-embed-core"
+            },
+            "ranges": [
+              {
+                "type": "ECOSYSTEM",
+                "events": [
+                  {
+                    "introduced": "11.0.0-M1"
+                  },
+                  {
+                    "fixed": "11.0.22"
+                  }
+                ]
+              }
+            ]
+          },
+          {
+            "package": {
+              "name": "org.apache.tomcat:tomcat",
+              "ecosystem": "Maven",
+              "purl": "pkg:maven/org.apache.tomcat/tomcat"
+            },
+            "ranges": [
+              {
+                "type": "ECOSYSTEM",
+                "events": [
+                  {
+                    "introduced": "0"
+                  },
+                  {
+                    "fixed": "9.0.118"
+                  }
+                ]
+              }
+            ]
+          },
+          {
+            "package": {
+              "name": "org.apache.tomcat:tomcat",
+              "ecosystem": "Maven",
+              "purl": "pkg:maven/org.apache.tomcat/tomcat"
+            },
+            "ranges": [
+              {
+                "type": "ECOSYSTEM",
+                "events": [
+                  {
+                    "introduced": "10.1.0-M1"
+                  },
+                  {
+                    "fixed": "10.1.55"
+                  }
+                ]
+              }
+            ]
+          },
+          {
+            "package": {
+              "name": "org.apache.tomcat:tomcat",
+              "ecosystem": "Maven",
+              "purl": "pkg:maven/org.apache.tomcat/tomcat"
+            },
+            "ranges": [
+              {
+                "type": "ECOSYSTEM",
+                "events": [
+                  {
+                    "introduced": "11.0.0-M1"
+                  },
+                  {
+                    "fixed": "11.0.22"
+                  }
+                ]
+              }
+            ]
+          },
+          {
+            "package": {
+              "name": "org.apache.tomcat:tomcat-catalina",
+              "ecosystem": "Maven",
+              "purl": "pkg:maven/org.apache.tomcat/tomcat-catalina"
+            },
+            "ranges": [
+              {
+                "type": "ECOSYSTEM",
+                "events": [
+                  {
+                    "introduced": "0"
+                  },
+                  {
+                    "fixed": "9.0.118"
+                  }
+                ]
+              }
+            ]
+          },
+          {
+            "package": {
+              "name": "org.apache.tomcat:tomcat-catalina",
+              "ecosystem": "Maven",
+              "purl": "pkg:maven/org.apache.tomcat/tomcat-catalina"
+            },
+            "ranges": [
+              {
+                "type": "ECOSYSTEM",
+                "events": [
+                  {
+                    "introduced": "10.1.0-M1"
+                  },
+                  {
+                    "fixed": "10.1.55"
+                  }
+                ]
+              }
+            ]
+          },
+          {
+            "package": {
+              "name": "org.apache.tomcat:tomcat-catalina",
+              "ecosystem": "Maven",
+              "purl": "pkg:maven/org.apache.tomcat/tomcat-catalina"
+            },
+            "ranges": [
+              {
+                "type": "ECOSYSTEM",
+                "events": [
+                  {
+                    "introduced": "11.0.0-M1"
+                  },
+                  {
+                    "fixed": "11.0.22"
+                  }
+                ]
+              }
+            ]
+          }
+        ]
+      },
+      {
+        "id": "GHSA-5mp6-jrq3-r938",
+        "aliases": [
+          "BIT-tomcat-2026-43513",
+          "CVE-2026-43513"
+        ],
+        "summary": "Apache Tomcat: LockOutRealm treats user names as case-sensitive",
+        "affected": [
+          {
+            "package": {
+              "name": "org.apache.tomcat.embed:tomcat-embed-core",
+              "ecosystem": "Maven",
+              "purl": "pkg:maven/org.apache.tomcat.embed/tomcat-embed-core"
+            },
+            "ranges": [
+              {
+                "type": "ECOSYSTEM",
+                "events": [
+                  {
+                    "introduced": "0"
+                  },
+                  {
+                    "fixed": "9.0.118"
+                  }
+                ]
+              }
+            ]
+          },
+          {
+            "package": {
+              "name": "org.apache.tomcat.embed:tomcat-embed-core",
+              "ecosystem": "Maven",
+              "purl": "pkg:maven/org.apache.tomcat.embed/tomcat-embed-core"
+            },
+            "ranges": [
+              {
+                "type": "ECOSYSTEM",
+                "events": [
+                  {
+                    "introduced": "10.1.0-M1"
+                  },
+                  {
+                    "fixed": "10.1.55"
+                  }
+                ]
+              }
+            ]
+          },
+          {
+            "package": {
+              "name": "org.apache.tomcat.embed:tomcat-embed-core",
+              "ecosystem": "Maven",
+              "purl": "pkg:maven/org.apache.tomcat.embed/tomcat-embed-core"
+            },
+            "ranges": [
+              {
+                "type": "ECOSYSTEM",
+                "events": [
+                  {
+                    "introduced": "11.0.0-M1"
+                  },
+                  {
+                    "fixed": "11.0.22"
+                  }
+                ]
+              }
+            ]
+          },
+          {
+            "package": {
+              "name": "org.apache.tomcat:tomcat",
+              "ecosystem": "Maven",
+              "purl": "pkg:maven/org.apache.tomcat/tomcat"
+            },
+            "ranges": [
+              {
+                "type": "ECOSYSTEM",
+                "events": [
+                  {
+                    "introduced": "0"
+                  },
+                  {
+                    "fixed": "9.0.118"
+                  }
+                ]
+              }
+            ]
+          },
+          {
+            "package": {
+              "name": "org.apache.tomcat:tomcat",
+              "ecosystem": "Maven",
+              "purl": "pkg:maven/org.apache.tomcat/tomcat"
+            },
+            "ranges": [
+              {
+                "type": "ECOSYSTEM",
+                "events": [
+                  {
+                    "introduced": "10.1.0-M1"
+                  },
+                  {
+                    "fixed": "10.1.55"
+                  }
+                ]
+              }
+            ]
+          },
+          {
+            "package": {
+              "name": "org.apache.tomcat:tomcat",
+              "ecosystem": "Maven",
+              "purl": "pkg:maven/org.apache.tomcat/tomcat"
+            },
+            "ranges": [
+              {
+                "type": "ECOSYSTEM",
+                "events": [
+                  {
+                    "introduced": "11.0.0-M1"
+                  },
+                  {
+                    "fixed": "11.0.22"
+                  }
+                ]
+              }
+            ]
+          },
+          {
+            "package": {
+              "name": "org.apache.tomcat:tomcat-catalina",
+              "ecosystem": "Maven",
+              "purl": "pkg:maven/org.apache.tomcat/tomcat-catalina"
+            },
+            "ranges": [
+              {
+                "type": "ECOSYSTEM",
+                "events": [
+                  {
+                    "introduced": "0"
+                  },
+                  {
+                    "fixed": "9.0.118"
+                  }
+                ]
+              }
+            ]
+          },
+          {
+            "package": {
+              "name": "org.apache.tomcat:tomcat-catalina",
+              "ecosystem": "Maven",
+              "purl": "pkg:maven/org.apache.tomcat/tomcat-catalina"
+            },
+            "ranges": [
+              {
+                "type": "ECOSYSTEM",
+                "events": [
+                  {
+                    "introduced": "10.1.0-M1"
+                  },
+                  {
+                    "fixed": "10.1.55"
+                  }
+                ]
+              }
+            ]
+          },
+          {
+            "package": {
+              "name": "org.apache.tomcat:tomcat-catalina",
+              "ecosystem": "Maven",
+              "purl": "pkg:maven/org.apache.tomcat/tomcat-catalina"
+            },
+            "ranges": [
+              {
+                "type": "ECOSYSTEM",
+                "events": [
+                  {
+                    "introduced": "11.0.0-M1"
+                  },
+                  {
+                    "fixed": "11.0.22"
+                  }
+                ]
+              }
+            ]
+          }
+        ]
+      },
+      {
+        "id": "GHSA-83qj-6fr2-vhqg",
+        "aliases": [
+          "BIT-tomcat-2025-24813",
+          "CVE-2025-24813"
+        ],
+        "summary": "Apache Tomcat: Potential RCE and/or information disclosure and/or information corruption with partial PUT",
+        "affected": [
+          {
+            "package": {
+              "name": "org.apache.tomcat:tomcat-catalina",
+              "ecosystem": "Maven",
+              "purl": "pkg:maven/org.apache.tomcat/tomcat-catalina"
+            },
+            "ranges": [
+              {
+                "type": "ECOSYSTEM",
+                "events": [
+                  {
+                    "introduced": "11.0.0-M1"
+                  },
+                  {
+                    "fixed": "11.0.3"
+                  }
+                ]
+              }
+            ]
+          },
+          {
+            "package": {
+              "name": "org.apache.tomcat:tomcat-catalina",
+              "ecosystem": "Maven",
+              "purl": "pkg:maven/org.apache.tomcat/tomcat-catalina"
+            },
+            "ranges": [
+              {
+                "type": "ECOSYSTEM",
+                "events": [
+                  {
+                    "introduced": "10.1.0-M1"
+                  },
+                  {
+                    "fixed": "10.1.35"
+                  }
+                ]
+              }
+            ]
+          },
+          {
+            "package": {
+              "name": "org.apache.tomcat:tomcat-catalina",
+              "ecosystem": "Maven",
+              "purl": "pkg:maven/org.apache.tomcat/tomcat-catalina"
+            },
+            "ranges": [
+              {
+                "type": "ECOSYSTEM",
+                "events": [
+                  {
+                    "introduced": "9.0.0.M1"
+                  },
+                  {
+                    "fixed": "9.0.99"
+                  }
+                ]
+              }
+            ]
+          },
+          {
+            "package": {
+              "name": "org.apache.tomcat.embed:tomcat-embed-core",
+              "ecosystem": "Maven",
+              "purl": "pkg:maven/org.apache.tomcat.embed/tomcat-embed-core"
+            },
+            "ranges": [
+              {
+                "type": "ECOSYSTEM",
+                "events": [
+                  {
+                    "introduced": "11.0.0-M1"
+                  },
+                  {
+                    "fixed": "11.0.3"
+                  }
+                ]
+              }
+            ]
+          },
+          {
+            "package": {
+              "name": "org.apache.tomcat.embed:tomcat-embed-core",
+              "ecosystem": "Maven",
+              "purl": "pkg:maven/org.apache.tomcat.embed/tomcat-embed-core"
+            },
+            "ranges": [
+              {
+                "type": "ECOSYSTEM",
+                "events": [
+                  {
+                    "introduced": "10.1.0-M1"
+                  },
+                  {
+                    "fixed": "10.1.35"
+                  }
+                ]
+              }
+            ]
+          },
+          {
+            "package": {
+              "name": "org.apache.tomcat.embed:tomcat-embed-core",
+              "ecosystem": "Maven",
+              "purl": "pkg:maven/org.apache.tomcat.embed/tomcat-embed-core"
+            },
+            "ranges": [
+              {
+                "type": "ECOSYSTEM",
+                "events": [
+                  {
+                    "introduced": "9.0.0.M1"
+                  },
+                  {
+                    "fixed": "9.0.99"
+                  }
+                ]
+              }
+            ]
+          },
+          {
+            "package": {
+              "name": "org.apache.tomcat:tomcat-catalina",
+              "ecosystem": "Maven",
+              "purl": "pkg:maven/org.apache.tomcat/tomcat-catalina"
+            },
+            "ranges": [
+              {
+                "type": "ECOSYSTEM",
+                "events": [
+                  {
+                    "introduced": "8.5.0"
+                  },
+                  {
+                    "last_affected": "8.5.100"
+                  }
+                ]
+              }
+            ]
+          },
+          {
+            "package": {
+              "name": "org.apache.tomcat.embed:tomcat-embed-core",
+              "ecosystem": "Maven",
+              "purl": "pkg:maven/org.apache.tomcat.embed/tomcat-embed-core"
+            },
+            "ranges": [
+              {
+                "type": "ECOSYSTEM",
+                "events": [
+                  {
+                    "introduced": "8.5.0"
+                  },
+                  {
+                    "last_affected": "8.5.100"
+                  }
+                ]
+              }
+            ]
+          }
+        ]
+      },
+      {
+        "id": "GHSA-9m3c-qcxr-9x87",
+        "aliases": [
+          "BIT-tomcat-2026-25854",
+          "CVE-2026-25854"
+        ],
+        "summary": "Apache Tomcat has an Open Redirect vulnerability",
+        "affected": [
+          {
+            "package": {
+              "name": "org.apache.tomcat:tomcat-catalina",
+              "ecosystem": "Maven",
+              "purl": "pkg:maven/org.apache.tomcat/tomcat-catalina"
+            },
+            "ranges": [
+              {
+                "type": "ECOSYSTEM",
+                "events": [
+                  {
+                    "introduced": "8.5.30"
+                  },
+                  {
+                    "fixed": "9.0.116"
+                  }
+                ]
+              }
+            ]
+          },
+          {
+            "package": {
+              "name": "org.apache.tomcat:tomcat-catalina",
+              "ecosystem": "Maven",
+              "purl": "pkg:maven/org.apache.tomcat/tomcat-catalina"
+            },
+            "ranges": [
+              {
+                "type": "ECOSYSTEM",
+                "events": [
+                  {
+                    "introduced": "10.1.0-M1"
+                  },
+                  {
+                    "fixed": "10.1.53"
+                  }
+                ]
+              }
+            ]
+          },
+          {
+            "package": {
+              "name": "org.apache.tomcat:tomcat-catalina",
+              "ecosystem": "Maven",
+              "purl": "pkg:maven/org.apache.tomcat/tomcat-catalina"
+            },
+            "ranges": [
+              {
+                "type": "ECOSYSTEM",
+                "events": [
+                  {
+                    "introduced": "11.0.0-M1"
+                  },
+                  {
+                    "fixed": "11.0.20"
+                  }
+                ]
+              }
+            ]
+          },
+          {
+            "package": {
+              "name": "org.apache.tomcat:tomcat",
+              "ecosystem": "Maven",
+              "purl": "pkg:maven/org.apache.tomcat/tomcat"
+            },
+            "ranges": [
+              {
+                "type": "ECOSYSTEM",
+                "events": [
+                  {
+                    "introduced": "8.5.30"
+                  },
+                  {
+                    "fixed": "9.0.116"
+                  }
+                ]
+              }
+            ]
+          },
+          {
+            "package": {
+              "name": "org.apache.tomcat:tomcat",
+              "ecosystem": "Maven",
+              "purl": "pkg:maven/org.apache.tomcat/tomcat"
+            },
+            "ranges": [
+              {
+                "type": "ECOSYSTEM",
+                "events": [
+                  {
+                    "introduced": "10.1.0-M1"
+                  },
+                  {
+                    "fixed": "10.1.53"
+                  }
+                ]
+              }
+            ]
+          },
+          {
+            "package": {
+              "name": "org.apache.tomcat:tomcat",
+              "ecosystem": "Maven",
+              "purl": "pkg:maven/org.apache.tomcat/tomcat"
+            },
+            "ranges": [
+              {
+                "type": "ECOSYSTEM",
+                "events": [
+                  {
+                    "introduced": "11.0.0-M1"
+                  },
+                  {
+                    "fixed": "11.0.20"
+                  }
+                ]
+              }
+            ]
+          },
+          {
+            "package": {
+              "name": "org.apache.tomcat.embed:tomcat-embed-core",
+              "ecosystem": "Maven",
+              "purl": "pkg:maven/org.apache.tomcat.embed/tomcat-embed-core"
+            },
+            "ranges": [
+              {
+                "type": "ECOSYSTEM",
+                "events": [
+                  {
+                    "introduced": "8.5.30"
+                  },
+                  {
+                    "fixed": "9.0.116"
+                  }
+                ]
+              }
+            ]
+          },
+          {
+            "package": {
+              "name": "org.apache.tomcat.embed:tomcat-embed-core",
+              "ecosystem": "Maven",
+              "purl": "pkg:maven/org.apache.tomcat.embed/tomcat-embed-core"
+            },
+            "ranges": [
+              {
+                "type": "ECOSYSTEM",
+                "events": [
+                  {
+                    "introduced": "10.1.0-M1"
+                  },
+                  {
+                    "fixed": "10.1.53"
+                  }
+                ]
+              }
+            ]
+          },
+          {
+            "package": {
+              "name": "org.apache.tomcat.embed:tomcat-embed-core",
+              "ecosystem": "Maven",
+              "purl": "pkg:maven/org.apache.tomcat.embed/tomcat-embed-core"
+            },
+            "ranges": [
+              {
+                "type": "ECOSYSTEM",
+                "events": [
+                  {
+                    "introduced": "11.0.0-M1"
+                  },
+                  {
+                    "fixed": "11.0.20"
+                  }
+                ]
+              }
+            ]
+          }
+        ]
+      },
+      {
+        "id": "GHSA-9m89-8frq-c98c",
+        "aliases": [
+          "BIT-tomcat-2026-43514",
+          "CVE-2026-43514"
+        ],
+        "summary": "Apache Tomcat - AJP secret compared in non-constant time",
+        "affected": [
+          {
+            "package": {
+              "name": "org.apache.tomcat.embed:tomcat-embed-core",
+              "ecosystem": "Maven",
+              "purl": "pkg:maven/org.apache.tomcat.embed/tomcat-embed-core"
+            },
+            "ranges": [
+              {
+                "type": "ECOSYSTEM",
+                "events": [
+                  {
+                    "introduced": "0"
+                  },
+                  {
+                    "fixed": "9.0.118"
+                  }
+                ]
+              }
+            ]
+          },
+          {
+            "package": {
+              "name": "org.apache.tomcat.embed:tomcat-embed-core",
+              "ecosystem": "Maven",
+              "purl": "pkg:maven/org.apache.tomcat.embed/tomcat-embed-core"
+            },
+            "ranges": [
+              {
+                "type": "ECOSYSTEM",
+                "events": [
+                  {
+                    "introduced": "10.1.0-M1"
+                  },
+                  {
+                    "fixed": "10.1.55"
+                  }
+                ]
+              }
+            ]
+          },
+          {
+            "package": {
+              "name": "org.apache.tomcat.embed:tomcat-embed-core",
+              "ecosystem": "Maven",
+              "purl": "pkg:maven/org.apache.tomcat.embed/tomcat-embed-core"
+            },
+            "ranges": [
+              {
+                "type": "ECOSYSTEM",
+                "events": [
+                  {
+                    "introduced": "11.0.0-M1"
+                  },
+                  {
+                    "fixed": "11.0.22"
+                  }
+                ]
+              }
+            ]
+          },
+          {
+            "package": {
+              "name": "org.apache.tomcat:tomcat",
+              "ecosystem": "Maven",
+              "purl": "pkg:maven/org.apache.tomcat/tomcat"
+            },
+            "ranges": [
+              {
+                "type": "ECOSYSTEM",
+                "events": [
+                  {
+                    "introduced": "0"
+                  },
+                  {
+                    "fixed": "9.0.118"
+                  }
+                ]
+              }
+            ]
+          },
+          {
+            "package": {
+              "name": "org.apache.tomcat:tomcat",
+              "ecosystem": "Maven",
+              "purl": "pkg:maven/org.apache.tomcat/tomcat"
+            },
+            "ranges": [
+              {
+                "type": "ECOSYSTEM",
+                "events": [
+                  {
+                    "introduced": "10.1.0-M1"
+                  },
+                  {
+                    "fixed": "10.1.55"
+                  }
+                ]
+              }
+            ]
+          },
+          {
+            "package": {
+              "name": "org.apache.tomcat:tomcat",
+              "ecosystem": "Maven",
+              "purl": "pkg:maven/org.apache.tomcat/tomcat"
+            },
+            "ranges": [
+              {
+                "type": "ECOSYSTEM",
+                "events": [
+                  {
+                    "introduced": "11.0.0-M1"
+                  },
+                  {
+                    "fixed": "11.0.22"
+                  }
+                ]
+              }
+            ]
+          },
+          {
+            "package": {
+              "name": "org.apache.tomcat:tomcat-catalina",
+              "ecosystem": "Maven",
+              "purl": "pkg:maven/org.apache.tomcat/tomcat-catalina"
+            },
+            "ranges": [
+              {
+                "type": "ECOSYSTEM",
+                "events": [
+                  {
+                    "introduced": "0"
+                  },
+                  {
+                    "fixed": "9.0.118"
+                  }
+                ]
+              }
+            ]
+          },
+          {
+            "package": {
+              "name": "org.apache.tomcat:tomcat-catalina",
+              "ecosystem": "Maven",
+              "purl": "pkg:maven/org.apache.tomcat/tomcat-catalina"
+            },
+            "ranges": [
+              {
+                "type": "ECOSYSTEM",
+                "events": [
+                  {
+                    "introduced": "10.1.0-M1"
+                  },
+                  {
+                    "fixed": "10.1.55"
+                  }
+                ]
+              }
+            ]
+          },
+          {
+            "package": {
+              "name": "org.apache.tomcat:tomcat-catalina",
+              "ecosystem": "Maven",
+              "purl": "pkg:maven/org.apache.tomcat/tomcat-catalina"
+            },
+            "ranges": [
+              {
+                "type": "ECOSYSTEM",
+                "events": [
+                  {
+                    "introduced": "11.0.0-M1"
+                  },
+                  {
+                    "fixed": "11.0.22"
+                  }
+                ]
+              }
+            ]
+          }
+        ]
+      },
+      {
+        "id": "GHSA-9xv2-5v5q-p794",
+        "aliases": [
+          "BIT-tomcat-2026-65905",
+          "CVE-2026-65905"
+        ],
+        "summary": "Apache Tomcat's DIGEST authenticator has an Authentication Bypass by Capture-replay vulnerability",
+        "affected": [
+          {
+            "package": {
+              "name": "org.apache.tomcat:tomcat",
+              "ecosystem": "Maven",
+              "purl": "pkg:maven/org.apache.tomcat/tomcat"
+            },
+            "ranges": [
+              {
+                "type": "ECOSYSTEM",
+                "events": [
+                  {
+                    "introduced": "11.0.0-M1"
+                  },
+                  {
+                    "fixed": "11.0.25"
+                  }
+                ]
+              }
+            ]
+          },
+          {
+            "package": {
+              "name": "org.apache.tomcat:tomcat",
+              "ecosystem": "Maven",
+              "purl": "pkg:maven/org.apache.tomcat/tomcat"
+            },
+            "ranges": [
+              {
+                "type": "ECOSYSTEM",
+                "events": [
+                  {
+                    "introduced": "10.1.0-M1"
+                  },
+                  {
+                    "fixed": "10.1.58"
+                  }
+                ]
+              }
+            ]
+          },
+          {
+            "package": {
+              "name": "org.apache.tomcat:tomcat",
+              "ecosystem": "Maven",
+              "purl": "pkg:maven/org.apache.tomcat/tomcat"
+            },
+            "ranges": [
+              {
+                "type": "ECOSYSTEM",
+                "events": [
+                  {
+                    "introduced": "9.0.0.M1"
+                  },
+                  {
+                    "fixed": "9.0.121"
+                  }
+                ]
+              }
+            ]
+          },
+          {
+            "package": {
+              "name": "org.apache.tomcat:tomcat",
+              "ecosystem": "Maven",
+              "purl": "pkg:maven/org.apache.tomcat/tomcat"
+            },
+            "ranges": [
+              {
+                "type": "ECOSYSTEM",
+                "events": [
+                  {
+                    "introduced": "8.5.0"
+                  },
+                  {
+                    "last_affected": "8.5.100"
+                  }
+                ]
+              }
+            ]
+          },
+          {
+            "package": {
+              "name": "org.apache.tomcat:tomcat",
+              "ecosystem": "Maven",
+              "purl": "pkg:maven/org.apache.tomcat/tomcat"
+            },
+            "ranges": [
+              {
+                "type": "ECOSYSTEM",
+                "events": [
+                  {
+                    "introduced": "7.0.30"
+                  },
+                  {
+                    "last_affected": "7.0.109"
+                  }
+                ]
+              }
+            ]
+          },
+          {
+            "package": {
+              "name": "org.apache.tomcat.embed:tomcat-embed-core",
+              "ecosystem": "Maven",
+              "purl": "pkg:maven/org.apache.tomcat.embed/tomcat-embed-core"
+            },
+            "ranges": [
+              {
+                "type": "ECOSYSTEM",
+                "events": [
+                  {
+                    "introduced": "11.0.0-M1"
+                  },
+                  {
+                    "fixed": "11.0.25"
+                  }
+                ]
+              }
+            ]
+          },
+          {
+            "package": {
+              "name": "org.apache.tomcat.embed:tomcat-embed-core",
+              "ecosystem": "Maven",
+              "purl": "pkg:maven/org.apache.tomcat.embed/tomcat-embed-core"
+            },
+            "ranges": [
+              {
+                "type": "ECOSYSTEM",
+                "events": [
+                  {
+                    "introduced": "10.1.0-M1"
+                  },
+                  {
+                    "fixed": "10.1.58"
+                  }
+                ]
+              }
+            ]
+          },
+          {
+            "package": {
+              "name": "org.apache.tomcat.embed:tomcat-embed-core",
+              "ecosystem": "Maven",
+              "purl": "pkg:maven/org.apache.tomcat.embed/tomcat-embed-core"
+            },
+            "ranges": [
+              {
+                "type": "ECOSYSTEM",
+                "events": [
+                  {
+                    "introduced": "9.0.0.M1"
+                  },
+                  {
+                    "fixed": "9.0.121"
+                  }
+                ]
+              }
+            ]
+          },
+          {
+            "package": {
+              "name": "org.apache.tomcat.embed:tomcat-embed-core",
+              "ecosystem": "Maven",
+              "purl": "pkg:maven/org.apache.tomcat.embed/tomcat-embed-core"
+            },
+            "ranges": [
+              {
+                "type": "ECOSYSTEM",
+                "events": [
+                  {
+                    "introduced": "8.5.0"
+                  },
+                  {
+                    "last_affected": "8.5.100"
+                  }
+                ]
+              }
+            ]
+          },
+          {
+            "package": {
+              "name": "org.apache.tomcat.embed:tomcat-embed-core",
+              "ecosystem": "Maven",
+              "purl": "pkg:maven/org.apache.tomcat.embed/tomcat-embed-core"
+            },
+            "ranges": [
+              {
+                "type": "ECOSYSTEM",
+                "events": [
+                  {
+                    "introduced": "7.0.30"
+                  },
+                  {
+                    "last_affected": "7.0.109"
+                  }
+                ]
+              }
+            ]
+          },
+          {
+            "package": {
+              "name": "org.apache.tomcat:tomcat-catalina",
+              "ecosystem": "Maven",
+              "purl": "pkg:maven/org.apache.tomcat/tomcat-catalina"
+            },
+            "ranges": [
+              {
+                "type": "ECOSYSTEM",
+                "events": [
+                  {
+                    "introduced": "11.0.0-M1"
+                  },
+                  {
+                    "fixed": "11.0.25"
+                  }
+                ]
+              }
+            ]
+          },
+          {
+            "package": {
+              "name": "org.apache.tomcat:tomcat-catalina",
+              "ecosystem": "Maven",
+              "purl": "pkg:maven/org.apache.tomcat/tomcat-catalina"
+            },
+            "ranges": [
+              {
+                "type": "ECOSYSTEM",
+                "events": [
+                  {
+                    "introduced": "10.1.0-M1"
+                  },
+                  {
+                    "fixed": "10.1.58"
+                  }
+                ]
+              }
+            ]
+          },
+          {
+            "package": {
+              "name": "org.apache.tomcat:tomcat-catalina",
+              "ecosystem": "Maven",
+              "purl": "pkg:maven/org.apache.tomcat/tomcat-catalina"
+            },
+            "ranges": [
+              {
+                "type": "ECOSYSTEM",
+                "events": [
+                  {
+                    "introduced": "9.0.0.M1"
+                  },
+                  {
+                    "fixed": "9.0.121"
+                  }
+                ]
+              }
+            ]
+          },
+          {
+            "package": {
+              "name": "org.apache.tomcat:tomcat-catalina",
+              "ecosystem": "Maven",
+              "purl": "pkg:maven/org.apache.tomcat/tomcat-catalina"
+            },
+            "ranges": [
+              {
+                "type": "ECOSYSTEM",
+                "events": [
+                  {
+                    "introduced": "8.5.0"
+                  },
+                  {
+                    "last_affected": "8.5.100"
+                  }
+                ]
+              }
+            ]
+          },
+          {
+            "package": {
+              "name": "org.apache.tomcat:tomcat-catalina",
+              "ecosystem": "Maven",
+              "purl": "pkg:maven/org.apache.tomcat/tomcat-catalina"
+            },
+            "ranges": [
+              {
+                "type": "ECOSYSTEM",
+                "events": [
+                  {
+                    "introduced": "7.0.30"
+                  },
+                  {
+                    "last_affected": "7.0.109"
+                  }
+                ]
+              }
+            ]
+          }
+        ]
+      },
+      {
+        "id": "GHSA-fccv-jmmp-qg76",
+        "aliases": [
+          "BIT-tomcat-2023-46589",
+          "CVE-2023-46589"
+        ],
+        "summary": "Apache Tomcat Improper Input Validation vulnerability",
+        "affected": [
+          {
+            "package": {
+              "name": "org.apache.tomcat:tomcat-catalina",
+              "ecosystem": "Maven",
+              "purl": "pkg:maven/org.apache.tomcat/tomcat-catalina"
+            },
+            "ranges": [
+              {
+                "type": "ECOSYSTEM",
+                "events": [
+                  {
+                    "introduced": "11.0.0-M1"
+                  },
+                  {
+                    "fixed": "11.0.0-M11"
+                  }
+                ]
+              }
+            ]
+          },
+          {
+            "package": {
+              "name": "org.apache.tomcat:tomcat-catalina",
+              "ecosystem": "Maven",
+              "purl": "pkg:maven/org.apache.tomcat/tomcat-catalina"
+            },
+            "ranges": [
+              {
+                "type": "ECOSYSTEM",
+                "events": [
+                  {
+                    "introduced": "10.1.0-M1"
+                  },
+                  {
+                    "fixed": "10.1.16"
+                  }
+                ]
+              }
+            ]
+          },
+          {
+            "package": {
+              "name": "org.apache.tomcat:tomcat-catalina",
+              "ecosystem": "Maven",
+              "purl": "pkg:maven/org.apache.tomcat/tomcat-catalina"
+            },
+            "ranges": [
+              {
+                "type": "ECOSYSTEM",
+                "events": [
+                  {
+                    "introduced": "9.0.0-M1"
+                  },
+                  {
+                    "fixed": "9.0.83"
+                  }
+                ]
+              }
+            ]
+          },
+          {
+            "package": {
+              "name": "org.apache.tomcat:tomcat-catalina",
+              "ecosystem": "Maven",
+              "purl": "pkg:maven/org.apache.tomcat/tomcat-catalina"
+            },
+            "ranges": [
+              {
+                "type": "ECOSYSTEM",
+                "events": [
+                  {
+                    "introduced": "8.5.0"
+                  },
+                  {
+                    "fixed": "8.5.96"
+                  }
+                ]
+              }
+            ]
+          },
+          {
+            "package": {
+              "name": "org.apache.tomcat.embed:tomcat-embed-core",
+              "ecosystem": "Maven",
+              "purl": "pkg:maven/org.apache.tomcat.embed/tomcat-embed-core"
+            },
+            "ranges": [
+              {
+                "type": "ECOSYSTEM",
+                "events": [
+                  {
+                    "introduced": "11.0.0-M1"
+                  },
+                  {
+                    "fixed": "11.0.0-M11"
+                  }
+                ]
+              }
+            ]
+          },
+          {
+            "package": {
+              "name": "org.apache.tomcat.embed:tomcat-embed-core",
+              "ecosystem": "Maven",
+              "purl": "pkg:maven/org.apache.tomcat.embed/tomcat-embed-core"
+            },
+            "ranges": [
+              {
+                "type": "ECOSYSTEM",
+                "events": [
+                  {
+                    "introduced": "10.1.0-M1"
+                  },
+                  {
+                    "fixed": "10.1.16"
+                  }
+                ]
+              }
+            ]
+          },
+          {
+            "package": {
+              "name": "org.apache.tomcat.embed:tomcat-embed-core",
+              "ecosystem": "Maven",
+              "purl": "pkg:maven/org.apache.tomcat.embed/tomcat-embed-core"
+            },
+            "ranges": [
+              {
+                "type": "ECOSYSTEM",
+                "events": [
+                  {
+                    "introduced": "9.0.0-M1"
+                  },
+                  {
+                    "fixed": "9.0.83"
+                  }
+                ]
+              }
+            ]
+          },
+          {
+            "package": {
+              "name": "org.apache.tomcat.embed:tomcat-embed-core",
+              "ecosystem": "Maven",
+              "purl": "pkg:maven/org.apache.tomcat.embed/tomcat-embed-core"
+            },
+            "ranges": [
+              {
+                "type": "ECOSYSTEM",
+                "events": [
+                  {
+                    "introduced": "8.5.0"
+                  },
+                  {
+                    "fixed": "8.5.96"
+                  }
+                ]
+              }
+            ]
+          },
+          {
+            "package": {
+              "name": "org.apache.tomcat:tomcat-coyote",
+              "ecosystem": "Maven",
+              "purl": "pkg:maven/org.apache.tomcat/tomcat-coyote"
+            },
+            "ranges": [
+              {
+                "type": "ECOSYSTEM",
+                "events": [
+                  {
+                    "introduced": "11.0.0-M1"
+                  },
+                  {
+                    "fixed": "11.0.0-M11"
+                  }
+                ]
+              }
+            ]
+          }
+        ]
+      },
+      {
+        "id": "GHSA-fv25-8xcx-gqjc",
+        "aliases": [
+          "BIT-tomcat-2026-42498",
+          "CVE-2026-42498"
+        ],
+        "summary": "Apache Tomcat - WebSocket authentication header exposure",
+        "affected": [
+          {
+            "package": {
+              "name": "org.apache.tomcat.embed:tomcat-embed-core",
+              "ecosystem": "Maven",
+              "purl": "pkg:maven/org.apache.tomcat.embed/tomcat-embed-core"
+            },
+            "ranges": [
+              {
+                "type": "ECOSYSTEM",
+                "events": [
+                  {
+                    "introduced": "0"
+                  },
+                  {
+                    "fixed": "9.0.118"
+                  }
+                ]
+              }
+            ]
+          },
+          {
+            "package": {
+              "name": "org.apache.tomcat.embed:tomcat-embed-core",
+              "ecosystem": "Maven",
+              "purl": "pkg:maven/org.apache.tomcat.embed/tomcat-embed-core"
+            },
+            "ranges": [
+              {
+                "type": "ECOSYSTEM",
+                "events": [
+                  {
+                    "introduced": "10.1.0-M1"
+                  },
+                  {
+                    "fixed": "10.1.55"
+                  }
+                ]
+              }
+            ]
+          },
+          {
+            "package": {
+              "name": "org.apache.tomcat.embed:tomcat-embed-core",
+              "ecosystem": "Maven",
+              "purl": "pkg:maven/org.apache.tomcat.embed/tomcat-embed-core"
+            },
+            "ranges": [
+              {
+                "type": "ECOSYSTEM",
+                "events": [
+                  {
+                    "introduced": "11.0.0-M1"
+                  },
+                  {
+                    "fixed": "11.0.22"
+                  }
+                ]
+              }
+            ]
+          },
+          {
+            "package": {
+              "name": "org.apache.tomcat:tomcat",
+              "ecosystem": "Maven",
+              "purl": "pkg:maven/org.apache.tomcat/tomcat"
+            },
+            "ranges": [
+              {
+                "type": "ECOSYSTEM",
+                "events": [
+                  {
+                    "introduced": "0"
+                  },
+                  {
+                    "fixed": "9.0.118"
+                  }
+                ]
+              }
+            ]
+          },
+          {
+            "package": {
+              "name": "org.apache.tomcat:tomcat",
+              "ecosystem": "Maven",
+              "purl": "pkg:maven/org.apache.tomcat/tomcat"
+            },
+            "ranges": [
+              {
+                "type": "ECOSYSTEM",
+                "events": [
+                  {
+                    "introduced": "10.1.0-M1"
+                  },
+                  {
+                    "fixed": "10.1.55"
+                  }
+                ]
+              }
+            ]
+          },
+          {
+            "package": {
+              "name": "org.apache.tomcat:tomcat",
+              "ecosystem": "Maven",
+              "purl": "pkg:maven/org.apache.tomcat/tomcat"
+            },
+            "ranges": [
+              {
+                "type": "ECOSYSTEM",
+                "events": [
+                  {
+                    "introduced": "11.0.0-M1"
+                  },
+                  {
+                    "fixed": "11.0.22"
+                  }
+                ]
+              }
+            ]
+          },
+          {
+            "package": {
+              "name": "org.apache.tomcat:tomcat-catalina",
+              "ecosystem": "Maven",
+              "purl": "pkg:maven/org.apache.tomcat/tomcat-catalina"
+            },
+            "ranges": [
+              {
+                "type": "ECOSYSTEM",
+                "events": [
+                  {
+                    "introduced": "0"
+                  },
+                  {
+                    "fixed": "9.0.118"
+                  }
+                ]
+              }
+            ]
+          },
+          {
+            "package": {
+              "name": "org.apache.tomcat:tomcat-catalina",
+              "ecosystem": "Maven",
+              "purl": "pkg:maven/org.apache.tomcat/tomcat-catalina"
+            },
+            "ranges": [
+              {
+                "type": "ECOSYSTEM",
+                "events": [
+                  {
+                    "introduced": "10.1.0-M1"
+                  },
+                  {
+                    "fixed": "10.1.55"
+                  }
+                ]
+              }
+            ]
+          },
+          {
+            "package": {
+              "name": "org.apache.tomcat:tomcat-catalina",
+              "ecosystem": "Maven",
+              "purl": "pkg:maven/org.apache.tomcat/tomcat-catalina"
+            },
+            "ranges": [
+              {
+                "type": "ECOSYSTEM",
+                "events": [
+                  {
+                    "introduced": "11.0.0-M1"
+                  },
+                  {
+                    "fixed": "11.0.22"
+                  }
+                ]
+              }
+            ]
+          }
+        ]
+      },
+      {
+        "id": "GHSA-g8pj-r55q-5c2v",
+        "aliases": [
+          "BIT-tomcat-2023-42795",
+          "CVE-2023-42795"
+        ],
+        "summary": "Apache Tomcat Incomplete Cleanup vulnerability",
+        "affected": [
+          {
+            "package": {
+              "name": "org.apache.tomcat:tomcat",
+              "ecosystem": "Maven",
+              "purl": "pkg:maven/org.apache.tomcat/tomcat"
+            },
+            "ranges": [
+              {
+                "type": "ECOSYSTEM",
+                "events": [
+                  {
+                    "introduced": "11.0.0-M1"
+                  },
+                  {
+                    "fixed": "11.0.0-M12"
+                  }
+                ]
+              }
+            ]
+          },
+          {
+            "package": {
+              "name": "org.apache.tomcat:tomcat",
+              "ecosystem": "Maven",
+              "purl": "pkg:maven/org.apache.tomcat/tomcat"
+            },
+            "ranges": [
+              {
+                "type": "ECOSYSTEM",
+                "events": [
+                  {
+                    "introduced": "10.1.0-M1"
+                  },
+                  {
+                    "fixed": "10.1.14"
+                  }
+                ]
+              }
+            ]
+          },
+          {
+            "package": {
+              "name": "org.apache.tomcat:tomcat",
+              "ecosystem": "Maven",
+              "purl": "pkg:maven/org.apache.tomcat/tomcat"
+            },
+            "ranges": [
+              {
+                "type": "ECOSYSTEM",
+                "events": [
+                  {
+                    "introduced": "9.0.0-M1"
+                  },
+                  {
+                    "fixed": "9.0.81"
+                  }
+                ]
+              }
+            ]
+          },
+          {
+            "package": {
+              "name": "org.apache.tomcat:tomcat",
+              "ecosystem": "Maven",
+              "purl": "pkg:maven/org.apache.tomcat/tomcat"
+            },
+            "ranges": [
+              {
+                "type": "ECOSYSTEM",
+                "events": [
+                  {
+                    "introduced": "8.5.0"
+                  },
+                  {
+                    "fixed": "8.5.94"
+                  }
+                ]
+              }
+            ]
+          },
+          {
+            "package": {
+              "name": "org.apache.tomcat.embed:tomcat-embed-core",
+              "ecosystem": "Maven",
+              "purl": "pkg:maven/org.apache.tomcat.embed/tomcat-embed-core"
+            },
+            "ranges": [
+              {
+                "type": "ECOSYSTEM",
+                "events": [
+                  {
+                    "introduced": "10.1.0-M1"
+                  },
+                  {
+                    "fixed": "10.1.14"
+                  }
+                ]
+              }
+            ]
+          },
+          {
+            "package": {
+              "name": "org.apache.tomcat.embed:tomcat-embed-core",
+              "ecosystem": "Maven",
+              "purl": "pkg:maven/org.apache.tomcat.embed/tomcat-embed-core"
+            },
+            "ranges": [
+              {
+                "type": "ECOSYSTEM",
+                "events": [
+                  {
+                    "introduced": "9.0.0-M1"
+                  },
+                  {
+                    "fixed": "9.0.81"
+                  }
+                ]
+              }
+            ]
+          },
+          {
+            "package": {
+              "name": "org.apache.tomcat.embed:tomcat-embed-core",
+              "ecosystem": "Maven",
+              "purl": "pkg:maven/org.apache.tomcat.embed/tomcat-embed-core"
+            },
+            "ranges": [
+              {
+                "type": "ECOSYSTEM",
+                "events": [
+                  {
+                    "introduced": "8.5.0"
+                  },
+                  {
+                    "fixed": "8.5.94"
+                  }
+                ]
+              }
+            ]
+          },
+          {
+            "package": {
+              "name": "org.apache.tomcat.embed:tomcat-embed-core",
+              "ecosystem": "Maven",
+              "purl": "pkg:maven/org.apache.tomcat.embed/tomcat-embed-core"
+            },
+            "ranges": [
+              {
+                "type": "ECOSYSTEM",
+                "events": [
+                  {
+                    "introduced": "11.0.0-M1"
+                  },
+                  {
+                    "fixed": "11.0.0-M12"
+                  }
+                ]
+              }
+            ]
+          },
+          {
+            "package": {
+              "name": "org.apache.tomcat:tomcat-catalina",
+              "ecosystem": "Maven",
+              "purl": "pkg:maven/org.apache.tomcat/tomcat-catalina"
+            },
+            "ranges": [
+              {
+                "type": "ECOSYSTEM",
+                "events": [
+                  {
+                    "introduced": "11.0.0-M1"
+                  },
+                  {
+                    "fixed": "11.0.0-M12"
+                  }
+                ]
+              }
+            ]
+          },
+          {
+            "package": {
+              "name": "org.apache.tomcat:tomcat-catalina",
+              "ecosystem": "Maven",
+              "purl": "pkg:maven/org.apache.tomcat/tomcat-catalina"
+            },
+            "ranges": [
+              {
+                "type": "ECOSYSTEM",
+                "events": [
+                  {
+                    "introduced": "10.1.0-M1"
+                  },
+                  {
+                    "fixed": "10.1.14"
+                  }
+                ]
+              }
+            ]
+          },
+          {
+            "package": {
+              "name": "org.apache.tomcat:tomcat-catalina",
+              "ecosystem": "Maven",
+              "purl": "pkg:maven/org.apache.tomcat/tomcat-catalina"
+            },
+            "ranges": [
+              {
+                "type": "ECOSYSTEM",
+                "events": [
+                  {
+                    "introduced": "9.0.0-M1"
+                  },
+                  {
+                    "fixed": "9.0.81"
+                  }
+                ]
+              }
+            ]
+          },
+          {
+            "package": {
+              "name": "org.apache.tomcat:tomcat-catalina",
+              "ecosystem": "Maven",
+              "purl": "pkg:maven/org.apache.tomcat/tomcat-catalina"
+            },
+            "ranges": [
+              {
+                "type": "ECOSYSTEM",
+                "events": [
+                  {
+                    "introduced": "8.5.0"
+                  },
+                  {
+                    "fixed": "8.5.94"
+                  }
+                ]
+              }
+            ]
+          },
+          {
+            "package": {
+              "name": "org.apache.tomcat:tomcat-util",
+              "ecosystem": "Maven",
+              "purl": "pkg:maven/org.apache.tomcat/tomcat-util"
+            },
+            "ranges": [
+              {
+                "type": "ECOSYSTEM",
+                "events": [
+                  {
+                    "introduced": "11.0.0-M1"
+                  },
+                  {
+                    "fixed": "11.0.0-M12"
+                  }
+                ]
+              }
+            ]
+          },
+          {
+            "package": {
+              "name": "org.apache.tomcat:tomcat-util",
+              "ecosystem": "Maven",
+              "purl": "pkg:maven/org.apache.tomcat/tomcat-util"
+            },
+            "ranges": [
+              {
+                "type": "ECOSYSTEM",
+                "events": [
+                  {
+                    "introduced": "10.1.0-M1"
+                  },
+                  {
+                    "fixed": "10.1.14"
+                  }
+                ]
+              }
+            ]
+          },
+          {
+            "package": {
+              "name": "org.apache.tomcat:tomcat-util",
+              "ecosystem": "Maven",
+              "purl": "pkg:maven/org.apache.tomcat/tomcat-util"
+            },
+            "ranges": [
+              {
+                "type": "ECOSYSTEM",
+                "events": [
+                  {
+                    "introduced": "9.0.0-M1"
+                  },
+                  {
+                    "fixed": "9.0.81"
+                  }
+                ]
+              }
+            ]
+          },
+          {
+            "package": {
+              "name": "org.apache.tomcat:tomcat-util",
+              "ecosystem": "Maven",
+              "purl": "pkg:maven/org.apache.tomcat/tomcat-util"
+            },
+            "ranges": [
+              {
+                "type": "ECOSYSTEM",
+                "events": [
+                  {
+                    "introduced": "8.5.0"
+                  },
+                  {
+                    "fixed": "8.5.94"
+                  }
+                ]
+              }
+            ]
+          }
+        ]
+      },
+      {
+        "id": "GHSA-gcx9-497g-6cp6",
+        "aliases": [
+          "BIT-tomcat-2026-65182",
+          "CVE-2026-65182"
+        ],
+        "summary": "Apache Tomcat has an Improper Access Control, Incorrect Authorization vulnerability",
+        "affected": [
+          {
+            "package": {
+              "name": "org.apache.tomcat:tomcat",
+              "ecosystem": "Maven",
+              "purl": "pkg:maven/org.apache.tomcat/tomcat"
+            },
+            "ranges": [
+              {
+                "type": "ECOSYSTEM",
+                "events": [
+                  {
+                    "introduced": "11.0.0-M1"
+                  },
+                  {
+                    "fixed": "11.0.25"
+                  }
+                ]
+              }
+            ]
+          },
+          {
+            "package": {
+              "name": "org.apache.tomcat:tomcat",
+              "ecosystem": "Maven",
+              "purl": "pkg:maven/org.apache.tomcat/tomcat"
+            },
+            "ranges": [
+              {
+                "type": "ECOSYSTEM",
+                "events": [
+                  {
+                    "introduced": "10.1.0-M1"
+                  },
+                  {
+                    "fixed": "10.1.58"
+                  }
+                ]
+              }
+            ]
+          },
+          {
+            "package": {
+              "name": "org.apache.tomcat:tomcat",
+              "ecosystem": "Maven",
+              "purl": "pkg:maven/org.apache.tomcat/tomcat"
+            },
+            "ranges": [
+              {
+                "type": "ECOSYSTEM",
+                "events": [
+                  {
+                    "introduced": "9.0.0-M1"
+                  },
+                  {
+                    "fixed": "9.0.121"
+                  }
+                ]
+              }
+            ]
+          },
+          {
+            "package": {
+              "name": "org.apache.tomcat:tomcat",
+              "ecosystem": "Maven",
+              "purl": "pkg:maven/org.apache.tomcat/tomcat"
+            },
+            "ranges": [
+              {
+                "type": "ECOSYSTEM",
+                "events": [
+                  {
+                    "introduced": "8.5.0"
+                  },
+                  {
+                    "last_affected": "8.5.100"
+                  }
+                ]
+              }
+            ]
+          },
+          {
+            "package": {
+              "name": "org.apache.tomcat:tomcat",
+              "ecosystem": "Maven",
+              "purl": "pkg:maven/org.apache.tomcat/tomcat"
+            },
+            "ranges": [
+              {
+                "type": "ECOSYSTEM",
+                "events": [
+                  {
+                    "introduced": "7.0.0"
+                  },
+                  {
+                    "last_affected": "7.0.109"
+                  }
+                ]
+              }
+            ]
+          },
+          {
+            "package": {
+              "name": "org.apache.tomcat:tomcat-catalina",
+              "ecosystem": "Maven",
+              "purl": "pkg:maven/org.apache.tomcat/tomcat-catalina"
+            },
+            "ranges": [
+              {
+                "type": "ECOSYSTEM",
+                "events": [
+                  {
+                    "introduced": "11.0.0-M1"
+                  },
+                  {
+                    "fixed": "11.0.25"
+                  }
+                ]
+              }
+            ]
+          },
+          {
+            "package": {
+              "name": "org.apache.tomcat:tomcat-catalina",
+              "ecosystem": "Maven",
+              "purl": "pkg:maven/org.apache.tomcat/tomcat-catalina"
+            },
+            "ranges": [
+              {
+                "type": "ECOSYSTEM",
+                "events": [
+                  {
+                    "introduced": "10.1.0-M1"
+                  },
+                  {
+                    "fixed": "10.1.58"
+                  }
+                ]
+              }
+            ]
+          },
+          {
+            "package": {
+              "name": "org.apache.tomcat:tomcat-catalina",
+              "ecosystem": "Maven",
+              "purl": "pkg:maven/org.apache.tomcat/tomcat-catalina"
+            },
+            "ranges": [
+              {
+                "type": "ECOSYSTEM",
+                "events": [
+                  {
+                    "introduced": "9.0.0-M1"
+                  },
+                  {
+                    "fixed": "9.0.121"
+                  }
+                ]
+              }
+            ]
+          },
+          {
+            "package": {
+              "name": "org.apache.tomcat:tomcat-catalina",
+              "ecosystem": "Maven",
+              "purl": "pkg:maven/org.apache.tomcat/tomcat-catalina"
+            },
+            "ranges": [
+              {
+                "type": "ECOSYSTEM",
+                "events": [
+                  {
+                    "introduced": "8.5.0"
+                  },
+                  {
+                    "last_affected": "8.5.100"
+                  }
+                ]
+              }
+            ]
+          },
+          {
+            "package": {
+              "name": "org.apache.tomcat:tomcat-catalina",
+              "ecosystem": "Maven",
+              "purl": "pkg:maven/org.apache.tomcat/tomcat-catalina"
+            },
+            "ranges": [
+              {
+                "type": "ECOSYSTEM",
+                "events": [
+                  {
+                    "introduced": "7.0.0"
+                  },
+                  {
+                    "last_affected": "7.0.109"
+                  }
+                ]
+              }
+            ]
+          },
+          {
+            "package": {
+              "name": "org.apache.tomcat.embed:tomcat-embed-core",
+              "ecosystem": "Maven",
+              "purl": "pkg:maven/org.apache.tomcat.embed/tomcat-embed-core"
+            },
+            "ranges": [
+              {
+                "type": "ECOSYSTEM",
+                "events": [
+                  {
+                    "introduced": "11.0.0-M1"
+                  },
+                  {
+                    "fixed": "11.0.25"
+                  }
+                ]
+              }
+            ]
+          },
+          {
+            "package": {
+              "name": "org.apache.tomcat.embed:tomcat-embed-core",
+              "ecosystem": "Maven",
+              "purl": "pkg:maven/org.apache.tomcat.embed/tomcat-embed-core"
+            },
+            "ranges": [
+              {
+                "type": "ECOSYSTEM",
+                "events": [
+                  {
+                    "introduced": "10.1.0-M1"
+                  },
+                  {
+                    "fixed": "10.1.58"
+                  }
+                ]
+              }
+            ]
+          },
+          {
+            "package": {
+              "name": "org.apache.tomcat.embed:tomcat-embed-core",
+              "ecosystem": "Maven",
+              "purl": "pkg:maven/org.apache.tomcat.embed/tomcat-embed-core"
+            },
+            "ranges": [
+              {
+                "type": "ECOSYSTEM",
+                "events": [
+                  {
+                    "introduced": "9.0.0-M1"
+                  },
+                  {
+                    "fixed": "9.0.121"
+                  }
+                ]
+              }
+            ]
+          },
+          {
+            "package": {
+              "name": "org.apache.tomcat.embed:tomcat-embed-core",
+              "ecosystem": "Maven",
+              "purl": "pkg:maven/org.apache.tomcat.embed/tomcat-embed-core"
+            },
+            "ranges": [
+              {
+                "type": "ECOSYSTEM",
+                "events": [
+                  {
+                    "introduced": "8.5.0"
+                  },
+                  {
+                    "last_affected": "8.5.100"
+                  }
+                ]
+              }
+            ]
+          },
+          {
+            "package": {
+              "name": "org.apache.tomcat.embed:tomcat-embed-core",
+              "ecosystem": "Maven",
+              "purl": "pkg:maven/org.apache.tomcat.embed/tomcat-embed-core"
+            },
+            "ranges": [
+              {
+                "type": "ECOSYSTEM",
+                "events": [
+                  {
+                    "introduced": "7.0.0"
+                  },
+                  {
+                    "last_affected": "7.0.109"
+                  }
+                ]
+              }
+            ]
+          }
+        ]
+      },
+      {
+        "id": "GHSA-gx5v-xp9w-j4cg",
+        "aliases": [
+          "BIT-tomcat-2026-41284",
+          "CVE-2026-41284"
+        ],
+        "summary": "Apache Tomcat: Unbounded read in WebDAV LOCK and  PROPFIND handling",
+        "affected": [
+          {
+            "package": {
+              "name": "org.apache.tomcat.embed:tomcat-embed-core",
+              "ecosystem": "Maven",
+              "purl": "pkg:maven/org.apache.tomcat.embed/tomcat-embed-core"
+            },
+            "ranges": [
+              {
+                "type": "ECOSYSTEM",
+                "events": [
+                  {
+                    "introduced": "0"
+                  },
+                  {
+                    "fixed": "9.0.118"
+                  }
+                ]
+              }
+            ]
+          },
+          {
+            "package": {
+              "name": "org.apache.tomcat.embed:tomcat-embed-core",
+              "ecosystem": "Maven",
+              "purl": "pkg:maven/org.apache.tomcat.embed/tomcat-embed-core"
+            },
+            "ranges": [
+              {
+                "type": "ECOSYSTEM",
+                "events": [
+                  {
+                    "introduced": "10.1.0-M1"
+                  },
+                  {
+                    "fixed": "10.1.55"
+                  }
+                ]
+              }
+            ]
+          },
+          {
+            "package": {
+              "name": "org.apache.tomcat.embed:tomcat-embed-core",
+              "ecosystem": "Maven",
+              "purl": "pkg:maven/org.apache.tomcat.embed/tomcat-embed-core"
+            },
+            "ranges": [
+              {
+                "type": "ECOSYSTEM",
+                "events": [
+                  {
+                    "introduced": "11.0.0-M1"
+                  },
+                  {
+                    "fixed": "11.0.22"
+                  }
+                ]
+              }
+            ]
+          },
+          {
+            "package": {
+              "name": "org.apache.tomcat:tomcat",
+              "ecosystem": "Maven",
+              "purl": "pkg:maven/org.apache.tomcat/tomcat"
+            },
+            "ranges": [
+              {
+                "type": "ECOSYSTEM",
+                "events": [
+                  {
+                    "introduced": "0"
+                  },
+                  {
+                    "fixed": "9.0.118"
+                  }
+                ]
+              }
+            ]
+          },
+          {
+            "package": {
+              "name": "org.apache.tomcat:tomcat",
+              "ecosystem": "Maven",
+              "purl": "pkg:maven/org.apache.tomcat/tomcat"
+            },
+            "ranges": [
+              {
+                "type": "ECOSYSTEM",
+                "events": [
+                  {
+                    "introduced": "10.1.0-M1"
+                  },
+                  {
+                    "fixed": "10.1.55"
+                  }
+                ]
+              }
+            ]
+          },
+          {
+            "package": {
+              "name": "org.apache.tomcat:tomcat",
+              "ecosystem": "Maven",
+              "purl": "pkg:maven/org.apache.tomcat/tomcat"
+            },
+            "ranges": [
+              {
+                "type": "ECOSYSTEM",
+                "events": [
+                  {
+                    "introduced": "11.0.0-M1"
+                  },
+                  {
+                    "fixed": "11.0.22"
+                  }
+                ]
+              }
+            ]
+          },
+          {
+            "package": {
+              "name": "org.apache.tomcat:tomcat-catalina",
+              "ecosystem": "Maven",
+              "purl": "pkg:maven/org.apache.tomcat/tomcat-catalina"
+            },
+            "ranges": [
+              {
+                "type": "ECOSYSTEM",
+                "events": [
+                  {
+                    "introduced": "0"
+                  },
+                  {
+                    "fixed": "9.0.118"
+                  }
+                ]
+              }
+            ]
+          },
+          {
+            "package": {
+              "name": "org.apache.tomcat:tomcat-catalina",
+              "ecosystem": "Maven",
+              "purl": "pkg:maven/org.apache.tomcat/tomcat-catalina"
+            },
+            "ranges": [
+              {
+                "type": "ECOSYSTEM",
+                "events": [
+                  {
+                    "introduced": "10.1.0-M1"
+                  },
+                  {
+                    "fixed": "10.1.55"
+                  }
+                ]
+              }
+            ]
+          },
+          {
+            "package": {
+              "name": "org.apache.tomcat:tomcat-catalina",
+              "ecosystem": "Maven",
+              "purl": "pkg:maven/org.apache.tomcat/tomcat-catalina"
+            },
+            "ranges": [
+              {
+                "type": "ECOSYSTEM",
+                "events": [
+                  {
+                    "introduced": "11.0.0-M1"
+                  },
+                  {
+                    "fixed": "11.0.22"
+                  }
+                ]
+              }
+            ]
+          }
+        ]
+      },
+      {
+        "id": "GHSA-h2fw-rfh5-95r3",
+        "aliases": [
+          "BIT-tomcat-2025-46701",
+          "CVE-2025-46701"
+        ],
+        "summary": "Apache Tomcat - CGI security constraint bypass",
+        "affected": [
+          {
+            "package": {
+              "name": "org.apache.tomcat:tomcat-catalina",
+              "ecosystem": "Maven",
+              "purl": "pkg:maven/org.apache.tomcat/tomcat-catalina"
+            },
+            "ranges": [
+              {
+                "type": "ECOSYSTEM",
+                "events": [
+                  {
+                    "introduced": "9.0.0.M1"
+                  },
+                  {
+                    "fixed": "9.0.105"
+                  }
+                ]
+              }
+            ]
+          },
+          {
+            "package": {
+              "name": "org.apache.tomcat:tomcat-catalina",
+              "ecosystem": "Maven",
+              "purl": "pkg:maven/org.apache.tomcat/tomcat-catalina"
+            },
+            "ranges": [
+              {
+                "type": "ECOSYSTEM",
+                "events": [
+                  {
+                    "introduced": "10.1.0-M1"
+                  },
+                  {
+                    "fixed": "10.1.41"
+                  }
+                ]
+              }
+            ]
+          },
+          {
+            "package": {
+              "name": "org.apache.tomcat:tomcat-catalina",
+              "ecosystem": "Maven",
+              "purl": "pkg:maven/org.apache.tomcat/tomcat-catalina"
+            },
+            "ranges": [
+              {
+                "type": "ECOSYSTEM",
+                "events": [
+                  {
+                    "introduced": "11.0.0-M1"
+                  },
+                  {
+                    "fixed": "11.0.7"
+                  }
+                ]
+              }
+            ]
+          },
+          {
+            "package": {
+              "name": "org.apache.tomcat.embed:tomcat-embed-core",
+              "ecosystem": "Maven",
+              "purl": "pkg:maven/org.apache.tomcat.embed/tomcat-embed-core"
+            },
+            "ranges": [
+              {
+                "type": "ECOSYSTEM",
+                "events": [
+                  {
+                    "introduced": "9.0.0.M1"
+                  },
+                  {
+                    "fixed": "9.0.105"
+                  }
+                ]
+              }
+            ]
+          },
+          {
+            "package": {
+              "name": "org.apache.tomcat.embed:tomcat-embed-core",
+              "ecosystem": "Maven",
+              "purl": "pkg:maven/org.apache.tomcat.embed/tomcat-embed-core"
+            },
+            "ranges": [
+              {
+                "type": "ECOSYSTEM",
+                "events": [
+                  {
+                    "introduced": "10.1.0-M1"
+                  },
+                  {
+                    "fixed": "10.1.41"
+                  }
+                ]
+              }
+            ]
+          },
+          {
+            "package": {
+              "name": "org.apache.tomcat.embed:tomcat-embed-core",
+              "ecosystem": "Maven",
+              "purl": "pkg:maven/org.apache.tomcat.embed/tomcat-embed-core"
+            },
+            "ranges": [
+              {
+                "type": "ECOSYSTEM",
+                "events": [
+                  {
+                    "introduced": "11.0.0-M1"
+                  },
+                  {
+                    "fixed": "11.0.7"
+                  }
+                ]
+              }
+            ]
+          },
+          {
+            "package": {
+              "name": "org.apache.tomcat:tomcat-catalina",
+              "ecosystem": "Maven",
+              "purl": "pkg:maven/org.apache.tomcat/tomcat-catalina"
+            },
+            "ranges": [
+              {
+                "type": "ECOSYSTEM",
+                "events": [
+                  {
+                    "introduced": "8.5.0"
+                  },
+                  {
+                    "last_affected": "8.5.100"
+                  }
+                ]
+              }
+            ]
+          },
+          {
+            "package": {
+              "name": "org.apache.tomcat.embed:tomcat-embed-core",
+              "ecosystem": "Maven",
+              "purl": "pkg:maven/org.apache.tomcat.embed/tomcat-embed-core"
+            },
+            "ranges": [
+              {
+                "type": "ECOSYSTEM",
+                "events": [
+                  {
+                    "introduced": "8.5.0"
+                  },
+                  {
+                    "last_affected": "8.5.100"
+                  }
+                ]
+              }
+            ]
+          }
+        ]
+      },
+      {
+        "id": "GHSA-h3gc-qfqq-6h8f",
+        "aliases": [
+          "BIT-tomcat-2025-48988",
+          "CVE-2025-48988"
+        ],
+        "summary": "Apache Tomcat - DoS in multipart upload",
+        "affected": [
+          {
+            "package": {
+              "name": "org.apache.tomcat:tomcat-catalina",
+              "ecosystem": "Maven",
+              "purl": "pkg:maven/org.apache.tomcat/tomcat-catalina"
+            },
+            "ranges": [
+              {
+                "type": "ECOSYSTEM",
+                "events": [
+                  {
+                    "introduced": "11.0.0-M1"
+                  },
+                  {
+                    "fixed": "11.0.8"
+                  }
+                ]
+              }
+            ]
+          },
+          {
+            "package": {
+              "name": "org.apache.tomcat:tomcat-catalina",
+              "ecosystem": "Maven",
+              "purl": "pkg:maven/org.apache.tomcat/tomcat-catalina"
+            },
+            "ranges": [
+              {
+                "type": "ECOSYSTEM",
+                "events": [
+                  {
+                    "introduced": "10.1.0-M1"
+                  },
+                  {
+                    "fixed": "10.1.42"
+                  }
+                ]
+              }
+            ]
+          },
+          {
+            "package": {
+              "name": "org.apache.tomcat:tomcat-catalina",
+              "ecosystem": "Maven",
+              "purl": "pkg:maven/org.apache.tomcat/tomcat-catalina"
+            },
+            "ranges": [
+              {
+                "type": "ECOSYSTEM",
+                "events": [
+                  {
+                    "introduced": "9.0.0.M1"
+                  },
+                  {
+                    "fixed": "9.0.106"
+                  }
+                ]
+              }
+            ]
+          },
+          {
+            "package": {
+              "name": "org.apache.tomcat.embed:tomcat-embed-core",
+              "ecosystem": "Maven",
+              "purl": "pkg:maven/org.apache.tomcat.embed/tomcat-embed-core"
+            },
+            "ranges": [
+              {
+                "type": "ECOSYSTEM",
+                "events": [
+                  {
+                    "introduced": "11.0.0-M1"
+                  },
+                  {
+                    "fixed": "11.0.8"
+                  }
+                ]
+              }
+            ]
+          },
+          {
+            "package": {
+              "name": "org.apache.tomcat.embed:tomcat-embed-core",
+              "ecosystem": "Maven",
+              "purl": "pkg:maven/org.apache.tomcat.embed/tomcat-embed-core"
+            },
+            "ranges": [
+              {
+                "type": "ECOSYSTEM",
+                "events": [
+                  {
+                    "introduced": "10.1.0-M1"
+                  },
+                  {
+                    "fixed": "10.1.42"
+                  }
+                ]
+              }
+            ]
+          },
+          {
+            "package": {
+              "name": "org.apache.tomcat.embed:tomcat-embed-core",
+              "ecosystem": "Maven",
+              "purl": "pkg:maven/org.apache.tomcat.embed/tomcat-embed-core"
+            },
+            "ranges": [
+              {
+                "type": "ECOSYSTEM",
+                "events": [
+                  {
+                    "introduced": "9.0.0.M1"
+                  },
+                  {
+                    "fixed": "9.0.106"
+                  }
+                ]
+              }
+            ]
+          },
+          {
+            "package": {
+              "name": "org.apache.tomcat:tomcat-catalina",
+              "ecosystem": "Maven",
+              "purl": "pkg:maven/org.apache.tomcat/tomcat-catalina"
+            },
+            "ranges": [
+              {
+                "type": "ECOSYSTEM",
+                "events": [
+                  {
+                    "introduced": "8.5.0"
+                  },
+                  {
+                    "last_affected": "8.5.100"
+                  }
+                ]
+              }
+            ]
+          },
+          {
+            "package": {
+              "name": "org.apache.tomcat.embed:tomcat-embed-core",
+              "ecosystem": "Maven",
+              "purl": "pkg:maven/org.apache.tomcat.embed/tomcat-embed-core"
+            },
+            "ranges": [
+              {
+                "type": "ECOSYSTEM",
+                "events": [
+                  {
+                    "introduced": "8.5.0"
+                  },
+                  {
+                    "last_affected": "8.5.100"
+                  }
+                ]
+              }
+            ]
+          }
+        ]
+      },
+      {
+        "id": "GHSA-h3x4-894j-xpx5",
+        "aliases": [
+          "BIT-tomcat-2026-68525",
+          "CVE-2026-68525"
+        ],
+        "summary": "Apache Tomcat's FORM authentication process has an Incorrect Authorization vulnerability",
+        "affected": [
+          {
+            "package": {
+              "name": "org.apache.tomcat:tomcat",
+              "ecosystem": "Maven",
+              "purl": "pkg:maven/org.apache.tomcat/tomcat"
+            },
+            "ranges": [
+              {
+                "type": "ECOSYSTEM",
+                "events": [
+                  {
+                    "introduced": "11.0.0-M1"
+                  },
+                  {
+                    "fixed": "11.0.25"
+                  }
+                ]
+              }
+            ]
+          },
+          {
+            "package": {
+              "name": "org.apache.tomcat:tomcat",
+              "ecosystem": "Maven",
+              "purl": "pkg:maven/org.apache.tomcat/tomcat"
+            },
+            "ranges": [
+              {
+                "type": "ECOSYSTEM",
+                "events": [
+                  {
+                    "introduced": "10.1.0-M1"
+                  },
+                  {
+                    "fixed": "10.1.58"
+                  }
+                ]
+              }
+            ]
+          },
+          {
+            "package": {
+              "name": "org.apache.tomcat:tomcat",
+              "ecosystem": "Maven",
+              "purl": "pkg:maven/org.apache.tomcat/tomcat"
+            },
+            "ranges": [
+              {
+                "type": "ECOSYSTEM",
+                "events": [
+                  {
+                    "introduced": "9.0.0-M1"
+                  },
+                  {
+                    "fixed": "9.0.121"
+                  }
+                ]
+              }
+            ]
+          },
+          {
+            "package": {
+              "name": "org.apache.tomcat:tomcat",
+              "ecosystem": "Maven",
+              "purl": "pkg:maven/org.apache.tomcat/tomcat"
+            },
+            "ranges": [
+              {
+                "type": "ECOSYSTEM",
+                "events": [
+                  {
+                    "introduced": "8.5.0"
+                  },
+                  {
+                    "last_affected": "8.5.100"
+                  }
+                ]
+              }
+            ]
+          },
+          {
+            "package": {
+              "name": "org.apache.tomcat:tomcat",
+              "ecosystem": "Maven",
+              "purl": "pkg:maven/org.apache.tomcat/tomcat"
+            },
+            "ranges": [
+              {
+                "type": "ECOSYSTEM",
+                "events": [
+                  {
+                    "introduced": "7.0.0"
+                  },
+                  {
+                    "last_affected": "7.0.109"
+                  }
+                ]
+              }
+            ]
+          },
+          {
+            "package": {
+              "name": "org.apache.tomcat:tomcat-catalina",
+              "ecosystem": "Maven",
+              "purl": "pkg:maven/org.apache.tomcat/tomcat-catalina"
+            },
+            "ranges": [
+              {
+                "type": "ECOSYSTEM",
+                "events": [
+                  {
+                    "introduced": "11.0.0-M1"
+                  },
+                  {
+                    "fixed": "11.0.25"
+                  }
+                ]
+              }
+            ]
+          },
+          {
+            "package": {
+              "name": "org.apache.tomcat:tomcat-catalina",
+              "ecosystem": "Maven",
+              "purl": "pkg:maven/org.apache.tomcat/tomcat-catalina"
+            },
+            "ranges": [
+              {
+                "type": "ECOSYSTEM",
+                "events": [
+                  {
+                    "introduced": "10.1.0-M1"
+                  },
+                  {
+                    "fixed": "10.1.58"
+                  }
+                ]
+              }
+            ]
+          },
+          {
+            "package": {
+              "name": "org.apache.tomcat:tomcat-catalina",
+              "ecosystem": "Maven",
+              "purl": "pkg:maven/org.apache.tomcat/tomcat-catalina"
+            },
+            "ranges": [
+              {
+                "type": "ECOSYSTEM",
+                "events": [
+                  {
+                    "introduced": "9.0.0-M1"
+                  },
+                  {
+                    "fixed": "9.0.121"
+                  }
+                ]
+              }
+            ]
+          },
+          {
+            "package": {
+              "name": "org.apache.tomcat:tomcat-catalina",
+              "ecosystem": "Maven",
+              "purl": "pkg:maven/org.apache.tomcat/tomcat-catalina"
+            },
+            "ranges": [
+              {
+                "type": "ECOSYSTEM",
+                "events": [
+                  {
+                    "introduced": "8.5.0"
+                  },
+                  {
+                    "last_affected": "8.5.100"
+                  }
+                ]
+              }
+            ]
+          },
+          {
+            "package": {
+              "name": "org.apache.tomcat:tomcat-catalina",
+              "ecosystem": "Maven",
+              "purl": "pkg:maven/org.apache.tomcat/tomcat-catalina"
+            },
+            "ranges": [
+              {
+                "type": "ECOSYSTEM",
+                "events": [
+                  {
+                    "introduced": "7.0.0"
+                  },
+                  {
+                    "last_affected": "7.0.109"
+                  }
+                ]
+              }
+            ]
+          },
+          {
+            "package": {
+              "name": "org.apache.tomcat.embed:tomcat-embed-core",
+              "ecosystem": "Maven",
+              "purl": "pkg:maven/org.apache.tomcat.embed/tomcat-embed-core"
+            },
+            "ranges": [
+              {
+                "type": "ECOSYSTEM",
+                "events": [
+                  {
+                    "introduced": "11.0.0-M1"
+                  },
+                  {
+                    "fixed": "11.0.25"
+                  }
+                ]
+              }
+            ]
+          },
+          {
+            "package": {
+              "name": "org.apache.tomcat.embed:tomcat-embed-core",
+              "ecosystem": "Maven",
+              "purl": "pkg:maven/org.apache.tomcat.embed/tomcat-embed-core"
+            },
+            "ranges": [
+              {
+                "type": "ECOSYSTEM",
+                "events": [
+                  {
+                    "introduced": "10.1.0-M1"
+                  },
+                  {
+                    "fixed": "10.1.58"
+                  }
+                ]
+              }
+            ]
+          },
+          {
+            "package": {
+              "name": "org.apache.tomcat.embed:tomcat-embed-core",
+              "ecosystem": "Maven",
+              "purl": "pkg:maven/org.apache.tomcat.embed/tomcat-embed-core"
+            },
+            "ranges": [
+              {
+                "type": "ECOSYSTEM",
+                "events": [
+                  {
+                    "introduced": "9.0.0-M1"
+                  },
+                  {
+                    "fixed": "9.0.121"
+                  }
+                ]
+              }
+            ]
+          },
+          {
+            "package": {
+              "name": "org.apache.tomcat.embed:tomcat-embed-core",
+              "ecosystem": "Maven",
+              "purl": "pkg:maven/org.apache.tomcat.embed/tomcat-embed-core"
+            },
+            "ranges": [
+              {
+                "type": "ECOSYSTEM",
+                "events": [
+                  {
+                    "introduced": "8.5.0"
+                  },
+                  {
+                    "last_affected": "8.5.100"
+                  }
+                ]
+              }
+            ]
+          },
+          {
+            "package": {
+              "name": "org.apache.tomcat.embed:tomcat-embed-core",
+              "ecosystem": "Maven",
+              "purl": "pkg:maven/org.apache.tomcat.embed/tomcat-embed-core"
+            },
+            "ranges": [
+              {
+                "type": "ECOSYSTEM",
+                "events": [
+                  {
+                    "introduced": "7.0.0"
+                  },
+                  {
+                    "last_affected": "7.0.109"
+                  }
+                ]
+              }
+            ]
+          }
+        ]
+      },
+      {
+        "id": "GHSA-h6fc-48rj-7qqh",
+        "aliases": [
+          "BIT-tomcat-2026-43512",
+          "CVE-2026-43512"
+        ],
+        "summary": "Apache Tomcat - Digest authenticator will authenticate any unknown user",
+        "affected": [
+          {
+            "package": {
+              "name": "org.apache.tomcat.embed:tomcat-embed-core",
+              "ecosystem": "Maven",
+              "purl": "pkg:maven/org.apache.tomcat.embed/tomcat-embed-core"
+            },
+            "ranges": [
+              {
+                "type": "ECOSYSTEM",
+                "events": [
+                  {
+                    "introduced": "0"
+                  },
+                  {
+                    "fixed": "9.0.118"
+                  }
+                ]
+              }
+            ]
+          },
+          {
+            "package": {
+              "name": "org.apache.tomcat.embed:tomcat-embed-core",
+              "ecosystem": "Maven",
+              "purl": "pkg:maven/org.apache.tomcat.embed/tomcat-embed-core"
+            },
+            "ranges": [
+              {
+                "type": "ECOSYSTEM",
+                "events": [
+                  {
+                    "introduced": "10.1.0-M1"
+                  },
+                  {
+                    "fixed": "10.1.55"
+                  }
+                ]
+              }
+            ]
+          },
+          {
+            "package": {
+              "name": "org.apache.tomcat.embed:tomcat-embed-core",
+              "ecosystem": "Maven",
+              "purl": "pkg:maven/org.apache.tomcat.embed/tomcat-embed-core"
+            },
+            "ranges": [
+              {
+                "type": "ECOSYSTEM",
+                "events": [
+                  {
+                    "introduced": "11.0.0-M1"
+                  },
+                  {
+                    "fixed": "11.0.22"
+                  }
+                ]
+              }
+            ]
+          },
+          {
+            "package": {
+              "name": "org.apache.tomcat:tomcat",
+              "ecosystem": "Maven",
+              "purl": "pkg:maven/org.apache.tomcat/tomcat"
+            },
+            "ranges": [
+              {
+                "type": "ECOSYSTEM",
+                "events": [
+                  {
+                    "introduced": "0"
+                  },
+                  {
+                    "fixed": "9.0.118"
+                  }
+                ]
+              }
+            ]
+          },
+          {
+            "package": {
+              "name": "org.apache.tomcat:tomcat",
+              "ecosystem": "Maven",
+              "purl": "pkg:maven/org.apache.tomcat/tomcat"
+            },
+            "ranges": [
+              {
+                "type": "ECOSYSTEM",
+                "events": [
+                  {
+                    "introduced": "10.1.0-M1"
+                  },
+                  {
+                    "fixed": "10.1.55"
+                  }
+                ]
+              }
+            ]
+          },
+          {
+            "package": {
+              "name": "org.apache.tomcat:tomcat",
+              "ecosystem": "Maven",
+              "purl": "pkg:maven/org.apache.tomcat/tomcat"
+            },
+            "ranges": [
+              {
+                "type": "ECOSYSTEM",
+                "events": [
+                  {
+                    "introduced": "11.0.0-M1"
+                  },
+                  {
+                    "fixed": "11.0.22"
+                  }
+                ]
+              }
+            ]
+          },
+          {
+            "package": {
+              "name": "org.apache.tomcat:tomcat-catalina",
+              "ecosystem": "Maven",
+              "purl": "pkg:maven/org.apache.tomcat/tomcat-catalina"
+            },
+            "ranges": [
+              {
+                "type": "ECOSYSTEM",
+                "events": [
+                  {
+                    "introduced": "0"
+                  },
+                  {
+                    "fixed": "9.0.118"
+                  }
+                ]
+              }
+            ]
+          },
+          {
+            "package": {
+              "name": "org.apache.tomcat:tomcat-catalina",
+              "ecosystem": "Maven",
+              "purl": "pkg:maven/org.apache.tomcat/tomcat-catalina"
+            },
+            "ranges": [
+              {
+                "type": "ECOSYSTEM",
+                "events": [
+                  {
+                    "introduced": "10.1.0-M1"
+                  },
+                  {
+                    "fixed": "10.1.55"
+                  }
+                ]
+              }
+            ]
+          },
+          {
+            "package": {
+              "name": "org.apache.tomcat:tomcat-catalina",
+              "ecosystem": "Maven",
+              "purl": "pkg:maven/org.apache.tomcat/tomcat-catalina"
+            },
+            "ranges": [
+              {
+                "type": "ECOSYSTEM",
+                "events": [
+                  {
+                    "introduced": "11.0.0-M1"
+                  },
+                  {
+                    "fixed": "11.0.22"
+                  }
+                ]
+              }
+            ]
+          }
+        ]
+      },
+      {
+        "id": "GHSA-hfrx-6qgj-fp6c",
+        "aliases": [
+          "CVE-2023-24998"
+        ],
+        "summary": "Apache Commons FileUpload denial of service vulnerability",
+        "affected": [
+          {
+            "package": {
+              "name": "commons-fileupload:commons-fileupload",
+              "ecosystem": "Maven",
+              "purl": "pkg:maven/commons-fileupload/commons-fileupload"
+            },
+            "ranges": [
+              {
+                "type": "ECOSYSTEM",
+                "events": [
+                  {
+                    "introduced": "0"
+                  },
+                  {
+                    "fixed": "1.5"
+                  }
+                ]
+              }
+            ]
+          },
+          {
+            "package": {
+              "name": "org.apache.tomcat:tomcat-coyote",
+              "ecosystem": "Maven",
+              "purl": "pkg:maven/org.apache.tomcat/tomcat-coyote"
+            },
+            "ranges": [
+              {
+                "type": "ECOSYSTEM",
+                "events": [
+                  {
+                    "introduced": "10.1.0-M1"
+                  },
+                  {
+                    "fixed": "10.1.5"
+                  }
+                ]
+              }
+            ]
+          },
+          {
+            "package": {
+              "name": "org.apache.tomcat:tomcat-coyote",
+              "ecosystem": "Maven",
+              "purl": "pkg:maven/org.apache.tomcat/tomcat-coyote"
+            },
+            "ranges": [
+              {
+                "type": "ECOSYSTEM",
+                "events": [
+                  {
+                    "introduced": "11.0.0-M2"
+                  },
+                  {
+                    "fixed": "11.0.0-M5"
+                  }
+                ]
+              }
+            ]
+          },
+          {
+            "package": {
+              "name": "org.apache.tomcat:tomcat-coyote",
+              "ecosystem": "Maven",
+              "purl": "pkg:maven/org.apache.tomcat/tomcat-coyote"
+            },
+            "ranges": [
+              {
+                "type": "ECOSYSTEM",
+                "events": [
+                  {
+                    "introduced": "8.5.85"
+                  },
+                  {
+                    "fixed": "8.5.88"
+                  }
+                ]
+              }
+            ]
+          },
+          {
+            "package": {
+              "name": "org.apache.tomcat:tomcat-coyote",
+              "ecosystem": "Maven",
+              "purl": "pkg:maven/org.apache.tomcat/tomcat-coyote"
+            },
+            "ranges": [
+              {
+                "type": "ECOSYSTEM",
+                "events": [
+                  {
+                    "introduced": "9.0.0-M1"
+                  },
+                  {
+                    "fixed": "9.0.71"
+                  }
+                ]
+              }
+            ]
+          },
+          {
+            "package": {
+              "name": "org.apache.tomcat.embed:tomcat-embed-core",
+              "ecosystem": "Maven",
+              "purl": "pkg:maven/org.apache.tomcat.embed/tomcat-embed-core"
+            },
+            "ranges": [
+              {
+                "type": "ECOSYSTEM",
+                "events": [
+                  {
+                    "introduced": "10.1.0-M1"
+                  },
+                  {
+                    "fixed": "10.1.5"
+                  }
+                ]
+              }
+            ]
+          },
+          {
+            "package": {
+              "name": "org.apache.tomcat.embed:tomcat-embed-core",
+              "ecosystem": "Maven",
+              "purl": "pkg:maven/org.apache.tomcat.embed/tomcat-embed-core"
+            },
+            "ranges": [
+              {
+                "type": "ECOSYSTEM",
+                "events": [
+                  {
+                    "introduced": "11.0.0-M2"
+                  },
+                  {
+                    "fixed": "11.0.0-M5"
+                  }
+                ]
+              }
+            ]
+          },
+          {
+            "package": {
+              "name": "org.apache.tomcat.embed:tomcat-embed-core",
+              "ecosystem": "Maven",
+              "purl": "pkg:maven/org.apache.tomcat.embed/tomcat-embed-core"
+            },
+            "ranges": [
+              {
+                "type": "ECOSYSTEM",
+                "events": [
+                  {
+                    "introduced": "8.5.85"
+                  },
+                  {
+                    "fixed": "8.5.88"
+                  }
+                ]
+              }
+            ]
+          },
+          {
+            "package": {
+              "name": "org.apache.tomcat.embed:tomcat-embed-core",
+              "ecosystem": "Maven",
+              "purl": "pkg:maven/org.apache.tomcat.embed/tomcat-embed-core"
+            },
+            "ranges": [
+              {
+                "type": "ECOSYSTEM",
+                "events": [
+                  {
+                    "introduced": "9.0.0-M1"
+                  },
+                  {
+                    "fixed": "9.0.71"
+                  }
+                ]
+              }
+            ]
+          },
+          {
+            "package": {
+              "name": "org.apache.tomcat:tomcat-catalina",
+              "ecosystem": "Maven",
+              "purl": "pkg:maven/org.apache.tomcat/tomcat-catalina"
+            },
+            "ranges": [
+              {
+                "type": "ECOSYSTEM",
+                "events": [
+                  {
+                    "introduced": "10.1.0-M1"
+                  },
+                  {
+                    "fixed": "10.1.5"
+                  }
+                ]
+              }
+            ]
+          },
+          {
+            "package": {
+              "name": "org.apache.tomcat:tomcat-catalina",
+              "ecosystem": "Maven",
+              "purl": "pkg:maven/org.apache.tomcat/tomcat-catalina"
+            },
+            "ranges": [
+              {
+                "type": "ECOSYSTEM",
+                "events": [
+                  {
+                    "introduced": "11.0.0-M2"
+                  },
+                  {
+                    "fixed": "11.0.0-M5"
+                  }
+                ]
+              }
+            ]
+          },
+          {
+            "package": {
+              "name": "org.apache.tomcat:tomcat-catalina",
+              "ecosystem": "Maven",
+              "purl": "pkg:maven/org.apache.tomcat/tomcat-catalina"
+            },
+            "ranges": [
+              {
+                "type": "ECOSYSTEM",
+                "events": [
+                  {
+                    "introduced": "8.5.85"
+                  },
+                  {
+                    "fixed": "8.5.88"
+                  }
+                ]
+              }
+            ]
+          },
+          {
+            "package": {
+              "name": "org.apache.tomcat:tomcat-catalina",
+              "ecosystem": "Maven",
+              "purl": "pkg:maven/org.apache.tomcat/tomcat-catalina"
+            },
+            "ranges": [
+              {
+                "type": "ECOSYSTEM",
+                "events": [
+                  {
+                    "introduced": "9.0.0-M1"
+                  },
+                  {
+                    "fixed": "9.0.71"
+                  }
+                ]
+              }
+            ]
+          }
+        ]
+      },
+      {
+        "id": "GHSA-hgrr-935x-pq79",
+        "aliases": [
+          "BIT-tomcat-2025-61795",
+          "CVE-2025-61795"
+        ],
+        "summary": "Apache Tomcat Vulnerable to Improper Resource Shutdown or Release",
+        "affected": [
+          {
+            "package": {
+              "name": "org.apache.tomcat:tomcat",
+              "ecosystem": "Maven",
+              "purl": "pkg:maven/org.apache.tomcat/tomcat"
+            },
+            "ranges": [
+              {
+                "type": "ECOSYSTEM",
+                "events": [
+                  {
+                    "introduced": "11.0.0-M1"
+                  },
+                  {
+                    "fixed": "11.0.12"
+                  }
+                ]
+              }
+            ]
+          },
+          {
+            "package": {
+              "name": "org.apache.tomcat:tomcat",
+              "ecosystem": "Maven",
+              "purl": "pkg:maven/org.apache.tomcat/tomcat"
+            },
+            "ranges": [
+              {
+                "type": "ECOSYSTEM",
+                "events": [
+                  {
+                    "introduced": "10.1.0-M1"
+                  },
+                  {
+                    "fixed": "10.1.47"
+                  }
+                ]
+              }
+            ]
+          },
+          {
+            "package": {
+              "name": "org.apache.tomcat:tomcat",
+              "ecosystem": "Maven",
+              "purl": "pkg:maven/org.apache.tomcat/tomcat"
+            },
+            "ranges": [
+              {
+                "type": "ECOSYSTEM",
+                "events": [
+                  {
+                    "introduced": "9.0.0.M1"
+                  },
+                  {
+                    "fixed": "9.0.110"
+                  }
+                ]
+              }
+            ]
+          },
+          {
+            "package": {
+              "name": "org.apache.tomcat:tomcat",
+              "ecosystem": "Maven",
+              "purl": "pkg:maven/org.apache.tomcat/tomcat"
+            },
+            "ranges": [
+              {
+                "type": "ECOSYSTEM",
+                "events": [
+                  {
+                    "introduced": "8.5.0"
+                  },
+                  {
+                    "last_affected": "8.5.100"
+                  }
+                ]
+              }
+            ]
+          },
+          {
+            "package": {
+              "name": "org.apache.tomcat:tomcat-catalina",
+              "ecosystem": "Maven",
+              "purl": "pkg:maven/org.apache.tomcat/tomcat-catalina"
+            },
+            "ranges": [
+              {
+                "type": "ECOSYSTEM",
+                "events": [
+                  {
+                    "introduced": "11.0.0-M1"
+                  },
+                  {
+                    "fixed": "11.0.12"
+                  }
+                ]
+              }
+            ]
+          },
+          {
+            "package": {
+              "name": "org.apache.tomcat:tomcat-catalina",
+              "ecosystem": "Maven",
+              "purl": "pkg:maven/org.apache.tomcat/tomcat-catalina"
+            },
+            "ranges": [
+              {
+                "type": "ECOSYSTEM",
+                "events": [
+                  {
+                    "introduced": "10.1.0-M1"
+                  },
+                  {
+                    "fixed": "10.1.47"
+                  }
+                ]
+              }
+            ]
+          },
+          {
+            "package": {
+              "name": "org.apache.tomcat:tomcat-catalina",
+              "ecosystem": "Maven",
+              "purl": "pkg:maven/org.apache.tomcat/tomcat-catalina"
+            },
+            "ranges": [
+              {
+                "type": "ECOSYSTEM",
+                "events": [
+                  {
+                    "introduced": "9.0.0.M1"
+                  },
+                  {
+                    "fixed": "9.0.110"
+                  }
+                ]
+              }
+            ]
+          },
+          {
+            "package": {
+              "name": "org.apache.tomcat:tomcat-catalina",
+              "ecosystem": "Maven",
+              "purl": "pkg:maven/org.apache.tomcat/tomcat-catalina"
+            },
+            "ranges": [
+              {
+                "type": "ECOSYSTEM",
+                "events": [
+                  {
+                    "introduced": "8.5.0"
+                  },
+                  {
+                    "last_affected": "8.5.100"
+                  }
+                ]
+              }
+            ]
+          },
+          {
+            "package": {
+              "name": "org.apache.tomcat.embed:tomcat-embed-core",
+              "ecosystem": "Maven",
+              "purl": "pkg:maven/org.apache.tomcat.embed/tomcat-embed-core"
+            },
+            "ranges": [
+              {
+                "type": "ECOSYSTEM",
+                "events": [
+                  {
+                    "introduced": "11.0.0-M1"
+                  },
+                  {
+                    "fixed": "11.0.12"
+                  }
+                ]
+              }
+            ]
+          },
+          {
+            "package": {
+              "name": "org.apache.tomcat.embed:tomcat-embed-core",
+              "ecosystem": "Maven",
+              "purl": "pkg:maven/org.apache.tomcat.embed/tomcat-embed-core"
+            },
+            "ranges": [
+              {
+                "type": "ECOSYSTEM",
+                "events": [
+                  {
+                    "introduced": "10.1.0-M1"
+                  },
+                  {
+                    "fixed": "10.1.47"
+                  }
+                ]
+              }
+            ]
+          },
+          {
+            "package": {
+              "name": "org.apache.tomcat.embed:tomcat-embed-core",
+              "ecosystem": "Maven",
+              "purl": "pkg:maven/org.apache.tomcat.embed/tomcat-embed-core"
+            },
+            "ranges": [
+              {
+                "type": "ECOSYSTEM",
+                "events": [
+                  {
+                    "introduced": "9.0.0.M1"
+                  },
+                  {
+                    "fixed": "9.0.110"
+                  }
+                ]
+              }
+            ]
+          },
+          {
+            "package": {
+              "name": "org.apache.tomcat.embed:tomcat-embed-core",
+              "ecosystem": "Maven",
+              "purl": "pkg:maven/org.apache.tomcat.embed/tomcat-embed-core"
+            },
+            "ranges": [
+              {
+                "type": "ECOSYSTEM",
+                "events": [
+                  {
+                    "introduced": "8.5.0"
+                  },
+                  {
+                    "last_affected": "8.5.100"
+                  }
+                ]
+              }
+            ]
+          }
+        ]
+      },
+      {
+        "id": "GHSA-q3mw-pvr8-9ggc",
+        "aliases": [
+          "BIT-tomcat-2023-41080",
+          "CVE-2023-41080"
+        ],
+        "summary": "Apache Tomcat Open Redirect vulnerability",
+        "affected": [
+          {
+            "package": {
+              "name": "org.apache.tomcat:tomcat",
+              "ecosystem": "Maven",
+              "purl": "pkg:maven/org.apache.tomcat/tomcat"
+            },
+            "ranges": [
+              {
+                "type": "ECOSYSTEM",
+                "events": [
+                  {
+                    "introduced": "11.0.0-M1"
+                  },
+                  {
+                    "fixed": "11.0.0-M11"
+                  }
+                ]
+              }
+            ]
+          },
+          {
+            "package": {
+              "name": "org.apache.tomcat:tomcat",
+              "ecosystem": "Maven",
+              "purl": "pkg:maven/org.apache.tomcat/tomcat"
+            },
+            "ranges": [
+              {
+                "type": "ECOSYSTEM",
+                "events": [
+                  {
+                    "introduced": "10.1.0-M1"
+                  },
+                  {
+                    "fixed": "10.1.13"
+                  }
+                ]
+              }
+            ]
+          },
+          {
+            "package": {
+              "name": "org.apache.tomcat:tomcat",
+              "ecosystem": "Maven",
+              "purl": "pkg:maven/org.apache.tomcat/tomcat"
+            },
+            "ranges": [
+              {
+                "type": "ECOSYSTEM",
+                "events": [
+                  {
+                    "introduced": "9.0.0-M1"
+                  },
+                  {
+                    "fixed": "9.0.80"
+                  }
+                ]
+              }
+            ]
+          },
+          {
+            "package": {
+              "name": "org.apache.tomcat:tomcat",
+              "ecosystem": "Maven",
+              "purl": "pkg:maven/org.apache.tomcat/tomcat"
+            },
+            "ranges": [
+              {
+                "type": "ECOSYSTEM",
+                "events": [
+                  {
+                    "introduced": "8.5.0"
+                  },
+                  {
+                    "fixed": "8.5.93"
+                  }
+                ]
+              }
+            ]
+          },
+          {
+            "package": {
+              "name": "org.apache.tomcat.embed:tomcat-embed-core",
+              "ecosystem": "Maven",
+              "purl": "pkg:maven/org.apache.tomcat.embed/tomcat-embed-core"
+            },
+            "ranges": [
+              {
+                "type": "ECOSYSTEM",
+                "events": [
+                  {
+                    "introduced": "8.5.0"
+                  },
+                  {
+                    "fixed": "8.5.93"
+                  }
+                ]
+              }
+            ]
+          },
+          {
+            "package": {
+              "name": "org.apache.tomcat.embed:tomcat-embed-core",
+              "ecosystem": "Maven",
+              "purl": "pkg:maven/org.apache.tomcat.embed/tomcat-embed-core"
+            },
+            "ranges": [
+              {
+                "type": "ECOSYSTEM",
+                "events": [
+                  {
+                    "introduced": "9.0.0-M1"
+                  },
+                  {
+                    "fixed": "9.0.80"
+                  }
+                ]
+              }
+            ]
+          },
+          {
+            "package": {
+              "name": "org.apache.tomcat.embed:tomcat-embed-core",
+              "ecosystem": "Maven",
+              "purl": "pkg:maven/org.apache.tomcat.embed/tomcat-embed-core"
+            },
+            "ranges": [
+              {
+                "type": "ECOSYSTEM",
+                "events": [
+                  {
+                    "introduced": "10.1.0-M1"
+                  },
+                  {
+                    "fixed": "10.1.13"
+                  }
+                ]
+              }
+            ]
+          },
+          {
+            "package": {
+              "name": "org.apache.tomcat.embed:tomcat-embed-core",
+              "ecosystem": "Maven",
+              "purl": "pkg:maven/org.apache.tomcat.embed/tomcat-embed-core"
+            },
+            "ranges": [
+              {
+                "type": "ECOSYSTEM",
+                "events": [
+                  {
+                    "introduced": "11.0.0-M1"
+                  },
+                  {
+                    "fixed": "11.0.0-M11"
+                  }
+                ]
+              }
+            ]
+          },
+          {
+            "package": {
+              "name": "org.apache.tomcat:tomcat-catalina",
+              "ecosystem": "Maven",
+              "purl": "pkg:maven/org.apache.tomcat/tomcat-catalina"
+            },
+            "ranges": [
+              {
+                "type": "ECOSYSTEM",
+                "events": [
+                  {
+                    "introduced": "10.1.0-M1"
+                  },
+                  {
+                    "fixed": "10.1.13"
+                  }
+                ]
+              }
+            ]
+          },
+          {
+            "package": {
+              "name": "org.apache.tomcat:tomcat-catalina",
+              "ecosystem": "Maven",
+              "purl": "pkg:maven/org.apache.tomcat/tomcat-catalina"
+            },
+            "ranges": [
+              {
+                "type": "ECOSYSTEM",
+                "events": [
+                  {
+                    "introduced": "9.0.0-M1"
+                  },
+                  {
+                    "fixed": "9.0.80"
+                  }
+                ]
+              }
+            ]
+          },
+          {
+            "package": {
+              "name": "org.apache.tomcat:tomcat-catalina",
+              "ecosystem": "Maven",
+              "purl": "pkg:maven/org.apache.tomcat/tomcat-catalina"
+            },
+            "ranges": [
+              {
+                "type": "ECOSYSTEM",
+                "events": [
+                  {
+                    "introduced": "8.5.0"
+                  },
+                  {
+                    "fixed": "8.5.93"
+                  }
+                ]
+              }
+            ]
+          }
+        ]
+      },
+      {
+        "id": "GHSA-wc4r-xq3c-5cf3",
+        "aliases": [
+          "BIT-tomcat-2025-49125",
+          "CVE-2025-49125"
+        ],
+        "summary": "Apache Tomcat - Security constraint bypass for pre/post-resources",
+        "affected": [
+          {
+            "package": {
+              "name": "org.apache.tomcat:tomcat-catalina",
+              "ecosystem": "Maven",
+              "purl": "pkg:maven/org.apache.tomcat/tomcat-catalina"
+            },
+            "ranges": [
+              {
+                "type": "ECOSYSTEM",
+                "events": [
+                  {
+                    "introduced": "11.0.0-M1"
+                  },
+                  {
+                    "fixed": "11.0.8"
+                  }
+                ]
+              }
+            ]
+          },
+          {
+            "package": {
+              "name": "org.apache.tomcat:tomcat-catalina",
+              "ecosystem": "Maven",
+              "purl": "pkg:maven/org.apache.tomcat/tomcat-catalina"
+            },
+            "ranges": [
+              {
+                "type": "ECOSYSTEM",
+                "events": [
+                  {
+                    "introduced": "10.1.0-M1"
+                  },
+                  {
+                    "fixed": "10.1.42"
+                  }
+                ]
+              }
+            ]
+          },
+          {
+            "package": {
+              "name": "org.apache.tomcat:tomcat-catalina",
+              "ecosystem": "Maven",
+              "purl": "pkg:maven/org.apache.tomcat/tomcat-catalina"
+            },
+            "ranges": [
+              {
+                "type": "ECOSYSTEM",
+                "events": [
+                  {
+                    "introduced": "9.0.0.M1"
+                  },
+                  {
+                    "fixed": "9.0.106"
+                  }
+                ]
+              }
+            ]
+          },
+          {
+            "package": {
+              "name": "org.apache.tomcat.embed:tomcat-embed-core",
+              "ecosystem": "Maven",
+              "purl": "pkg:maven/org.apache.tomcat.embed/tomcat-embed-core"
+            },
+            "ranges": [
+              {
+                "type": "ECOSYSTEM",
+                "events": [
+                  {
+                    "introduced": "11.0.0-M1"
+                  },
+                  {
+                    "fixed": "11.0.8"
+                  }
+                ]
+              }
+            ]
+          },
+          {
+            "package": {
+              "name": "org.apache.tomcat.embed:tomcat-embed-core",
+              "ecosystem": "Maven",
+              "purl": "pkg:maven/org.apache.tomcat.embed/tomcat-embed-core"
+            },
+            "ranges": [
+              {
+                "type": "ECOSYSTEM",
+                "events": [
+                  {
+                    "introduced": "10.1.0-M1"
+                  },
+                  {
+                    "fixed": "10.1.42"
+                  }
+                ]
+              }
+            ]
+          },
+          {
+            "package": {
+              "name": "org.apache.tomcat.embed:tomcat-embed-core",
+              "ecosystem": "Maven",
+              "purl": "pkg:maven/org.apache.tomcat.embed/tomcat-embed-core"
+            },
+            "ranges": [
+              {
+                "type": "ECOSYSTEM",
+                "events": [
+                  {
+                    "introduced": "9.0.0.M1"
+                  },
+                  {
+                    "fixed": "9.0.106"
+                  }
+                ]
+              }
+            ]
+          },
+          {
+            "package": {
+              "name": "org.apache.tomcat:tomcat-catalina",
+              "ecosystem": "Maven",
+              "purl": "pkg:maven/org.apache.tomcat/tomcat-catalina"
+            },
+            "ranges": [
+              {
+                "type": "ECOSYSTEM",
+                "events": [
+                  {
+                    "introduced": "8.5.0"
+                  },
+                  {
+                    "last_affected": "8.5.100"
+                  }
+                ]
+              }
+            ]
+          },
+          {
+            "package": {
+              "name": "org.apache.tomcat.embed:tomcat-embed-core",
+              "ecosystem": "Maven",
+              "purl": "pkg:maven/org.apache.tomcat.embed/tomcat-embed-core"
+            },
+            "ranges": [
+              {
+                "type": "ECOSYSTEM",
+                "events": [
+                  {
+                    "introduced": "8.5.0"
+                  },
+                  {
+                    "last_affected": "8.5.100"
+                  }
+                ]
+              }
+            ]
+          }
+        ]
+      },
+      {
+        "id": "GHSA-wmwf-9ccg-fff5",
+        "aliases": [
+          "BIT-tomcat-2025-55752",
+          "CVE-2025-55752"
+        ],
+        "summary": "Apache Tomcat Vulnerable to Relative Path Traversal",
+        "affected": [
+          {
+            "package": {
+              "name": "org.apache.tomcat:tomcat",
+              "ecosystem": "Maven",
+              "purl": "pkg:maven/org.apache.tomcat/tomcat"
+            },
+            "ranges": [
+              {
+                "type": "ECOSYSTEM",
+                "events": [
+                  {
+                    "introduced": "11.0.0-M1"
+                  },
+                  {
+                    "fixed": "11.0.11"
+                  }
+                ]
+              }
+            ]
+          },
+          {
+            "package": {
+              "name": "org.apache.tomcat:tomcat",
+              "ecosystem": "Maven",
+              "purl": "pkg:maven/org.apache.tomcat/tomcat"
+            },
+            "ranges": [
+              {
+                "type": "ECOSYSTEM",
+                "events": [
+                  {
+                    "introduced": "10.1.0-M1"
+                  },
+                  {
+                    "fixed": "10.1.45"
+                  }
+                ]
+              }
+            ]
+          },
+          {
+            "package": {
+              "name": "org.apache.tomcat:tomcat",
+              "ecosystem": "Maven",
+              "purl": "pkg:maven/org.apache.tomcat/tomcat"
+            },
+            "ranges": [
+              {
+                "type": "ECOSYSTEM",
+                "events": [
+                  {
+                    "introduced": "9.0.0-M11"
+                  },
+                  {
+                    "fixed": "9.0.109"
+                  }
+                ]
+              }
+            ]
+          },
+          {
+            "package": {
+              "name": "org.apache.tomcat:tomcat",
+              "ecosystem": "Maven",
+              "purl": "pkg:maven/org.apache.tomcat/tomcat"
+            },
+            "ranges": [
+              {
+                "type": "ECOSYSTEM",
+                "events": [
+                  {
+                    "introduced": "8.5.6"
+                  },
+                  {
+                    "last_affected": "8.5.100"
+                  }
+                ]
+              }
+            ]
+          },
+          {
+            "package": {
+              "name": "org.apache.tomcat:tomcat-catalina",
+              "ecosystem": "Maven",
+              "purl": "pkg:maven/org.apache.tomcat/tomcat-catalina"
+            },
+            "ranges": [
+              {
+                "type": "ECOSYSTEM",
+                "events": [
+                  {
+                    "introduced": "11.0.0-M1"
+                  },
+                  {
+                    "fixed": "11.0.11"
+                  }
+                ]
+              }
+            ]
+          },
+          {
+            "package": {
+              "name": "org.apache.tomcat:tomcat-catalina",
+              "ecosystem": "Maven",
+              "purl": "pkg:maven/org.apache.tomcat/tomcat-catalina"
+            },
+            "ranges": [
+              {
+                "type": "ECOSYSTEM",
+                "events": [
+                  {
+                    "introduced": "10.1.0-M1"
+                  },
+                  {
+                    "fixed": "10.1.45"
+                  }
+                ]
+              }
+            ]
+          },
+          {
+            "package": {
+              "name": "org.apache.tomcat:tomcat-catalina",
+              "ecosystem": "Maven",
+              "purl": "pkg:maven/org.apache.tomcat/tomcat-catalina"
+            },
+            "ranges": [
+              {
+                "type": "ECOSYSTEM",
+                "events": [
+                  {
+                    "introduced": "9.0.0-M11"
+                  },
+                  {
+                    "fixed": "9.0.109"
+                  }
+                ]
+              }
+            ]
+          },
+          {
+            "package": {
+              "name": "org.apache.tomcat:tomcat-catalina",
+              "ecosystem": "Maven",
+              "purl": "pkg:maven/org.apache.tomcat/tomcat-catalina"
+            },
+            "ranges": [
+              {
+                "type": "ECOSYSTEM",
+                "events": [
+                  {
+                    "introduced": "8.5.6"
+                  },
+                  {
+                    "last_affected": "8.5.100"
+                  }
+                ]
+              }
+            ]
+          },
+          {
+            "package": {
+              "name": "org.apache.tomcat.embed:tomcat-embed-core",
+              "ecosystem": "Maven",
+              "purl": "pkg:maven/org.apache.tomcat.embed/tomcat-embed-core"
+            },
+            "ranges": [
+              {
+                "type": "ECOSYSTEM",
+                "events": [
+                  {
+                    "introduced": "11.0.0-M1"
+                  },
+                  {
+                    "fixed": "11.0.11"
+                  }
+                ]
+              }
+            ]
+          },
+          {
+            "package": {
+              "name": "org.apache.tomcat.embed:tomcat-embed-core",
+              "ecosystem": "Maven",
+              "purl": "pkg:maven/org.apache.tomcat.embed/tomcat-embed-core"
+            },
+            "ranges": [
+              {
+                "type": "ECOSYSTEM",
+                "events": [
+                  {
+                    "introduced": "10.1.0-M1"
+                  },
+                  {
+                    "fixed": "10.1.45"
+                  }
+                ]
+              }
+            ]
+          },
+          {
+            "package": {
+              "name": "org.apache.tomcat.embed:tomcat-embed-core",
+              "ecosystem": "Maven",
+              "purl": "pkg:maven/org.apache.tomcat.embed/tomcat-embed-core"
+            },
+            "ranges": [
+              {
+                "type": "ECOSYSTEM",
+                "events": [
+                  {
+                    "introduced": "9.0.0-M11"
+                  },
+                  {
+                    "fixed": "9.0.109"
+                  }
+                ]
+              }
+            ]
+          },
+          {
+            "package": {
+              "name": "org.apache.tomcat.embed:tomcat-embed-core",
+              "ecosystem": "Maven",
+              "purl": "pkg:maven/org.apache.tomcat.embed/tomcat-embed-core"
+            },
+            "ranges": [
+              {
+                "type": "ECOSYSTEM",
+                "events": [
+                  {
+                    "introduced": "8.5.6"
+                  },
+                  {
+                    "last_affected": "8.5.100"
+                  }
+                ]
+              }
+            ]
+          }
+        ]
+      },
+      {
+        "id": "GHSA-wr62-c79q-cv37",
+        "aliases": [
+          "BIT-tomcat-2025-52520",
+          "CVE-2025-52520"
+        ],
+        "summary": "Apache Tomcat Catalina is vulnerable to DoS attack through bypassing of size limits",
+        "affected": [
+          {
+            "package": {
+              "name": "org.apache.tomcat:tomcat-catalina",
+              "ecosystem": "Maven",
+              "purl": "pkg:maven/org.apache.tomcat/tomcat-catalina"
+            },
+            "ranges": [
+              {
+                "type": "ECOSYSTEM",
+                "events": [
+                  {
+                    "introduced": "11.0.0-M1"
+                  },
+                  {
+                    "fixed": "11.0.9"
+                  }
+                ]
+              }
+            ]
+          },
+          {
+            "package": {
+              "name": "org.apache.tomcat:tomcat-catalina",
+              "ecosystem": "Maven",
+              "purl": "pkg:maven/org.apache.tomcat/tomcat-catalina"
+            },
+            "ranges": [
+              {
+                "type": "ECOSYSTEM",
+                "events": [
+                  {
+                    "introduced": "10.1.0-M1"
+                  },
+                  {
+                    "fixed": "10.1.43"
+                  }
+                ]
+              }
+            ]
+          },
+          {
+            "package": {
+              "name": "org.apache.tomcat:tomcat-catalina",
+              "ecosystem": "Maven",
+              "purl": "pkg:maven/org.apache.tomcat/tomcat-catalina"
+            },
+            "ranges": [
+              {
+                "type": "ECOSYSTEM",
+                "events": [
+                  {
+                    "introduced": "9.0.0.M1"
+                  },
+                  {
+                    "fixed": "9.0.107"
+                  }
+                ]
+              }
+            ]
+          },
+          {
+            "package": {
+              "name": "org.apache.tomcat:tomcat-catalina",
+              "ecosystem": "Maven",
+              "purl": "pkg:maven/org.apache.tomcat/tomcat-catalina"
+            },
+            "ranges": [
+              {
+                "type": "ECOSYSTEM",
+                "events": [
+                  {
+                    "introduced": "8.5.0"
+                  },
+                  {
+                    "last_affected": "8.5.100"
+                  }
+                ]
+              }
+            ]
+          },
+          {
+            "package": {
+              "name": "org.apache.tomcat.embed:tomcat-embed-core",
+              "ecosystem": "Maven",
+              "purl": "pkg:maven/org.apache.tomcat.embed/tomcat-embed-core"
+            },
+            "ranges": [
+              {
+                "type": "ECOSYSTEM",
+                "events": [
+                  {
+                    "introduced": "11.0.0-M1"
+                  },
+                  {
+                    "fixed": "11.0.9"
+                  }
+                ]
+              }
+            ]
+          },
+          {
+            "package": {
+              "name": "org.apache.tomcat.embed:tomcat-embed-core",
+              "ecosystem": "Maven",
+              "purl": "pkg:maven/org.apache.tomcat.embed/tomcat-embed-core"
+            },
+            "ranges": [
+              {
+                "type": "ECOSYSTEM",
+                "events": [
+                  {
+                    "introduced": "10.1.0-M1"
+                  },
+                  {
+                    "fixed": "10.1.43"
+                  }
+                ]
+              }
+            ]
+          },
+          {
+            "package": {
+              "name": "org.apache.tomcat.embed:tomcat-embed-core",
+              "ecosystem": "Maven",
+              "purl": "pkg:maven/org.apache.tomcat.embed/tomcat-embed-core"
+            },
+            "ranges": [
+              {
+                "type": "ECOSYSTEM",
+                "events": [
+                  {
+                    "introduced": "9.0.0.M1"
+                  },
+                  {
+                    "fixed": "9.0.107"
+                  }
+                ]
+              }
+            ]
+          },
+          {
+            "package": {
+              "name": "org.apache.tomcat.embed:tomcat-embed-core",
+              "ecosystem": "Maven",
+              "purl": "pkg:maven/org.apache.tomcat.embed/tomcat-embed-core"
+            },
+            "ranges": [
+              {
+                "type": "ECOSYSTEM",
+                "events": [
+                  {
+                    "introduced": "8.5.0"
+                  },
+                  {
+                    "last_affected": "8.5.100"
+                  }
+                ]
+              }
+            ]
+          }
+        ]
+      },
+      {
+        "id": "GHSA-xcpr-7mr4-h4xq",
+        "aliases": [
+          "BIT-tomcat-2024-52316",
+          "CVE-2024-52316"
+        ],
+        "summary": "Apache Tomcat - Authentication Bypass",
+        "affected": [
+          {
+            "package": {
+              "name": "org.apache.tomcat:tomcat-catalina",
+              "ecosystem": "Maven",
+              "purl": "pkg:maven/org.apache.tomcat/tomcat-catalina"
+            },
+            "ranges": [
+              {
+                "type": "ECOSYSTEM",
+                "events": [
+                  {
+                    "introduced": "0"
+                  },
+                  {
+                    "fixed": "9.0.96"
+                  }
+                ]
+              }
+            ]
+          },
+          {
+            "package": {
+              "name": "org.apache.tomcat:tomcat-catalina",
+              "ecosystem": "Maven",
+              "purl": "pkg:maven/org.apache.tomcat/tomcat-catalina"
+            },
+            "ranges": [
+              {
+                "type": "ECOSYSTEM",
+                "events": [
+                  {
+                    "introduced": "10.1.0-M1"
+                  },
+                  {
+                    "fixed": "10.1.30"
+                  }
+                ]
+              }
+            ]
+          },
+          {
+            "package": {
+              "name": "org.apache.tomcat:tomcat-catalina",
+              "ecosystem": "Maven",
+              "purl": "pkg:maven/org.apache.tomcat/tomcat-catalina"
+            },
+            "ranges": [
+              {
+                "type": "ECOSYSTEM",
+                "events": [
+                  {
+                    "introduced": "11.0.0-M1"
+                  },
+                  {
+                    "fixed": "11.0.1"
+                  }
+                ]
+              }
+            ]
+          }
+        ]
+      }
+    ]
+  }
+}

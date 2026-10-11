@@ -23,16 +23,43 @@ param(
 
 $ErrorActionPreference = "Stop"
 $base = "https://euvdservices.enisa.europa.eu/api/search"
-$headers = @{
-  Accept     = "application/json"
-  "User-Agent" = "euvd-mapper/0.1 (https://github.com/rkosinski941/euvd-mapper)"
+$ua = "euvd-mapper/0.2 (https://github.com/rkosinski941/euvd-mapper)"
+
+# /api/search page is 0-based and size max is 100 (checked live).
+# Page 0 of Apache Tomcat returns 100, page 1 the rest, page 2 empty.
+if ($Size -gt 100) { $Size = 100 }
+if ($Size -lt 1) { $Size = 100 }
+
+function Get-EuvdJson {
+  param([string]$Url)
+  $attempt = 0
+  while ($attempt -lt 4) {
+    $attempt++
+    $tmp = New-TemporaryFile
+    try {
+      $code = (& curl.exe -sS -A $ua -H "Accept: application/json" -o $tmp.FullName -w "%{http_code}" $Url)
+      $code = "$code".Trim()
+      if ($code -eq "200") {
+        $text = [System.IO.File]::ReadAllText($tmp.FullName)
+        if (-not $text) { throw "Empty response from EUVD API" }
+        return ($text | ConvertFrom-Json)
+      }
+      if ($code -eq "429" -or $code.StartsWith("5")) {
+        Start-Sleep -Seconds ([Math]::Min(16, [int][Math]::Pow(2, $attempt)))
+        continue
+      }
+      throw "EUVD HTTP $code for $Url"
+    } finally {
+      Remove-Item -Force $tmp.FullName -ErrorAction SilentlyContinue
+    }
+  }
+  throw "EUVD request failed after retries: $Url"
 }
 
-$all = @()
+$seen = @{}
+$all = New-Object System.Collections.Generic.List[object]
 $total = $null
 for ($page = 0; $page -lt $MaxPages; $page++) {
-  $qs = [System.Web.HttpUtility]::ParseQueryString("")
-  # ParseQueryString needs System.Web; build the query by hand instead.
   $pairs = @(
     "product=$([uri]::EscapeDataString($Product))",
     "size=$Size",
@@ -41,13 +68,22 @@ for ($page = 0; $page -lt $MaxPages; $page++) {
   if ($Vendor) { $pairs += "vendor=$([uri]::EscapeDataString($Vendor))" }
   $url = "$base`?$($pairs -join '&')"
   Write-Host "GET $url"
-  $resp = curl.exe -sS -A $headers["User-Agent"] -H "Accept: application/json" $url
-  if (-not $resp) { throw "Empty response from EUVD API" }
-  $json = $resp | ConvertFrom-Json
-  if ($null -eq $total) { $total = $json.total }
-  if (-not $json.items -or $json.items.Count -eq 0) { break }
-  $all += $json.items
-  if ($all.Count -ge [int]$total) { break }
+  $json = Get-EuvdJson $url
+  if ($null -eq $total -and $null -ne $json.total) { $total = [int]$json.total }
+  if ($null -eq $json.items) { break }
+  $batch = @($json.items)
+  $added = 0
+  foreach ($item in $batch) {
+    if ($null -eq $item) { continue }
+    $id = [string]$item.id
+    if (-not $id -or $seen.ContainsKey($id)) { continue }
+    $seen[$id] = $true
+    $all.Add($item) | Out-Null
+    $added++
+  }
+  if ($batch.Count -eq 0 -or $added -eq 0) { break }
+  if ($null -ne $total -and $all.Count -ge $total) { break }
+  Start-Sleep -Milliseconds 300
 }
 
 $payload = [ordered]@{

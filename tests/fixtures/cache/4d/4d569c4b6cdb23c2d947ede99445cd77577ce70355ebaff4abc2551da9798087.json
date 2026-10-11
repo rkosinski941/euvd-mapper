@@ -1,0 +1,768 @@
+{
+  "status": 200,
+  "url": "https://api.osv.dev/v1/query",
+  "method": "POST",
+  "payload": {
+    "vulns": [
+      {
+        "id": "GHSA-3pxv-7cmr-fjr4",
+        "aliases": [
+          "CVE-2026-34480"
+        ],
+        "summary": "Apache Log4j Core: Silent log event loss in XmlLayout due to unescaped XML 1.0 forbidden characters",
+        "affected": [
+          {
+            "package": {
+              "name": "org.apache.logging.log4j:log4j-core",
+              "ecosystem": "Maven",
+              "purl": "pkg:maven/org.apache.logging.log4j/log4j-core"
+            },
+            "ranges": [
+              {
+                "type": "ECOSYSTEM",
+                "events": [
+                  {
+                    "introduced": "2.0-alpha1"
+                  },
+                  {
+                    "fixed": "2.25.4"
+                  }
+                ]
+              }
+            ]
+          },
+          {
+            "package": {
+              "name": "org.apache.logging.log4j:log4j-core",
+              "ecosystem": "Maven",
+              "purl": "pkg:maven/org.apache.logging.log4j/log4j-core"
+            },
+            "ranges": [
+              {
+                "type": "ECOSYSTEM",
+                "events": [
+                  {
+                    "introduced": "3.0.0-alpha1"
+                  },
+                  {
+                    "last_affected": "3.0.0-beta3"
+                  }
+                ]
+              }
+            ]
+          }
+        ]
+      },
+      {
+        "id": "GHSA-6hg6-v5c8-fphq",
+        "aliases": [
+          "CVE-2026-34477"
+        ],
+        "summary": "Apache Log4j Core: `verifyHostName` attribute silently ignored in TLS configuration",
+        "affected": [
+          {
+            "package": {
+              "name": "org.apache.logging.log4j:log4j-core",
+              "ecosystem": "Maven",
+              "purl": "pkg:maven/org.apache.logging.log4j/log4j-core"
+            },
+            "ranges": [
+              {
+                "type": "ECOSYSTEM",
+                "events": [
+                  {
+                    "introduced": "2.12.0"
+                  },
+                  {
+                    "fixed": "2.25.4"
+                  }
+                ]
+              }
+            ]
+          },
+          {
+            "package": {
+              "name": "org.apache.logging.log4j:log4j-core",
+              "ecosystem": "Maven",
+              "purl": "pkg:maven/org.apache.logging.log4j/log4j-core"
+            },
+            "ranges": [
+              {
+                "type": "ECOSYSTEM",
+                "events": [
+                  {
+                    "introduced": "3.0.0-alpha1"
+                  },
+                  {
+                    "last_affected": "3.0.0-beta3"
+                  }
+                ]
+              }
+            ]
+          }
+        ]
+      },
+      {
+        "id": "GHSA-7rjr-3q55-vv33",
+        "aliases": [
+          "CVE-2021-45046"
+        ],
+        "summary": "Incomplete fix for Apache Log4j vulnerability",
+        "affected": [
+          {
+            "package": {
+              "name": "org.apache.logging.log4j:log4j-core",
+              "ecosystem": "Maven",
+              "purl": "pkg:maven/org.apache.logging.log4j/log4j-core"
+            },
+            "ranges": [
+              {
+                "type": "ECOSYSTEM",
+                "events": [
+                  {
+                    "introduced": "2.13.0"
+                  },
+                  {
+                    "fixed": "2.16.0"
+                  }
+                ]
+              }
+            ]
+          },
+          {
+            "package": {
+              "name": "org.apache.logging.log4j:log4j-core",
+              "ecosystem": "Maven",
+              "purl": "pkg:maven/org.apache.logging.log4j/log4j-core"
+            },
+            "ranges": [
+              {
+                "type": "ECOSYSTEM",
+                "events": [
+                  {
+                    "introduced": "2.4.0"
+                  },
+                  {
+                    "fixed": "2.12.2"
+                  }
+                ]
+              }
+            ]
+          },
+          {
+            "package": {
+              "name": "org.ops4j.pax.logging:pax-logging-log4j2",
+              "ecosystem": "Maven",
+              "purl": "pkg:maven/org.ops4j.pax.logging/pax-logging-log4j2"
+            },
+            "ranges": [
+              {
+                "type": "ECOSYSTEM",
+                "events": [
+                  {
+                    "introduced": "1.8.0"
+                  },
+                  {
+                    "fixed": "1.9.2"
+                  }
+                ]
+              }
+            ]
+          },
+          {
+            "package": {
+              "name": "org.ops4j.pax.logging:pax-logging-log4j2",
+              "ecosystem": "Maven",
+              "purl": "pkg:maven/org.ops4j.pax.logging/pax-logging-log4j2"
+            },
+            "ranges": [
+              {
+                "type": "ECOSYSTEM",
+                "events": [
+                  {
+                    "introduced": "1.10.0"
+                  },
+                  {
+                    "fixed": "1.10.8"
+                  }
+                ]
+              }
+            ]
+          },
+          {
+            "package": {
+              "name": "org.ops4j.pax.logging:pax-logging-log4j2",
+              "ecosystem": "Maven",
+              "purl": "pkg:maven/org.ops4j.pax.logging/pax-logging-log4j2"
+            },
+            "ranges": [
+              {
+                "type": "ECOSYSTEM",
+                "events": [
+                  {
+                    "introduced": "1.11.0"
+                  },
+                  {
+                    "fixed": "1.11.11"
+                  }
+                ]
+              }
+            ]
+          },
+          {
+            "package": {
+              "name": "org.ops4j.pax.logging:pax-logging-log4j2",
+              "ecosystem": "Maven",
+              "purl": "pkg:maven/org.ops4j.pax.logging/pax-logging-log4j2"
+            },
+            "ranges": [
+              {
+                "type": "ECOSYSTEM",
+                "events": [
+                  {
+                    "introduced": "2.0.0"
+                  },
+                  {
+                    "fixed": "2.0.12"
+                  }
+                ]
+              }
+            ]
+          },
+          {
+            "package": {
+              "name": "org.apache.logging.log4j:log4j-core",
+              "ecosystem": "Maven",
+              "purl": "pkg:maven/org.apache.logging.log4j/log4j-core"
+            },
+            "ranges": [
+              {
+                "type": "ECOSYSTEM",
+                "events": [
+                  {
+                    "introduced": "0"
+                  },
+                  {
+                    "fixed": "2.3.1"
+                  }
+                ]
+              }
+            ]
+          }
+        ]
+      },
+      {
+        "id": "GHSA-8489-44mv-ggj8",
+        "aliases": [
+          "CVE-2021-44832"
+        ],
+        "summary": "Improper Input Validation and Injection in Apache Log4j2",
+        "affected": [
+          {
+            "package": {
+              "name": "org.apache.logging.log4j:log4j-core",
+              "ecosystem": "Maven",
+              "purl": "pkg:maven/org.apache.logging.log4j/log4j-core"
+            },
+            "ranges": [
+              {
+                "type": "ECOSYSTEM",
+                "events": [
+                  {
+                    "introduced": "2.0-beta7"
+                  },
+                  {
+                    "fixed": "2.3.2"
+                  }
+                ]
+              }
+            ]
+          },
+          {
+            "package": {
+              "name": "org.apache.logging.log4j:log4j-core",
+              "ecosystem": "Maven",
+              "purl": "pkg:maven/org.apache.logging.log4j/log4j-core"
+            },
+            "ranges": [
+              {
+                "type": "ECOSYSTEM",
+                "events": [
+                  {
+                    "introduced": "2.4"
+                  },
+                  {
+                    "fixed": "2.12.4"
+                  }
+                ]
+              }
+            ]
+          },
+          {
+            "package": {
+              "name": "org.apache.logging.log4j:log4j-core",
+              "ecosystem": "Maven",
+              "purl": "pkg:maven/org.apache.logging.log4j/log4j-core"
+            },
+            "ranges": [
+              {
+                "type": "ECOSYSTEM",
+                "events": [
+                  {
+                    "introduced": "2.13.0"
+                  },
+                  {
+                    "fixed": "2.17.1"
+                  }
+                ]
+              }
+            ]
+          },
+          {
+            "package": {
+              "name": "org.ops4j.pax.logging:pax-logging-log4j2",
+              "ecosystem": "Maven",
+              "purl": "pkg:maven/org.ops4j.pax.logging/pax-logging-log4j2"
+            },
+            "ranges": [
+              {
+                "type": "ECOSYSTEM",
+                "events": [
+                  {
+                    "introduced": "1.8.0"
+                  },
+                  {
+                    "fixed": "1.9.2"
+                  }
+                ]
+              }
+            ]
+          },
+          {
+            "package": {
+              "name": "org.ops4j.pax.logging:pax-logging-log4j2",
+              "ecosystem": "Maven",
+              "purl": "pkg:maven/org.ops4j.pax.logging/pax-logging-log4j2"
+            },
+            "ranges": [
+              {
+                "type": "ECOSYSTEM",
+                "events": [
+                  {
+                    "introduced": "1.10.0"
+                  },
+                  {
+                    "fixed": "1.10.9"
+                  }
+                ]
+              }
+            ]
+          },
+          {
+            "package": {
+              "name": "org.ops4j.pax.logging:pax-logging-log4j2",
+              "ecosystem": "Maven",
+              "purl": "pkg:maven/org.ops4j.pax.logging/pax-logging-log4j2"
+            },
+            "ranges": [
+              {
+                "type": "ECOSYSTEM",
+                "events": [
+                  {
+                    "introduced": "1.11.0"
+                  },
+                  {
+                    "fixed": "1.11.13"
+                  }
+                ]
+              }
+            ]
+          },
+          {
+            "package": {
+              "name": "org.ops4j.pax.logging:pax-logging-log4j2",
+              "ecosystem": "Maven",
+              "purl": "pkg:maven/org.ops4j.pax.logging/pax-logging-log4j2"
+            },
+            "ranges": [
+              {
+                "type": "ECOSYSTEM",
+                "events": [
+                  {
+                    "introduced": "2.0.0"
+                  },
+                  {
+                    "fixed": "2.0.14"
+                  }
+                ]
+              }
+            ]
+          }
+        ]
+      },
+      {
+        "id": "GHSA-jfh8-c2jp-5v3q",
+        "aliases": [
+          "CVE-2021-44228"
+        ],
+        "summary": "Remote code injection in Log4j",
+        "affected": [
+          {
+            "package": {
+              "name": "org.apache.logging.log4j:log4j-core",
+              "ecosystem": "Maven",
+              "purl": "pkg:maven/org.apache.logging.log4j/log4j-core"
+            },
+            "ranges": [
+              {
+                "type": "ECOSYSTEM",
+                "events": [
+                  {
+                    "introduced": "2.13.0"
+                  },
+                  {
+                    "fixed": "2.15.0"
+                  }
+                ]
+              }
+            ]
+          },
+          {
+            "package": {
+              "name": "org.apache.logging.log4j:log4j-core",
+              "ecosystem": "Maven",
+              "purl": "pkg:maven/org.apache.logging.log4j/log4j-core"
+            },
+            "ranges": [
+              {
+                "type": "ECOSYSTEM",
+                "events": [
+                  {
+                    "introduced": "2.0-beta9"
+                  },
+                  {
+                    "fixed": "2.3.1"
+                  }
+                ]
+              }
+            ]
+          },
+          {
+            "package": {
+              "name": "org.apache.logging.log4j:log4j-core",
+              "ecosystem": "Maven",
+              "purl": "pkg:maven/org.apache.logging.log4j/log4j-core"
+            },
+            "ranges": [
+              {
+                "type": "ECOSYSTEM",
+                "events": [
+                  {
+                    "introduced": "2.4"
+                  },
+                  {
+                    "fixed": "2.12.2"
+                  }
+                ]
+              }
+            ]
+          },
+          {
+            "package": {
+              "name": "com.guicedee.services:log4j-core",
+              "ecosystem": "Maven",
+              "purl": "pkg:maven/com.guicedee.services/log4j-core"
+            },
+            "ranges": [
+              {
+                "type": "ECOSYSTEM",
+                "events": [
+                  {
+                    "introduced": "0"
+                  },
+                  {
+                    "last_affected": "1.2.1.2-jre17"
+                  }
+                ]
+              }
+            ]
+          },
+          {
+            "package": {
+              "name": "org.xbib.elasticsearch:log4j",
+              "ecosystem": "Maven",
+              "purl": "pkg:maven/org.xbib.elasticsearch/log4j"
+            },
+            "ranges": []
+          },
+          {
+            "package": {
+              "name": "uk.co.nichesolutions.logging.log4j:log4j-core",
+              "ecosystem": "Maven",
+              "purl": "pkg:maven/uk.co.nichesolutions.logging.log4j/log4j-core"
+            },
+            "ranges": []
+          },
+          {
+            "package": {
+              "name": "org.ops4j.pax.logging:pax-logging-log4j2",
+              "ecosystem": "Maven",
+              "purl": "pkg:maven/org.ops4j.pax.logging/pax-logging-log4j2"
+            },
+            "ranges": [
+              {
+                "type": "ECOSYSTEM",
+                "events": [
+                  {
+                    "introduced": "1.8.0"
+                  },
+                  {
+                    "fixed": "1.9.2"
+                  }
+                ]
+              }
+            ]
+          },
+          {
+            "package": {
+              "name": "org.ops4j.pax.logging:pax-logging-log4j2",
+              "ecosystem": "Maven",
+              "purl": "pkg:maven/org.ops4j.pax.logging/pax-logging-log4j2"
+            },
+            "ranges": [
+              {
+                "type": "ECOSYSTEM",
+                "events": [
+                  {
+                    "introduced": "1.10.0"
+                  },
+                  {
+                    "fixed": "1.10.8"
+                  }
+                ]
+              }
+            ]
+          },
+          {
+            "package": {
+              "name": "org.ops4j.pax.logging:pax-logging-log4j2",
+              "ecosystem": "Maven",
+              "purl": "pkg:maven/org.ops4j.pax.logging/pax-logging-log4j2"
+            },
+            "ranges": [
+              {
+                "type": "ECOSYSTEM",
+                "events": [
+                  {
+                    "introduced": "1.11.0"
+                  },
+                  {
+                    "fixed": "1.11.10"
+                  }
+                ]
+              }
+            ]
+          },
+          {
+            "package": {
+              "name": "org.ops4j.pax.logging:pax-logging-log4j2",
+              "ecosystem": "Maven",
+              "purl": "pkg:maven/org.ops4j.pax.logging/pax-logging-log4j2"
+            },
+            "ranges": [
+              {
+                "type": "ECOSYSTEM",
+                "events": [
+                  {
+                    "introduced": "2.0.0"
+                  },
+                  {
+                    "fixed": "2.0.11"
+                  }
+                ]
+              }
+            ]
+          }
+        ]
+      },
+      {
+        "id": "GHSA-p6xc-xr62-6r2g",
+        "aliases": [
+          "CVE-2021-45105"
+        ],
+        "summary": "Apache Log4j2 vulnerable to Improper Input Validation and Uncontrolled Recursion",
+        "affected": [
+          {
+            "package": {
+              "name": "org.apache.logging.log4j:log4j-core",
+              "ecosystem": "Maven",
+              "purl": "pkg:maven/org.apache.logging.log4j/log4j-core"
+            },
+            "ranges": [
+              {
+                "type": "ECOSYSTEM",
+                "events": [
+                  {
+                    "introduced": "2.4.0"
+                  },
+                  {
+                    "fixed": "2.12.3"
+                  }
+                ]
+              }
+            ]
+          },
+          {
+            "package": {
+              "name": "org.apache.logging.log4j:log4j-core",
+              "ecosystem": "Maven",
+              "purl": "pkg:maven/org.apache.logging.log4j/log4j-core"
+            },
+            "ranges": [
+              {
+                "type": "ECOSYSTEM",
+                "events": [
+                  {
+                    "introduced": "2.13.0"
+                  },
+                  {
+                    "fixed": "2.17.0"
+                  }
+                ]
+              }
+            ]
+          },
+          {
+            "package": {
+              "name": "org.apache.logging.log4j:log4j-core",
+              "ecosystem": "Maven",
+              "purl": "pkg:maven/org.apache.logging.log4j/log4j-core"
+            },
+            "ranges": [
+              {
+                "type": "ECOSYSTEM",
+                "events": [
+                  {
+                    "introduced": "0"
+                  },
+                  {
+                    "fixed": "2.3.1"
+                  }
+                ]
+              }
+            ]
+          },
+          {
+            "package": {
+              "name": "org.ops4j.pax.logging:pax-logging-log4j2",
+              "ecosystem": "Maven",
+              "purl": "pkg:maven/org.ops4j.pax.logging/pax-logging-log4j2"
+            },
+            "ranges": [
+              {
+                "type": "ECOSYSTEM",
+                "events": [
+                  {
+                    "introduced": "1.8.0"
+                  },
+                  {
+                    "fixed": "1.9.2"
+                  }
+                ]
+              }
+            ]
+          },
+          {
+            "package": {
+              "name": "org.ops4j.pax.logging:pax-logging-log4j2",
+              "ecosystem": "Maven",
+              "purl": "pkg:maven/org.ops4j.pax.logging/pax-logging-log4j2"
+            },
+            "ranges": [
+              {
+                "type": "ECOSYSTEM",
+                "events": [
+                  {
+                    "introduced": "1.10.0"
+                  },
+                  {
+                    "fixed": "1.10.9"
+                  }
+                ]
+              }
+            ]
+          },
+          {
+            "package": {
+              "name": "org.ops4j.pax.logging:pax-logging-log4j2",
+              "ecosystem": "Maven",
+              "purl": "pkg:maven/org.ops4j.pax.logging/pax-logging-log4j2"
+            },
+            "ranges": [
+              {
+                "type": "ECOSYSTEM",
+                "events": [
+                  {
+                    "introduced": "1.11.0"
+                  },
+                  {
+                    "fixed": "1.11.12"
+                  }
+                ]
+              }
+            ]
+          },
+          {
+            "package": {
+              "name": "org.ops4j.pax.logging:pax-logging-log4j2",
+              "ecosystem": "Maven",
+              "purl": "pkg:maven/org.ops4j.pax.logging/pax-logging-log4j2"
+            },
+            "ranges": [
+              {
+                "type": "ECOSYSTEM",
+                "events": [
+                  {
+                    "introduced": "2.0.0"
+                  },
+                  {
+                    "fixed": "2.0.13"
+                  }
+                ]
+              }
+            ]
+          }
+        ]
+      },
+      {
+        "id": "GHSA-vc5p-v9hr-52mj",
+        "aliases": [
+          "CVE-2025-68161"
+        ],
+        "summary": "Apache Log4j does not verify the TLS hostname in its Socket Appender",
+        "affected": [
+          {
+            "package": {
+              "name": "org.apache.logging.log4j:log4j-core",
+              "ecosystem": "Maven",
+              "purl": "pkg:maven/org.apache.logging.log4j/log4j-core"
+            },
+            "ranges": [
+              {
+                "type": "ECOSYSTEM",
+                "events": [
+                  {
+                    "introduced": "2.0-beta9"
+                  },
+                  {
+                    "fixed": "2.25.3"
+                  }
+                ]
+              }
+            ]
+          }
+        ]
+      }
+    ]
+  }
+}
