@@ -1,0 +1,12 @@
+[project]
+name = "euvd-mapper"
+version = "0.2.0"
+description = "Map open source components to ENISA EUVD records and enrich a BOM workbook."
+requires-python = ">=3.9"
+dependencies = ["openpyxl"]
+
+[project.scripts]
+euvd-mapper = "euvd_mapper.cli:main"
+
+[tool.setuptools.packages.find]
+include = ["euvd_mapper*"]
