@@ -1,0 +1,302 @@
+[
+  {
+    "range": "Apache Tomcat 9 9.0.0.M1 to 9.0.20",
+    "version": "9.0.20",
+    "verdict": "affected"
+  },
+  {
+    "range": "Apache Tomcat 9 9.0.0.M1 to 9.0.20",
+    "version": "9.0.0.M1",
+    "verdict": "affected"
+  },
+  {
+    "range": "Apache Tomcat 9 9.0.0.M1 to 9.0.20",
+    "version": "9.0.0-M1",
+    "verdict": "affected"
+  },
+  {
+    "range": "Apache Tomcat 9 9.0.0.M1 to 9.0.20",
+    "version": "9.0.0",
+    "verdict": "affected"
+  },
+  {
+    "range": "Apache Tomcat 9 9.0.0.M1 to 9.0.20",
+    "version": "9.0.21",
+    "verdict": "not_affected"
+  },
+  {
+    "range": "Apache Tomcat 9 9.0.0.M1 to 9.0.20",
+    "version": "8.5.50",
+    "verdict": "not_affected"
+  },
+  {
+    "range": "Apache Tomcat 10 10.0.0-M1 to 10.0.2",
+    "version": "10.0.0-M1",
+    "verdict": "affected"
+  },
+  {
+    "range": "Apache Tomcat 10 10.0.0-M1 to 10.0.2",
+    "version": "10.0.0",
+    "verdict": "affected"
+  },
+  {
+    "range": "Apache Tomcat 10 10.0.0-M1 to 10.0.2",
+    "version": "10.0.3",
+    "verdict": "not_affected"
+  },
+  {
+    "range": "8.5.85 \u22648.5.93",
+    "version": "8.5.85",
+    "verdict": "affected"
+  },
+  {
+    "range": "8.5.85 \u22648.5.93",
+    "version": "8.5.93",
+    "verdict": "affected"
+  },
+  {
+    "range": "8.5.85 \u22648.5.93",
+    "version": "8.5.84",
+    "verdict": "not_affected"
+  },
+  {
+    "range": "8.5.85 \u22648.5.93",
+    "version": "8.5.94",
+    "verdict": "not_affected"
+  },
+  {
+    "range": "Apache Tomcat 9 <9.0.42",
+    "version": "9.0.0.M1",
+    "verdict": "affected"
+  },
+  {
+    "range": "Apache Tomcat 9 <9.0.42",
+    "version": "9.0.41",
+    "verdict": "affected"
+  },
+  {
+    "range": "Apache Tomcat 9 <9.0.42",
+    "version": "9.0.42",
+    "verdict": "not_affected"
+  },
+  {
+    "range": "Apache Tomcat 9 <9.0.42",
+    "version": "8.5.50",
+    "verdict": "not_affected"
+  },
+  {
+    "range": "Apache Tomcat 8.5 <8.5.62",
+    "version": "8.5.0",
+    "verdict": "affected"
+  },
+  {
+    "range": "Apache Tomcat 8.5 <8.5.62",
+    "version": "8.0.50",
+    "verdict": "not_affected"
+  },
+  {
+    "range": "Apache Tomcat 10 <10.0.0-M10",
+    "version": "10.0.0-M5",
+    "verdict": "affected"
+  },
+  {
+    "range": "Apache Tomcat 10 <10.0.0-M10",
+    "version": "10.0.0",
+    "verdict": "not_affected"
+  },
+  {
+    "range": "Apache Tomcat 10 <10.0.0-M10",
+    "version": "9.0.20",
+    "verdict": "not_affected"
+  },
+  {
+    "range": "0 <1.5",
+    "version": "1.4",
+    "verdict": "affected"
+  },
+  {
+    "range": "0 <1.5",
+    "version": "1.5",
+    "verdict": "not_affected"
+  },
+  {
+    "range": "2.14.0 <2.25.4",
+    "version": "2.14.1",
+    "verdict": "affected"
+  },
+  {
+    "range": "2.14.0 <2.25.4",
+    "version": "2.25.4",
+    "verdict": "not_affected"
+  },
+  {
+    "range": "2.14.0 <2.25.4",
+    "version": "2.13.0",
+    "verdict": "not_affected"
+  },
+  {
+    "range": "log4j-core <2.17.1",
+    "version": "2.14.1",
+    "verdict": "affected"
+  },
+  {
+    "range": "log4j-core <2.17.1",
+    "version": "2.17.1",
+    "verdict": "not_affected"
+  },
+  {
+    "range": "prior to 4.17.21",
+    "version": "4.17.15",
+    "verdict": "affected"
+  },
+  {
+    "range": "prior to 4.17.21",
+    "version": "4.17.21",
+    "verdict": "not_affected"
+  },
+  {
+    "range": "versions prior to 4.17.21",
+    "version": "4.17.20",
+    "verdict": "affected"
+  },
+  {
+    "range": "Versions before 4.17.5",
+    "version": "4.17.4",
+    "verdict": "affected"
+  },
+  {
+    "range": "Versions before 4.17.5",
+    "version": "4.17.5",
+    "verdict": "not_affected"
+  },
+  {
+    "range": "before 2.6.7.1",
+    "version": "2.6.7",
+    "verdict": "affected"
+  },
+  {
+    "range": "before 2.6.7.1",
+    "version": "2.6.7.1",
+    "verdict": "not_affected"
+  },
+  {
+    "range": "<4.17.11 [fixed: 4.7.11]",
+    "version": "4.17.10",
+    "verdict": "affected"
+  },
+  {
+    "range": "<4.17.11 [fixed: 4.7.11]",
+    "version": "4.17.11",
+    "verdict": "not_affected"
+  },
+  {
+    "range": "10.0.0-M1 to 10.0.0-M6, 9.0.0.M5 to 9.0.36, 8.5.1 to 8.5.56",
+    "version": "10.0.0-M3",
+    "verdict": "affected"
+  },
+  {
+    "range": "10.0.0-M1 to 10.0.0-M6, 9.0.0.M5 to 9.0.36, 8.5.1 to 8.5.56",
+    "version": "9.0.20",
+    "verdict": "affected"
+  },
+  {
+    "range": "10.0.0-M1 to 10.0.0-M6, 9.0.0.M5 to 9.0.36, 8.5.1 to 8.5.56",
+    "version": "9.0.0.M1",
+    "verdict": "not_affected"
+  },
+  {
+    "range": "10.0.0-M1 to 10.0.0-M6, 9.0.0.M5 to 9.0.36, 8.5.1 to 8.5.56",
+    "version": "8.5.57",
+    "verdict": "not_affected"
+  },
+  {
+    "range": "10.0.0-M1 to 10.0.0-M6, 9.0.0.M5 to 9.0.36, 8.5.1 to 8.5.56",
+    "version": "7.0.50",
+    "verdict": "not_affected"
+  },
+  {
+    "range": "All versions between 2.0-alpha1 and 2.8.1",
+    "version": "2.0-beta9",
+    "verdict": "affected"
+  },
+  {
+    "range": "All versions between 2.0-alpha1 and 2.8.1",
+    "version": "2.8.1",
+    "verdict": "affected"
+  },
+  {
+    "range": "All versions between 2.0-alpha1 and 2.8.1",
+    "version": "2.8.2",
+    "verdict": "not_affected"
+  },
+  {
+    "range": "log4j-core 2.13.0",
+    "version": "2.13.0",
+    "verdict": "affected"
+  },
+  {
+    "range": "log4j-core 2.13.0",
+    "version": "2.13.1",
+    "verdict": "not_affected"
+  },
+  {
+    "range": "2.9.10",
+    "version": "2.9.10",
+    "verdict": "affected"
+  },
+  {
+    "range": "2.9.10",
+    "version": "2.9.9",
+    "verdict": "not_affected"
+  },
+  {
+    "range": "11.0.0-M1",
+    "version": "11.0.0-M1",
+    "verdict": "affected"
+  },
+  {
+    "range": "11.0.0-M1",
+    "version": "11.0.0",
+    "verdict": "not_affected"
+  },
+  {
+    "range": "Apache Log4j 1.2 1.2.x",
+    "version": "1.2.17",
+    "verdict": "affected"
+  },
+  {
+    "range": "Apache Log4j 1.2 1.2.x",
+    "version": "1.3.0",
+    "verdict": "not_affected"
+  },
+  {
+    "range": "8.0.0.RC1 to 8.0.36",
+    "version": "8.0.0.RC1",
+    "verdict": "affected"
+  },
+  {
+    "range": "8.0.0.RC1 to 8.0.36",
+    "version": "8.0.0",
+    "verdict": "affected"
+  },
+  {
+    "range": "2.0-beta9 <log4j-core*",
+    "version": "2.14.1",
+    "verdict": "unknown"
+  },
+  {
+    "range": "n/a",
+    "version": "2.14.1",
+    "verdict": "unknown"
+  },
+  {
+    "range": "Apache Tomcat 9 9.0.0.M1 to 9.0.20",
+    "version": "latest",
+    "verdict": "unknown"
+  },
+  {
+    "range": "Apache Tomcat 9 9.0.0.M1 to 9.0.20",
+    "version": "",
+    "verdict": "unknown"
+  }
+]

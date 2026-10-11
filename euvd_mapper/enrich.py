@@ -2,6 +2,7 @@
 
 from __future__ import annotations
 
+import sys
 from collections import Counter
 from copy import copy
 from datetime import datetime, timezone
@@ -222,6 +223,8 @@ def _lookup_rows(rows: list[dict], http, matcher) -> tuple[dict[int, ComponentRe
     for row in rows:
         key = _identity(row)
         if key not in cache:
+            label = row["purl"] or f"{row['name']} {row['version']}".strip()
+            print(f"lookup {label}", file=sys.stderr)
             cache[key] = _one(http, matcher, row)
         result = cache[key]
         resolved[row["row"]] = result
@@ -399,12 +402,26 @@ def _write_run(workbook, resolved, unresolved, source: Path, http) -> None:
 
 def _summary(results: list[ComponentResult], unresolved: list[str], target: Path) -> list[str]:
     counts = Counter(result.verdict for result in results)
+    unique = []
+    seen_components: set[tuple] = set()
+    for result in results:
+        marker = (result.purl or "", result.name, result.version or "")
+        if marker in seen_components:
+            continue
+        seen_components.add(marker)
+        unique.append(result)
+    record_counts = Counter(item.verdict for result in unique for item in result.records)
     lines = [
         (
             f"components {len(results)} affected {counts['affected']} "
             f"not_affected {counts['not_affected']} unknown {counts['unknown']} "
             f"disagree {counts['disagree']}"
-        )
+        ),
+        (
+            f"records affected {record_counts['affected']} "
+            f"not_affected {record_counts['not_affected']} unknown {record_counts['unknown']} "
+            f"disagree {record_counts['disagree']}"
+        ),
     ]
     seen = set()
     for result in results:

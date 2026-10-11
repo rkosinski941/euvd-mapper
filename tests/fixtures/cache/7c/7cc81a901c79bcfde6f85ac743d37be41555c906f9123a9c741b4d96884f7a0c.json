@@ -1,0 +1,671 @@
+{
+  "status": 200,
+  "url": "https://api.osv.dev/v1/query",
+  "method": "POST",
+  "payload": {
+    "vulns": [
+      {
+        "id": "GHSA-29mw-wpgm-hmr9",
+        "aliases": [
+          "CVE-2020-28500"
+        ],
+        "summary": "Regular Expression Denial of Service (ReDoS) in lodash",
+        "affected": [
+          {
+            "package": {
+              "name": "lodash",
+              "ecosystem": "npm",
+              "purl": "pkg:npm/lodash"
+            },
+            "ranges": [
+              {
+                "type": "SEMVER",
+                "events": [
+                  {
+                    "introduced": "4.0.0"
+                  },
+                  {
+                    "fixed": "4.17.21"
+                  }
+                ]
+              }
+            ]
+          },
+          {
+            "package": {
+              "name": "lodash-es",
+              "ecosystem": "npm",
+              "purl": "pkg:npm/lodash-es"
+            },
+            "ranges": [
+              {
+                "type": "SEMVER",
+                "events": [
+                  {
+                    "introduced": "4.0.0"
+                  },
+                  {
+                    "fixed": "4.17.21"
+                  }
+                ]
+              }
+            ]
+          },
+          {
+            "package": {
+              "name": "lodash.trimend",
+              "ecosystem": "npm",
+              "purl": "pkg:npm/lodash.trimend"
+            },
+            "ranges": [
+              {
+                "type": "SEMVER",
+                "events": [
+                  {
+                    "introduced": "4.0.0"
+                  },
+                  {
+                    "last_affected": "4.5.1"
+                  }
+                ]
+              }
+            ]
+          },
+          {
+            "package": {
+              "name": "lodash.trim",
+              "ecosystem": "npm",
+              "purl": "pkg:npm/lodash.trim"
+            },
+            "ranges": [
+              {
+                "type": "SEMVER",
+                "events": [
+                  {
+                    "introduced": "4.0.0"
+                  },
+                  {
+                    "last_affected": "4.5.1"
+                  }
+                ]
+              }
+            ]
+          },
+          {
+            "package": {
+              "name": "lodash-rails",
+              "ecosystem": "RubyGems",
+              "purl": "pkg:gem/lodash-rails"
+            },
+            "ranges": [
+              {
+                "type": "ECOSYSTEM",
+                "events": [
+                  {
+                    "introduced": "4.0.0"
+                  },
+                  {
+                    "fixed": "4.17.21"
+                  }
+                ]
+              }
+            ]
+          }
+        ]
+      },
+      {
+        "id": "GHSA-35jh-r3h4-6jhm",
+        "aliases": [
+          "CVE-2021-23337",
+          "CVE-2026-4800",
+          "GHSA-r5fr-rjxr-66jc"
+        ],
+        "summary": "Command Injection in lodash",
+        "affected": [
+          {
+            "package": {
+              "name": "lodash",
+              "ecosystem": "npm",
+              "purl": "pkg:npm/lodash"
+            },
+            "ranges": [
+              {
+                "type": "SEMVER",
+                "events": [
+                  {
+                    "introduced": "0"
+                  },
+                  {
+                    "fixed": "4.17.21"
+                  }
+                ]
+              }
+            ]
+          },
+          {
+            "package": {
+              "name": "lodash-es",
+              "ecosystem": "npm",
+              "purl": "pkg:npm/lodash-es"
+            },
+            "ranges": [
+              {
+                "type": "SEMVER",
+                "events": [
+                  {
+                    "introduced": "0"
+                  },
+                  {
+                    "fixed": "4.17.21"
+                  }
+                ]
+              }
+            ]
+          },
+          {
+            "package": {
+              "name": "lodash.template",
+              "ecosystem": "npm",
+              "purl": "pkg:npm/lodash.template"
+            },
+            "ranges": [
+              {
+                "type": "SEMVER",
+                "events": [
+                  {
+                    "introduced": "0"
+                  },
+                  {
+                    "last_affected": "4.5.0"
+                  }
+                ]
+              }
+            ]
+          },
+          {
+            "package": {
+              "name": "lodash-template",
+              "ecosystem": "npm",
+              "purl": "pkg:npm/lodash-template"
+            },
+            "ranges": [
+              {
+                "type": "SEMVER",
+                "events": [
+                  {
+                    "introduced": "0"
+                  },
+                  {
+                    "last_affected": "1.0.0"
+                  }
+                ]
+              }
+            ]
+          },
+          {
+            "package": {
+              "name": "lodash-rails",
+              "ecosystem": "RubyGems",
+              "purl": "pkg:gem/lodash-rails"
+            },
+            "ranges": [
+              {
+                "type": "ECOSYSTEM",
+                "events": [
+                  {
+                    "introduced": "0"
+                  },
+                  {
+                    "fixed": "4.17.21"
+                  }
+                ]
+              }
+            ]
+          }
+        ]
+      },
+      {
+        "id": "GHSA-f23m-r3pf-42rh",
+        "aliases": [
+          "CVE-2025-13465",
+          "CVE-2026-2950",
+          "GHSA-xxjr-mmjv-4gpg"
+        ],
+        "summary": "lodash vulnerable to Prototype Pollution via array path bypass in `_.unset` and `_.omit`",
+        "affected": [
+          {
+            "package": {
+              "name": "lodash",
+              "ecosystem": "npm",
+              "purl": "pkg:npm/lodash"
+            },
+            "ranges": [
+              {
+                "type": "SEMVER",
+                "events": [
+                  {
+                    "introduced": "0"
+                  },
+                  {
+                    "fixed": "4.18.0"
+                  }
+                ]
+              }
+            ]
+          },
+          {
+            "package": {
+              "name": "lodash-es",
+              "ecosystem": "npm",
+              "purl": "pkg:npm/lodash-es"
+            },
+            "ranges": [
+              {
+                "type": "SEMVER",
+                "events": [
+                  {
+                    "introduced": "0"
+                  },
+                  {
+                    "fixed": "4.18.0"
+                  }
+                ]
+              }
+            ]
+          },
+          {
+            "package": {
+              "name": "lodash-amd",
+              "ecosystem": "npm",
+              "purl": "pkg:npm/lodash-amd"
+            },
+            "ranges": [
+              {
+                "type": "SEMVER",
+                "events": [
+                  {
+                    "introduced": "0"
+                  },
+                  {
+                    "fixed": "4.18.0"
+                  }
+                ]
+              }
+            ]
+          },
+          {
+            "package": {
+              "name": "lodash.unset",
+              "ecosystem": "npm",
+              "purl": "pkg:npm/lodash.unset"
+            },
+            "ranges": [
+              {
+                "type": "SEMVER",
+                "events": [
+                  {
+                    "introduced": "4.0.0"
+                  },
+                  {
+                    "fixed": "4.18.0"
+                  }
+                ]
+              }
+            ]
+          }
+        ]
+      },
+      {
+        "id": "GHSA-p6mc-m468-83gw",
+        "aliases": [
+          "CVE-2020-8203"
+        ],
+        "summary": "Prototype Pollution in lodash",
+        "affected": [
+          {
+            "package": {
+              "name": "lodash",
+              "ecosystem": "npm",
+              "purl": "pkg:npm/lodash"
+            },
+            "ranges": [
+              {
+                "type": "SEMVER",
+                "events": [
+                  {
+                    "introduced": "3.7.0"
+                  },
+                  {
+                    "fixed": "4.17.19"
+                  }
+                ]
+              }
+            ]
+          },
+          {
+            "package": {
+              "name": "lodash-es",
+              "ecosystem": "npm",
+              "purl": "pkg:npm/lodash-es"
+            },
+            "ranges": [
+              {
+                "type": "SEMVER",
+                "events": [
+                  {
+                    "introduced": "3.7.0"
+                  },
+                  {
+                    "fixed": "4.17.20"
+                  }
+                ]
+              }
+            ]
+          },
+          {
+            "package": {
+              "name": "lodash.pick",
+              "ecosystem": "npm",
+              "purl": "pkg:npm/lodash.pick"
+            },
+            "ranges": [
+              {
+                "type": "SEMVER",
+                "events": [
+                  {
+                    "introduced": "4.0.0"
+                  },
+                  {
+                    "last_affected": "4.4.0"
+                  }
+                ]
+              }
+            ]
+          },
+          {
+            "package": {
+              "name": "lodash.set",
+              "ecosystem": "npm",
+              "purl": "pkg:npm/lodash.set"
+            },
+            "ranges": [
+              {
+                "type": "SEMVER",
+                "events": [
+                  {
+                    "introduced": "3.7.0"
+                  },
+                  {
+                    "last_affected": "4.3.2"
+                  }
+                ]
+              }
+            ]
+          },
+          {
+            "package": {
+              "name": "lodash.setwith",
+              "ecosystem": "npm",
+              "purl": "pkg:npm/lodash.setwith"
+            },
+            "ranges": [
+              {
+                "type": "SEMVER",
+                "events": [
+                  {
+                    "introduced": "0"
+                  },
+                  {
+                    "last_affected": "4.3.2"
+                  }
+                ]
+              }
+            ]
+          },
+          {
+            "package": {
+              "name": "lodash.update",
+              "ecosystem": "npm",
+              "purl": "pkg:npm/lodash.update"
+            },
+            "ranges": [
+              {
+                "type": "SEMVER",
+                "events": [
+                  {
+                    "introduced": "0"
+                  },
+                  {
+                    "last_affected": "4.10.2"
+                  }
+                ]
+              }
+            ]
+          },
+          {
+            "package": {
+              "name": "lodash.updatewith",
+              "ecosystem": "npm",
+              "purl": "pkg:npm/lodash.updatewith"
+            },
+            "ranges": [
+              {
+                "type": "SEMVER",
+                "events": [
+                  {
+                    "introduced": "0"
+                  },
+                  {
+                    "last_affected": "4.10.2"
+                  }
+                ]
+              }
+            ]
+          },
+          {
+            "package": {
+              "name": "lodash-rails",
+              "ecosystem": "RubyGems",
+              "purl": "pkg:gem/lodash-rails"
+            },
+            "ranges": [
+              {
+                "type": "ECOSYSTEM",
+                "events": [
+                  {
+                    "introduced": "3.7.0"
+                  },
+                  {
+                    "fixed": "4.17.19"
+                  }
+                ]
+              }
+            ]
+          }
+        ]
+      },
+      {
+        "id": "GHSA-r5fr-rjxr-66jc",
+        "aliases": [
+          "CVE-2021-23337",
+          "CVE-2026-4800",
+          "GHSA-35jh-r3h4-6jhm"
+        ],
+        "summary": "lodash vulnerable to Code Injection via `_.template` imports key names",
+        "affected": [
+          {
+            "package": {
+              "name": "lodash",
+              "ecosystem": "npm",
+              "purl": "pkg:npm/lodash"
+            },
+            "ranges": [
+              {
+                "type": "SEMVER",
+                "events": [
+                  {
+                    "introduced": "4.0.0"
+                  },
+                  {
+                    "fixed": "4.18.0"
+                  }
+                ]
+              }
+            ]
+          },
+          {
+            "package": {
+              "name": "lodash-es",
+              "ecosystem": "npm",
+              "purl": "pkg:npm/lodash-es"
+            },
+            "ranges": [
+              {
+                "type": "SEMVER",
+                "events": [
+                  {
+                    "introduced": "4.0.0"
+                  },
+                  {
+                    "fixed": "4.18.0"
+                  }
+                ]
+              }
+            ]
+          },
+          {
+            "package": {
+              "name": "lodash-amd",
+              "ecosystem": "npm",
+              "purl": "pkg:npm/lodash-amd"
+            },
+            "ranges": [
+              {
+                "type": "SEMVER",
+                "events": [
+                  {
+                    "introduced": "4.0.0"
+                  },
+                  {
+                    "fixed": "4.18.0"
+                  }
+                ]
+              }
+            ]
+          },
+          {
+            "package": {
+              "name": "lodash.template",
+              "ecosystem": "npm",
+              "purl": "pkg:npm/lodash.template"
+            },
+            "ranges": [
+              {
+                "type": "SEMVER",
+                "events": [
+                  {
+                    "introduced": "4.0.0"
+                  },
+                  {
+                    "fixed": "4.18.0"
+                  }
+                ]
+              }
+            ]
+          }
+        ]
+      },
+      {
+        "id": "GHSA-xxjr-mmjv-4gpg",
+        "aliases": [
+          "CVE-2025-13465",
+          "CVE-2026-2950",
+          "GHSA-f23m-r3pf-42rh"
+        ],
+        "summary": "Lodash has Prototype Pollution Vulnerability in `_.unset` and `_.omit` functions",
+        "affected": [
+          {
+            "package": {
+              "name": "lodash",
+              "ecosystem": "npm",
+              "purl": "pkg:npm/lodash"
+            },
+            "ranges": [
+              {
+                "type": "SEMVER",
+                "events": [
+                  {
+                    "introduced": "4.0.0"
+                  },
+                  {
+                    "fixed": "4.17.23"
+                  }
+                ]
+              }
+            ]
+          },
+          {
+            "package": {
+              "name": "lodash.unset",
+              "ecosystem": "npm",
+              "purl": "pkg:npm/lodash.unset"
+            },
+            "ranges": [
+              {
+                "type": "SEMVER",
+                "events": [
+                  {
+                    "introduced": "4.0.0"
+                  },
+                  {
+                    "last_affected": "4.5.2"
+                  }
+                ]
+              }
+            ]
+          },
+          {
+            "package": {
+              "name": "lodash-es",
+              "ecosystem": "npm",
+              "purl": "pkg:npm/lodash-es"
+            },
+            "ranges": [
+              {
+                "type": "SEMVER",
+                "events": [
+                  {
+                    "introduced": "4.0.0"
+                  },
+                  {
+                    "fixed": "4.17.23"
+                  }
+                ]
+              }
+            ]
+          },
+          {
+            "package": {
+              "name": "lodash-amd",
+              "ecosystem": "npm",
+              "purl": "pkg:npm/lodash-amd"
+            },
+            "ranges": [
+              {
+                "type": "SEMVER",
+                "events": [
+                  {
+                    "introduced": "4.0.0"
+                  },
+                  {
+                    "fixed": "4.17.23"
+                  }
+                ]
+              }
+            ]
+          }
+        ]
+      }
+    ]
+  }
+}

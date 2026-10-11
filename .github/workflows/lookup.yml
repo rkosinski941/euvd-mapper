@@ -25,6 +25,13 @@ jobs:
     steps:
       - uses: actions/checkout@v4
 
+      - uses: actions/setup-python@v5
+        with:
+          python-version: "3.12"
+
+      - name: Install matcher
+        run: pip install -e .
+
       - name: Fetch EUVD snapshot
         env:
           PRODUCT: ${{ inputs.product }}
@@ -32,71 +39,10 @@ jobs:
           SLUG: ${{ inputs.slug }}
         run: |
           set -euo pipefail
-          python3 <<'PY'
-          import json, os, re, urllib.parse, urllib.request
-          from datetime import datetime, timezone
-          from pathlib import Path
-
-          product = os.environ["PRODUCT"].strip()
-          vendor = os.environ.get("VENDOR", "").strip()
-          slug = os.environ.get("SLUG", "").strip()
-          if not slug:
-              slug = re.sub(r"[^a-z0-9]+", "-", product.lower()).strip("-")
-          headers = {
-              "Accept": "application/json",
-              "User-Agent": "euvd-mapper/0.1 (https://github.com/rkosinski941/euvd-mapper)",
-          }
-          items = []
-          total = None
-          for page in range(5):
-              q = {"product": product, "size": 100, "page": page}
-              if vendor:
-                  q["vendor"] = vendor
-              url = "https://euvdservices.enisa.europa.eu/api/search?" + urllib.parse.urlencode(q)
-              req = urllib.request.Request(url, headers=headers)
-              with urllib.request.urlopen(req, timeout=60) as resp:
-                  data = json.load(resp)
-              if total is None:
-                  total = data.get("total")
-              batch = data.get("items") or []
-              if not batch:
-                  break
-              items.extend(batch)
-              if total is not None and len(items) >= int(total):
-                  break
-
-          out = {
-              "queriedAt": datetime.now(timezone.utc).isoformat(),
-              "product": product,
-              "vendor": vendor,
-              "source": "https://euvdservices.enisa.europa.eu/api/search",
-              "totalReported": total,
-              "itemCount": len(items),
-              "items": items,
-          }
-          dest = Path("data/products") / f"{slug}.json"
-          dest.parent.mkdir(parents=True, exist_ok=True)
-          dest.write_text(json.dumps(out, indent=2), encoding="utf-8")
-
-          catalog_path = Path("data/catalog.json")
-          catalog = json.loads(catalog_path.read_text(encoding="utf-8"))
-          entry = {
-              "id": slug,
-              "name": product,
-              "vendor": vendor,
-              "file": f"products/{slug}.json",
-              "queryProduct": product,
-              "itemCount": len(items),
-              "total": total,
-          }
-          products = [p for p in catalog.get("products", []) if p.get("id") != slug]
-          products.append(entry)
-          products.sort(key=lambda p: p.get("name", "").lower())
-          catalog["products"] = products
-          catalog["generated"] = datetime.now(timezone.utc).date().isoformat()
-          catalog_path.write_text(json.dumps(catalog, indent=2) + "\n", encoding="utf-8")
-          print(f"Wrote {dest} ({len(items)} of {total})")
-          PY
+          args=(snapshot --product "$PRODUCT" --interval 0.3)
+          if [ -n "${VENDOR}" ]; then args+=(--vendor "$VENDOR"); fi
+          if [ -n "${SLUG}" ]; then args+=(--slug "$SLUG"); fi
+          python -m euvd_mapper "${args[@]}"
 
       - name: Commit snapshot
         run: |

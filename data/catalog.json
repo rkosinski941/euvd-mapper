@@ -1,5 +1,5 @@
 {
-  "generated": "2026-10-10",
+  "generated": "2026-10-11",
   "source": "https://euvdservices.enisa.europa.eu/api/search",
   "note": "Browser clients cannot call the EUVD API (CORS). Pages reads these snapshots. Refresh with scripts/lookup.ps1 or the Lookup EUVD GitHub Action.",
   "products": [
@@ -9,7 +9,7 @@
       "vendor": "Apache Software Foundation",
       "file": "products/apache-tomcat.json",
       "queryProduct": "Apache Tomcat",
-      "itemCount": 100,
+      "itemCount": 165,
       "total": 165
     }
   ]

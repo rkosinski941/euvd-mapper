@@ -1,0 +1,2531 @@
+{
+  "status": 200,
+  "url": "https://api.osv.dev/v1/query",
+  "method": "POST",
+  "payload": {
+    "vulns": [
+      {
+        "id": "GHSA-27xj-rqx5-2255",
+        "aliases": [
+          "CVE-2020-11619"
+        ],
+        "summary": "jackson-databind mishandles the interaction between serialization gadgets and typing",
+        "affected": [
+          {
+            "package": {
+              "name": "com.fasterxml.jackson.core:jackson-databind",
+              "ecosystem": "Maven",
+              "purl": "pkg:maven/com.fasterxml.jackson.core/jackson-databind"
+            },
+            "ranges": [
+              {
+                "type": "ECOSYSTEM",
+                "events": [
+                  {
+                    "introduced": "2.9.0"
+                  },
+                  {
+                    "fixed": "2.9.10.4"
+                  }
+                ]
+              }
+            ]
+          }
+        ]
+      },
+      {
+        "id": "GHSA-288c-cq4h-88gq",
+        "aliases": [
+          "CVE-2020-25649"
+        ],
+        "summary": "XML External Entity (XXE) Injection in Jackson Databind",
+        "affected": [
+          {
+            "package": {
+              "name": "com.fasterxml.jackson.core:jackson-databind",
+              "ecosystem": "Maven",
+              "purl": "pkg:maven/com.fasterxml.jackson.core/jackson-databind"
+            },
+            "ranges": [
+              {
+                "type": "ECOSYSTEM",
+                "events": [
+                  {
+                    "introduced": "2.6.0"
+                  },
+                  {
+                    "fixed": "2.6.7.4"
+                  }
+                ]
+              }
+            ]
+          },
+          {
+            "package": {
+              "name": "com.fasterxml.jackson.core:jackson-databind",
+              "ecosystem": "Maven",
+              "purl": "pkg:maven/com.fasterxml.jackson.core/jackson-databind"
+            },
+            "ranges": [
+              {
+                "type": "ECOSYSTEM",
+                "events": [
+                  {
+                    "introduced": "2.7.0.0"
+                  },
+                  {
+                    "fixed": "2.9.10.7"
+                  }
+                ]
+              }
+            ]
+          },
+          {
+            "package": {
+              "name": "com.fasterxml.jackson.core:jackson-databind",
+              "ecosystem": "Maven",
+              "purl": "pkg:maven/com.fasterxml.jackson.core/jackson-databind"
+            },
+            "ranges": [
+              {
+                "type": "ECOSYSTEM",
+                "events": [
+                  {
+                    "introduced": "2.10.0.0"
+                  },
+                  {
+                    "fixed": "2.10.5.1"
+                  }
+                ]
+              }
+            ]
+          }
+        ]
+      },
+      {
+        "id": "GHSA-4w82-r329-3q67",
+        "aliases": [
+          "CVE-2020-8840"
+        ],
+        "summary": "Deserialization of Untrusted Data in jackson-databind",
+        "affected": [
+          {
+            "package": {
+              "name": "com.fasterxml.jackson.core:jackson-databind",
+              "ecosystem": "Maven",
+              "purl": "pkg:maven/com.fasterxml.jackson.core/jackson-databind"
+            },
+            "ranges": [
+              {
+                "type": "ECOSYSTEM",
+                "events": [
+                  {
+                    "introduced": "2.0.0"
+                  },
+                  {
+                    "fixed": "2.6.7.4"
+                  }
+                ]
+              }
+            ]
+          },
+          {
+            "package": {
+              "name": "com.fasterxml.jackson.core:jackson-databind",
+              "ecosystem": "Maven",
+              "purl": "pkg:maven/com.fasterxml.jackson.core/jackson-databind"
+            },
+            "ranges": [
+              {
+                "type": "ECOSYSTEM",
+                "events": [
+                  {
+                    "introduced": "2.7.0"
+                  },
+                  {
+                    "fixed": "2.7.9.7"
+                  }
+                ]
+              }
+            ]
+          },
+          {
+            "package": {
+              "name": "com.fasterxml.jackson.core:jackson-databind",
+              "ecosystem": "Maven",
+              "purl": "pkg:maven/com.fasterxml.jackson.core/jackson-databind"
+            },
+            "ranges": [
+              {
+                "type": "ECOSYSTEM",
+                "events": [
+                  {
+                    "introduced": "2.8.0"
+                  },
+                  {
+                    "fixed": "2.8.11.5"
+                  }
+                ]
+              }
+            ]
+          },
+          {
+            "package": {
+              "name": "com.fasterxml.jackson.core:jackson-databind",
+              "ecosystem": "Maven",
+              "purl": "pkg:maven/com.fasterxml.jackson.core/jackson-databind"
+            },
+            "ranges": [
+              {
+                "type": "ECOSYSTEM",
+                "events": [
+                  {
+                    "introduced": "2.9.0"
+                  },
+                  {
+                    "fixed": "2.9.10.3"
+                  }
+                ]
+              }
+            ]
+          }
+        ]
+      },
+      {
+        "id": "GHSA-57j2-w4cx-62h2",
+        "aliases": [
+          "CVE-2020-36518"
+        ],
+        "summary": "Deeply nested json in jackson-databind",
+        "affected": [
+          {
+            "package": {
+              "name": "com.fasterxml.jackson.core:jackson-databind",
+              "ecosystem": "Maven",
+              "purl": "pkg:maven/com.fasterxml.jackson.core/jackson-databind"
+            },
+            "ranges": [
+              {
+                "type": "ECOSYSTEM",
+                "events": [
+                  {
+                    "introduced": "2.13.0"
+                  },
+                  {
+                    "fixed": "2.13.2.1"
+                  }
+                ]
+              }
+            ]
+          },
+          {
+            "package": {
+              "name": "com.fasterxml.jackson.core:jackson-databind",
+              "ecosystem": "Maven",
+              "purl": "pkg:maven/com.fasterxml.jackson.core/jackson-databind"
+            },
+            "ranges": [
+              {
+                "type": "ECOSYSTEM",
+                "events": [
+                  {
+                    "introduced": "0"
+                  },
+                  {
+                    "fixed": "2.12.6.1"
+                  }
+                ]
+              }
+            ]
+          }
+        ]
+      },
+      {
+        "id": "GHSA-58pp-9c76-5625",
+        "aliases": [
+          "CVE-2020-11112"
+        ],
+        "summary": "jackson-databind mishandles the interaction between serialization gadgets and typing",
+        "affected": [
+          {
+            "package": {
+              "name": "com.fasterxml.jackson.core:jackson-databind",
+              "ecosystem": "Maven",
+              "purl": "pkg:maven/com.fasterxml.jackson.core/jackson-databind"
+            },
+            "ranges": [
+              {
+                "type": "ECOSYSTEM",
+                "events": [
+                  {
+                    "introduced": "2.9.0"
+                  },
+                  {
+                    "fixed": "2.9.10.4"
+                  }
+                ]
+              }
+            ]
+          }
+        ]
+      },
+      {
+        "id": "GHSA-5949-rw7g-wx7w",
+        "aliases": [
+          "BIT-nifi-2021-20190",
+          "CVE-2021-20190"
+        ],
+        "summary": "Deserialization of untrusted data in jackson-databind",
+        "affected": [
+          {
+            "package": {
+              "name": "com.fasterxml.jackson.core:jackson-databind",
+              "ecosystem": "Maven",
+              "purl": "pkg:maven/com.fasterxml.jackson.core/jackson-databind"
+            },
+            "ranges": [
+              {
+                "type": "ECOSYSTEM",
+                "events": [
+                  {
+                    "introduced": "2.7.0"
+                  },
+                  {
+                    "fixed": "2.9.10.7"
+                  }
+                ]
+              }
+            ]
+          },
+          {
+            "package": {
+              "name": "com.fasterxml.jackson.core:jackson-databind",
+              "ecosystem": "Maven",
+              "purl": "pkg:maven/com.fasterxml.jackson.core/jackson-databind"
+            },
+            "ranges": [
+              {
+                "type": "ECOSYSTEM",
+                "events": [
+                  {
+                    "introduced": "0"
+                  },
+                  {
+                    "fixed": "2.6.7.5"
+                  }
+                ]
+              }
+            ]
+          }
+        ]
+      },
+      {
+        "id": "GHSA-5jmj-h7xm-6q6v",
+        "aliases": [
+          "CVE-2026-54515"
+        ],
+        "summary": "jackson-databind has case-insensitive deserialization bypasses per-property @JsonIgnoreProperties",
+        "affected": [
+          {
+            "package": {
+              "name": "com.fasterxml.jackson.core:jackson-databind",
+              "ecosystem": "Maven",
+              "purl": "pkg:maven/com.fasterxml.jackson.core/jackson-databind"
+            },
+            "ranges": [
+              {
+                "type": "ECOSYSTEM",
+                "events": [
+                  {
+                    "introduced": "3.1.0"
+                  },
+                  {
+                    "fixed": "3.1.4"
+                  }
+                ]
+              }
+            ]
+          },
+          {
+            "package": {
+              "name": "tools.jackson.core:jackson-databind",
+              "ecosystem": "Maven",
+              "purl": "pkg:maven/tools.jackson.core/jackson-databind"
+            },
+            "ranges": [
+              {
+                "type": "ECOSYSTEM",
+                "events": [
+                  {
+                    "introduced": "3.1.0"
+                  },
+                  {
+                    "fixed": "3.1.4"
+                  }
+                ]
+              }
+            ]
+          },
+          {
+            "package": {
+              "name": "com.fasterxml.jackson.core:jackson-databind",
+              "ecosystem": "Maven",
+              "purl": "pkg:maven/com.fasterxml.jackson.core/jackson-databind"
+            },
+            "ranges": [
+              {
+                "type": "ECOSYSTEM",
+                "events": [
+                  {
+                    "introduced": "2.8.0"
+                  },
+                  {
+                    "fixed": "2.18.9"
+                  }
+                ]
+              }
+            ]
+          },
+          {
+            "package": {
+              "name": "com.fasterxml.jackson.core:jackson-databind",
+              "ecosystem": "Maven",
+              "purl": "pkg:maven/com.fasterxml.jackson.core/jackson-databind"
+            },
+            "ranges": [
+              {
+                "type": "ECOSYSTEM",
+                "events": [
+                  {
+                    "introduced": "2.19.0"
+                  },
+                  {
+                    "fixed": "2.21.5"
+                  }
+                ]
+              }
+            ]
+          },
+          {
+            "package": {
+              "name": "com.fasterxml.jackson.core:jackson-databind",
+              "ecosystem": "Maven",
+              "purl": "pkg:maven/com.fasterxml.jackson.core/jackson-databind"
+            },
+            "ranges": [
+              {
+                "type": "ECOSYSTEM",
+                "events": [
+                  {
+                    "introduced": "2.22.0"
+                  },
+                  {
+                    "fixed": "2.22.1"
+                  }
+                ]
+              }
+            ]
+          }
+        ]
+      },
+      {
+        "id": "GHSA-5p34-5m6p-p58g",
+        "aliases": [
+          "CVE-2020-9546"
+        ],
+        "summary": "jackson-databind mishandles the interaction between serialization gadgets and typing",
+        "affected": [
+          {
+            "package": {
+              "name": "com.fasterxml.jackson.core:jackson-databind",
+              "ecosystem": "Maven",
+              "purl": "pkg:maven/com.fasterxml.jackson.core/jackson-databind"
+            },
+            "ranges": [
+              {
+                "type": "ECOSYSTEM",
+                "events": [
+                  {
+                    "introduced": "2.9.0"
+                  },
+                  {
+                    "fixed": "2.9.10.4"
+                  }
+                ]
+              }
+            ]
+          }
+        ]
+      },
+      {
+        "id": "GHSA-5r5r-6hpj-8gg9",
+        "aliases": [
+          "CVE-2020-35728"
+        ],
+        "summary": "Serialization gadget exploit in jackson-databind",
+        "affected": [
+          {
+            "package": {
+              "name": "com.fasterxml.jackson.core:jackson-databind",
+              "ecosystem": "Maven",
+              "purl": "pkg:maven/com.fasterxml.jackson.core/jackson-databind"
+            },
+            "ranges": [
+              {
+                "type": "ECOSYSTEM",
+                "events": [
+                  {
+                    "introduced": "2.0.0"
+                  },
+                  {
+                    "fixed": "2.9.10.8"
+                  }
+                ]
+              }
+            ]
+          }
+        ]
+      },
+      {
+        "id": "GHSA-758m-v56v-grj4",
+        "aliases": [
+          "CVE-2020-10969"
+        ],
+        "summary": "jackson-databind mishandles the interaction between serialization gadgets and typing",
+        "affected": [
+          {
+            "package": {
+              "name": "com.fasterxml.jackson.core:jackson-databind",
+              "ecosystem": "Maven",
+              "purl": "pkg:maven/com.fasterxml.jackson.core/jackson-databind"
+            },
+            "ranges": [
+              {
+                "type": "ECOSYSTEM",
+                "events": [
+                  {
+                    "introduced": "2.9.0"
+                  },
+                  {
+                    "fixed": "2.9.10.4"
+                  }
+                ]
+              }
+            ]
+          }
+        ]
+      },
+      {
+        "id": "GHSA-89qr-369f-5m5x",
+        "aliases": [
+          "CVE-2020-36182"
+        ],
+        "summary": "Unsafe Deserialization in jackson-databind",
+        "affected": [
+          {
+            "package": {
+              "name": "com.fasterxml.jackson.core:jackson-databind",
+              "ecosystem": "Maven",
+              "purl": "pkg:maven/com.fasterxml.jackson.core/jackson-databind"
+            },
+            "ranges": [
+              {
+                "type": "ECOSYSTEM",
+                "events": [
+                  {
+                    "introduced": "2.7.0"
+                  },
+                  {
+                    "fixed": "2.9.10.8"
+                  }
+                ]
+              }
+            ]
+          },
+          {
+            "package": {
+              "name": "com.fasterxml.jackson.core:jackson-databind",
+              "ecosystem": "Maven",
+              "purl": "pkg:maven/com.fasterxml.jackson.core/jackson-databind"
+            },
+            "ranges": [
+              {
+                "type": "ECOSYSTEM",
+                "events": [
+                  {
+                    "introduced": "2.0.0"
+                  },
+                  {
+                    "fixed": "2.6.7.5"
+                  }
+                ]
+              }
+            ]
+          }
+        ]
+      },
+      {
+        "id": "GHSA-8c4j-34r4-xr8g",
+        "aliases": [
+          "CVE-2020-36180"
+        ],
+        "summary": "Unsafe Deserialization in jackson-databind",
+        "affected": [
+          {
+            "package": {
+              "name": "com.fasterxml.jackson.core:jackson-databind",
+              "ecosystem": "Maven",
+              "purl": "pkg:maven/com.fasterxml.jackson.core/jackson-databind"
+            },
+            "ranges": [
+              {
+                "type": "ECOSYSTEM",
+                "events": [
+                  {
+                    "introduced": "2.7.0"
+                  },
+                  {
+                    "fixed": "2.9.10.8"
+                  }
+                ]
+              }
+            ]
+          },
+          {
+            "package": {
+              "name": "com.fasterxml.jackson.core:jackson-databind",
+              "ecosystem": "Maven",
+              "purl": "pkg:maven/com.fasterxml.jackson.core/jackson-databind"
+            },
+            "ranges": [
+              {
+                "type": "ECOSYSTEM",
+                "events": [
+                  {
+                    "introduced": "2.0.0"
+                  },
+                  {
+                    "fixed": "2.6.7.5"
+                  }
+                ]
+              }
+            ]
+          }
+        ]
+      },
+      {
+        "id": "GHSA-8w26-6f25-cm9x",
+        "aliases": [
+          "CVE-2020-36185"
+        ],
+        "summary": "Unsafe Deserialization in jackson-databind",
+        "affected": [
+          {
+            "package": {
+              "name": "com.fasterxml.jackson.core:jackson-databind",
+              "ecosystem": "Maven",
+              "purl": "pkg:maven/com.fasterxml.jackson.core/jackson-databind"
+            },
+            "ranges": [
+              {
+                "type": "ECOSYSTEM",
+                "events": [
+                  {
+                    "introduced": "2.0.0"
+                  },
+                  {
+                    "fixed": "2.9.10.8"
+                  }
+                ]
+              }
+            ]
+          }
+        ]
+      },
+      {
+        "id": "GHSA-95cm-88f5-f2c7",
+        "aliases": [
+          "CVE-2020-10672"
+        ],
+        "summary": "jackson-databind mishandles the interaction between serialization gadgets and typing",
+        "affected": [
+          {
+            "package": {
+              "name": "com.fasterxml.jackson.core:jackson-databind",
+              "ecosystem": "Maven",
+              "purl": "pkg:maven/com.fasterxml.jackson.core/jackson-databind"
+            },
+            "ranges": [
+              {
+                "type": "ECOSYSTEM",
+                "events": [
+                  {
+                    "introduced": "2.9.0"
+                  },
+                  {
+                    "fixed": "2.9.10.4"
+                  }
+                ]
+              }
+            ]
+          }
+        ]
+      },
+      {
+        "id": "GHSA-9gph-22xh-8x98",
+        "aliases": [
+          "CVE-2020-36179"
+        ],
+        "summary": "Unsafe Deserialization in jackson-databind",
+        "affected": [
+          {
+            "package": {
+              "name": "com.fasterxml.jackson.core:jackson-databind",
+              "ecosystem": "Maven",
+              "purl": "pkg:maven/com.fasterxml.jackson.core/jackson-databind"
+            },
+            "ranges": [
+              {
+                "type": "ECOSYSTEM",
+                "events": [
+                  {
+                    "introduced": "2.7.0"
+                  },
+                  {
+                    "fixed": "2.9.10.8"
+                  }
+                ]
+              }
+            ]
+          },
+          {
+            "package": {
+              "name": "com.fasterxml.jackson.core:jackson-databind",
+              "ecosystem": "Maven",
+              "purl": "pkg:maven/com.fasterxml.jackson.core/jackson-databind"
+            },
+            "ranges": [
+              {
+                "type": "ECOSYSTEM",
+                "events": [
+                  {
+                    "introduced": "2.0.0"
+                  },
+                  {
+                    "fixed": "2.6.7.5"
+                  }
+                ]
+              }
+            ]
+          }
+        ]
+      },
+      {
+        "id": "GHSA-9m6f-7xcq-8vf8",
+        "aliases": [
+          "CVE-2020-36183"
+        ],
+        "summary": "Unsafe Deserialization in jackson-databind",
+        "affected": [
+          {
+            "package": {
+              "name": "com.fasterxml.jackson.core:jackson-databind",
+              "ecosystem": "Maven",
+              "purl": "pkg:maven/com.fasterxml.jackson.core/jackson-databind"
+            },
+            "ranges": [
+              {
+                "type": "ECOSYSTEM",
+                "events": [
+                  {
+                    "introduced": "2.7.00"
+                  },
+                  {
+                    "fixed": "2.9.10.8"
+                  }
+                ]
+              }
+            ]
+          },
+          {
+            "package": {
+              "name": "com.fasterxml.jackson.core:jackson-databind",
+              "ecosystem": "Maven",
+              "purl": "pkg:maven/com.fasterxml.jackson.core/jackson-databind"
+            },
+            "ranges": [
+              {
+                "type": "ECOSYSTEM",
+                "events": [
+                  {
+                    "introduced": "2.0.0"
+                  },
+                  {
+                    "fixed": "2.6.7.5"
+                  }
+                ]
+              }
+            ]
+          }
+        ]
+      },
+      {
+        "id": "GHSA-9vvp-fxw6-jcxr",
+        "aliases": [
+          "CVE-2020-11113"
+        ],
+        "summary": "jackson-databind mishandles the interaction between serialization gadgets and typing",
+        "affected": [
+          {
+            "package": {
+              "name": "com.fasterxml.jackson.core:jackson-databind",
+              "ecosystem": "Maven",
+              "purl": "pkg:maven/com.fasterxml.jackson.core/jackson-databind"
+            },
+            "ranges": [
+              {
+                "type": "ECOSYSTEM",
+                "events": [
+                  {
+                    "introduced": "2.9.0"
+                  },
+                  {
+                    "fixed": "2.9.10.4"
+                  }
+                ]
+              }
+            ]
+          }
+        ]
+      },
+      {
+        "id": "GHSA-c265-37vj-cwcc",
+        "aliases": [
+          "CVE-2020-14062"
+        ],
+        "summary": "Deserialization of untrusted data in Jackson Databind",
+        "affected": [
+          {
+            "package": {
+              "name": "com.fasterxml.jackson.core:jackson-databind",
+              "ecosystem": "Maven",
+              "purl": "pkg:maven/com.fasterxml.jackson.core/jackson-databind"
+            },
+            "ranges": [
+              {
+                "type": "ECOSYSTEM",
+                "events": [
+                  {
+                    "introduced": "2.9.0"
+                  },
+                  {
+                    "fixed": "2.9.10.5"
+                  }
+                ]
+              }
+            ]
+          }
+        ]
+      },
+      {
+        "id": "GHSA-c2q3-4qrh-fm48",
+        "aliases": [
+          "CVE-2020-14061"
+        ],
+        "summary": "Deserialization of untrusted data in Jackson Databind",
+        "affected": [
+          {
+            "package": {
+              "name": "com.fasterxml.jackson.core:jackson-databind",
+              "ecosystem": "Maven",
+              "purl": "pkg:maven/com.fasterxml.jackson.core/jackson-databind"
+            },
+            "ranges": [
+              {
+                "type": "ECOSYSTEM",
+                "events": [
+                  {
+                    "introduced": "2.9.0"
+                  },
+                  {
+                    "fixed": "2.9.10.5"
+                  }
+                ]
+              }
+            ]
+          }
+        ]
+      },
+      {
+        "id": "GHSA-cvm9-fjm9-3572",
+        "aliases": [
+          "CVE-2020-36181"
+        ],
+        "summary": "Unsafe Deserialization in jackson-databind",
+        "affected": [
+          {
+            "package": {
+              "name": "com.fasterxml.jackson.core:jackson-databind",
+              "ecosystem": "Maven",
+              "purl": "pkg:maven/com.fasterxml.jackson.core/jackson-databind"
+            },
+            "ranges": [
+              {
+                "type": "ECOSYSTEM",
+                "events": [
+                  {
+                    "introduced": "2.7.0"
+                  },
+                  {
+                    "fixed": "2.9.10.8"
+                  }
+                ]
+              }
+            ]
+          },
+          {
+            "package": {
+              "name": "com.fasterxml.jackson.core:jackson-databind",
+              "ecosystem": "Maven",
+              "purl": "pkg:maven/com.fasterxml.jackson.core/jackson-databind"
+            },
+            "ranges": [
+              {
+                "type": "ECOSYSTEM",
+                "events": [
+                  {
+                    "introduced": "2.0.0"
+                  },
+                  {
+                    "fixed": "2.6.7.5"
+                  }
+                ]
+              }
+            ]
+          }
+        ]
+      },
+      {
+        "id": "GHSA-cxp5-3px4-pw24",
+        "aliases": [
+          "CVE-2026-91777"
+        ],
+        "summary": "jackson-databind quadratic forward-reference completion ",
+        "affected": [
+          {
+            "package": {
+              "name": "com.fasterxml.jackson.core:jackson-databind",
+              "ecosystem": "Maven",
+              "purl": "pkg:maven/com.fasterxml.jackson.core/jackson-databind"
+            },
+            "ranges": [
+              {
+                "type": "ECOSYSTEM",
+                "events": [
+                  {
+                    "introduced": "2.19.0"
+                  },
+                  {
+                    "fixed": "2.21.7"
+                  }
+                ]
+              }
+            ]
+          },
+          {
+            "package": {
+              "name": "tools.jackson.core:jackson-databind",
+              "ecosystem": "Maven",
+              "purl": "pkg:maven/tools.jackson.core/jackson-databind"
+            },
+            "ranges": [
+              {
+                "type": "ECOSYSTEM",
+                "events": [
+                  {
+                    "introduced": "3.0.0"
+                  },
+                  {
+                    "fixed": "3.1.7"
+                  }
+                ]
+              }
+            ]
+          },
+          {
+            "package": {
+              "name": "tools.jackson.core:jackson-databind",
+              "ecosystem": "Maven",
+              "purl": "pkg:maven/tools.jackson.core/jackson-databind"
+            },
+            "ranges": [
+              {
+                "type": "ECOSYSTEM",
+                "events": [
+                  {
+                    "introduced": "3.2.0"
+                  },
+                  {
+                    "fixed": "3.2.3"
+                  }
+                ]
+              }
+            ]
+          },
+          {
+            "package": {
+              "name": "com.fasterxml.jackson.core:jackson-databind",
+              "ecosystem": "Maven",
+              "purl": "pkg:maven/com.fasterxml.jackson.core/jackson-databind"
+            },
+            "ranges": [
+              {
+                "type": "ECOSYSTEM",
+                "events": [
+                  {
+                    "introduced": "2.5.0"
+                  },
+                  {
+                    "fixed": "2.18.11"
+                  }
+                ]
+              }
+            ]
+          },
+          {
+            "package": {
+              "name": "com.fasterxml.jackson.core:jackson-databind",
+              "ecosystem": "Maven",
+              "purl": "pkg:maven/com.fasterxml.jackson.core/jackson-databind"
+            },
+            "ranges": [
+              {
+                "type": "ECOSYSTEM",
+                "events": [
+                  {
+                    "introduced": "2.22.0"
+                  },
+                  {
+                    "fixed": "2.22.3"
+                  }
+                ]
+              }
+            ]
+          }
+        ]
+      },
+      {
+        "id": "GHSA-f9xh-2qgp-cq57",
+        "aliases": [
+          "CVE-2020-36188"
+        ],
+        "summary": "Unsafe Deserialization in jackson-databind",
+        "affected": [
+          {
+            "package": {
+              "name": "com.fasterxml.jackson.core:jackson-databind",
+              "ecosystem": "Maven",
+              "purl": "pkg:maven/com.fasterxml.jackson.core/jackson-databind"
+            },
+            "ranges": [
+              {
+                "type": "ECOSYSTEM",
+                "events": [
+                  {
+                    "introduced": "2.7.0"
+                  },
+                  {
+                    "fixed": "2.9.10.8"
+                  }
+                ]
+              }
+            ]
+          },
+          {
+            "package": {
+              "name": "com.fasterxml.jackson.core:jackson-databind",
+              "ecosystem": "Maven",
+              "purl": "pkg:maven/com.fasterxml.jackson.core/jackson-databind"
+            },
+            "ranges": [
+              {
+                "type": "ECOSYSTEM",
+                "events": [
+                  {
+                    "introduced": "2.0.0"
+                  },
+                  {
+                    "fixed": "2.6.7.5"
+                  }
+                ]
+              }
+            ]
+          }
+        ]
+      },
+      {
+        "id": "GHSA-fmmc-742q-jg75",
+        "aliases": [
+          "CVE-2019-16943"
+        ],
+        "summary": "jackson-databind polymorphic typing issue",
+        "affected": [
+          {
+            "package": {
+              "name": "com.fasterxml.jackson.core:jackson-databind",
+              "ecosystem": "Maven",
+              "purl": "pkg:maven/com.fasterxml.jackson.core/jackson-databind"
+            },
+            "ranges": [
+              {
+                "type": "ECOSYSTEM",
+                "events": [
+                  {
+                    "introduced": "2.9.0"
+                  },
+                  {
+                    "fixed": "2.9.10.1"
+                  }
+                ]
+              }
+            ]
+          },
+          {
+            "package": {
+              "name": "com.fasterxml.jackson.core:jackson-databind",
+              "ecosystem": "Maven",
+              "purl": "pkg:maven/com.fasterxml.jackson.core/jackson-databind"
+            },
+            "ranges": [
+              {
+                "type": "ECOSYSTEM",
+                "events": [
+                  {
+                    "introduced": "2.7.0"
+                  },
+                  {
+                    "fixed": "2.8.11.5"
+                  }
+                ]
+              }
+            ]
+          },
+          {
+            "package": {
+              "name": "com.fasterxml.jackson.core:jackson-databind",
+              "ecosystem": "Maven",
+              "purl": "pkg:maven/com.fasterxml.jackson.core/jackson-databind"
+            },
+            "ranges": [
+              {
+                "type": "ECOSYSTEM",
+                "events": [
+                  {
+                    "introduced": "0"
+                  },
+                  {
+                    "fixed": "2.6.7.3"
+                  }
+                ]
+              }
+            ]
+          }
+        ]
+      },
+      {
+        "id": "GHSA-fqwf-pjwf-7vqv",
+        "aliases": [
+          "CVE-2020-10673"
+        ],
+        "summary": "jackson-databind mishandles the interaction between serialization gadgets and typing",
+        "affected": [
+          {
+            "package": {
+              "name": "com.fasterxml.jackson.core:jackson-databind",
+              "ecosystem": "Maven",
+              "purl": "pkg:maven/com.fasterxml.jackson.core/jackson-databind"
+            },
+            "ranges": [
+              {
+                "type": "ECOSYSTEM",
+                "events": [
+                  {
+                    "introduced": "2.7.0"
+                  },
+                  {
+                    "fixed": "2.9.10.4"
+                  }
+                ]
+              }
+            ]
+          },
+          {
+            "package": {
+              "name": "com.fasterxml.jackson.core:jackson-databind",
+              "ecosystem": "Maven",
+              "purl": "pkg:maven/com.fasterxml.jackson.core/jackson-databind"
+            },
+            "ranges": [
+              {
+                "type": "ECOSYSTEM",
+                "events": [
+                  {
+                    "introduced": "2.0.0"
+                  },
+                  {
+                    "fixed": "2.6.7.4"
+                  }
+                ]
+              }
+            ]
+          }
+        ]
+      },
+      {
+        "id": "GHSA-gjmw-vf9h-g25v",
+        "aliases": [
+          "CVE-2019-17531"
+        ],
+        "summary": "jackson-databind polymorphic typing issue",
+        "affected": [
+          {
+            "package": {
+              "name": "com.fasterxml.jackson.core:jackson-databind",
+              "ecosystem": "Maven",
+              "purl": "pkg:maven/com.fasterxml.jackson.core/jackson-databind"
+            },
+            "ranges": [
+              {
+                "type": "ECOSYSTEM",
+                "events": [
+                  {
+                    "introduced": "2.9.0"
+                  },
+                  {
+                    "fixed": "2.9.10.1"
+                  }
+                ]
+              }
+            ]
+          },
+          {
+            "package": {
+              "name": "com.fasterxml.jackson.core:jackson-databind",
+              "ecosystem": "Maven",
+              "purl": "pkg:maven/com.fasterxml.jackson.core/jackson-databind"
+            },
+            "ranges": [
+              {
+                "type": "ECOSYSTEM",
+                "events": [
+                  {
+                    "introduced": "2.7.0"
+                  },
+                  {
+                    "fixed": "2.8.11.5"
+                  }
+                ]
+              }
+            ]
+          },
+          {
+            "package": {
+              "name": "com.fasterxml.jackson.core:jackson-databind",
+              "ecosystem": "Maven",
+              "purl": "pkg:maven/com.fasterxml.jackson.core/jackson-databind"
+            },
+            "ranges": [
+              {
+                "type": "ECOSYSTEM",
+                "events": [
+                  {
+                    "introduced": "0"
+                  },
+                  {
+                    "fixed": "2.6.7.3"
+                  }
+                ]
+              }
+            ]
+          }
+        ]
+      },
+      {
+        "id": "GHSA-gww7-p5w4-wrfv",
+        "aliases": [
+          "CVE-2019-20330"
+        ],
+        "summary": "Deserialization of Untrusted Data in jackson-databind",
+        "affected": [
+          {
+            "package": {
+              "name": "com.fasterxml.jackson.core:jackson-databind",
+              "ecosystem": "Maven",
+              "purl": "pkg:maven/com.fasterxml.jackson.core/jackson-databind"
+            },
+            "ranges": [
+              {
+                "type": "ECOSYSTEM",
+                "events": [
+                  {
+                    "introduced": "2.0.0"
+                  },
+                  {
+                    "fixed": "2.6.7.4"
+                  }
+                ]
+              }
+            ]
+          },
+          {
+            "package": {
+              "name": "com.fasterxml.jackson.core:jackson-databind",
+              "ecosystem": "Maven",
+              "purl": "pkg:maven/com.fasterxml.jackson.core/jackson-databind"
+            },
+            "ranges": [
+              {
+                "type": "ECOSYSTEM",
+                "events": [
+                  {
+                    "introduced": "2.7.0"
+                  },
+                  {
+                    "fixed": "2.7.9.7"
+                  }
+                ]
+              }
+            ]
+          },
+          {
+            "package": {
+              "name": "com.fasterxml.jackson.core:jackson-databind",
+              "ecosystem": "Maven",
+              "purl": "pkg:maven/com.fasterxml.jackson.core/jackson-databind"
+            },
+            "ranges": [
+              {
+                "type": "ECOSYSTEM",
+                "events": [
+                  {
+                    "introduced": "2.8.0"
+                  },
+                  {
+                    "fixed": "2.8.11.5"
+                  }
+                ]
+              }
+            ]
+          },
+          {
+            "package": {
+              "name": "com.fasterxml.jackson.core:jackson-databind",
+              "ecosystem": "Maven",
+              "purl": "pkg:maven/com.fasterxml.jackson.core/jackson-databind"
+            },
+            "ranges": [
+              {
+                "type": "ECOSYSTEM",
+                "events": [
+                  {
+                    "introduced": "2.9.0"
+                  },
+                  {
+                    "fixed": "2.9.10.2"
+                  }
+                ]
+              }
+            ]
+          }
+        ]
+      },
+      {
+        "id": "GHSA-h3cw-g4mq-c5x2",
+        "aliases": [
+          "CVE-2020-24616"
+        ],
+        "summary": "Code Injection in jackson-databind",
+        "affected": [
+          {
+            "package": {
+              "name": "com.fasterxml.jackson.core:jackson-databind",
+              "ecosystem": "Maven",
+              "purl": "pkg:maven/com.fasterxml.jackson.core/jackson-databind"
+            },
+            "ranges": [
+              {
+                "type": "ECOSYSTEM",
+                "events": [
+                  {
+                    "introduced": "2.0.0"
+                  },
+                  {
+                    "fixed": "2.9.10.6"
+                  }
+                ]
+              }
+            ]
+          }
+        ]
+      },
+      {
+        "id": "GHSA-h4rc-386g-6m85",
+        "aliases": [
+          "CVE-2020-11620"
+        ],
+        "summary": "jackson-databind mishandles the interaction between serialization gadgets and typing",
+        "affected": [
+          {
+            "package": {
+              "name": "com.fasterxml.jackson.core:jackson-databind",
+              "ecosystem": "Maven",
+              "purl": "pkg:maven/com.fasterxml.jackson.core/jackson-databind"
+            },
+            "ranges": [
+              {
+                "type": "ECOSYSTEM",
+                "events": [
+                  {
+                    "introduced": "2.9.0"
+                  },
+                  {
+                    "fixed": "2.9.10.4"
+                  }
+                ]
+              }
+            ]
+          }
+        ]
+      },
+      {
+        "id": "GHSA-hgj6-7826-r7m5",
+        "aliases": [
+          "CVE-2026-54514"
+        ],
+        "summary": "jackson-databind: InetSocketAddress deserialization triggers eager DNS resolution (SSRF)",
+        "affected": [
+          {
+            "package": {
+              "name": "com.fasterxml.jackson.core:jackson-databind",
+              "ecosystem": "Maven",
+              "purl": "pkg:maven/com.fasterxml.jackson.core/jackson-databind"
+            },
+            "ranges": [
+              {
+                "type": "ECOSYSTEM",
+                "events": [
+                  {
+                    "introduced": "2.0.0"
+                  },
+                  {
+                    "fixed": "2.18.8"
+                  }
+                ]
+              }
+            ]
+          },
+          {
+            "package": {
+              "name": "com.fasterxml.jackson.core:jackson-databind",
+              "ecosystem": "Maven",
+              "purl": "pkg:maven/com.fasterxml.jackson.core/jackson-databind"
+            },
+            "ranges": [
+              {
+                "type": "ECOSYSTEM",
+                "events": [
+                  {
+                    "introduced": "2.19.0"
+                  },
+                  {
+                    "fixed": "2.21.4"
+                  }
+                ]
+              }
+            ]
+          },
+          {
+            "package": {
+              "name": "com.fasterxml.jackson.core:jackson-databind",
+              "ecosystem": "Maven",
+              "purl": "pkg:maven/com.fasterxml.jackson.core/jackson-databind"
+            },
+            "ranges": [
+              {
+                "type": "ECOSYSTEM",
+                "events": [
+                  {
+                    "introduced": "3.0.0"
+                  },
+                  {
+                    "fixed": "3.1.4"
+                  }
+                ]
+              }
+            ]
+          },
+          {
+            "package": {
+              "name": "tools.jackson.core:jackson-databind",
+              "ecosystem": "Maven",
+              "purl": "pkg:maven/tools.jackson.core/jackson-databind"
+            },
+            "ranges": [
+              {
+                "type": "ECOSYSTEM",
+                "events": [
+                  {
+                    "introduced": "2.19.0"
+                  },
+                  {
+                    "fixed": "2.21.4"
+                  }
+                ]
+              }
+            ]
+          },
+          {
+            "package": {
+              "name": "tools.jackson.core:jackson-databind",
+              "ecosystem": "Maven",
+              "purl": "pkg:maven/tools.jackson.core/jackson-databind"
+            },
+            "ranges": [
+              {
+                "type": "ECOSYSTEM",
+                "events": [
+                  {
+                    "introduced": "3.0.0"
+                  },
+                  {
+                    "fixed": "3.1.4"
+                  }
+                ]
+              }
+            ]
+          }
+        ]
+      },
+      {
+        "id": "GHSA-j823-4qch-3rgm",
+        "aliases": [
+          "CVE-2020-14060"
+        ],
+        "summary": "Deserialization of untrusted data in Jackson Databind",
+        "affected": [
+          {
+            "package": {
+              "name": "com.fasterxml.jackson.core:jackson-databind",
+              "ecosystem": "Maven",
+              "purl": "pkg:maven/com.fasterxml.jackson.core/jackson-databind"
+            },
+            "ranges": [
+              {
+                "type": "ECOSYSTEM",
+                "events": [
+                  {
+                    "introduced": "2.9.0"
+                  },
+                  {
+                    "fixed": "2.9.10.5"
+                  }
+                ]
+              }
+            ]
+          }
+        ]
+      },
+      {
+        "id": "GHSA-jjjh-jjxp-wpff",
+        "aliases": [
+          "CVE-2022-42003"
+        ],
+        "summary": "Uncontrolled Resource Consumption in Jackson-databind",
+        "affected": [
+          {
+            "package": {
+              "name": "com.fasterxml.jackson.core:jackson-databind",
+              "ecosystem": "Maven",
+              "purl": "pkg:maven/com.fasterxml.jackson.core/jackson-databind"
+            },
+            "ranges": [
+              {
+                "type": "ECOSYSTEM",
+                "events": [
+                  {
+                    "introduced": "2.4.0-rc1"
+                  },
+                  {
+                    "fixed": "2.12.7.1"
+                  }
+                ]
+              }
+            ]
+          },
+          {
+            "package": {
+              "name": "com.fasterxml.jackson.core:jackson-databind",
+              "ecosystem": "Maven",
+              "purl": "pkg:maven/com.fasterxml.jackson.core/jackson-databind"
+            },
+            "ranges": [
+              {
+                "type": "ECOSYSTEM",
+                "events": [
+                  {
+                    "introduced": "2.13.0"
+                  },
+                  {
+                    "fixed": "2.13.4.2"
+                  }
+                ]
+              }
+            ]
+          }
+        ]
+      },
+      {
+        "id": "GHSA-m6x4-97wx-4q27",
+        "aliases": [
+          "CVE-2020-36184"
+        ],
+        "summary": "Unsafe Deserialization in jackson-databind",
+        "affected": [
+          {
+            "package": {
+              "name": "com.fasterxml.jackson.core:jackson-databind",
+              "ecosystem": "Maven",
+              "purl": "pkg:maven/com.fasterxml.jackson.core/jackson-databind"
+            },
+            "ranges": [
+              {
+                "type": "ECOSYSTEM",
+                "events": [
+                  {
+                    "introduced": "2.0.0"
+                  },
+                  {
+                    "fixed": "2.9.10.8"
+                  }
+                ]
+              }
+            ]
+          }
+        ]
+      },
+      {
+        "id": "GHSA-mc6h-4qgp-37qh",
+        "aliases": [
+          "CVE-2020-14195"
+        ],
+        "summary": "Deserialization of untrusted data in Jackson Databind",
+        "affected": [
+          {
+            "package": {
+              "name": "com.fasterxml.jackson.core:jackson-databind",
+              "ecosystem": "Maven",
+              "purl": "pkg:maven/com.fasterxml.jackson.core/jackson-databind"
+            },
+            "ranges": [
+              {
+                "type": "ECOSYSTEM",
+                "events": [
+                  {
+                    "introduced": "2.9.0"
+                  },
+                  {
+                    "fixed": "2.9.10.5"
+                  }
+                ]
+              }
+            ]
+          }
+        ]
+      },
+      {
+        "id": "GHSA-mx7p-6679-8g3q",
+        "aliases": [
+          "CVE-2019-16942"
+        ],
+        "summary": "Polymorphic Typing in FasterXML jackson-databind",
+        "affected": [
+          {
+            "package": {
+              "name": "com.fasterxml.jackson.core:jackson-databind",
+              "ecosystem": "Maven",
+              "purl": "pkg:maven/com.fasterxml.jackson.core/jackson-databind"
+            },
+            "ranges": [
+              {
+                "type": "ECOSYSTEM",
+                "events": [
+                  {
+                    "introduced": "2.9.0"
+                  },
+                  {
+                    "fixed": "2.9.10.1"
+                  }
+                ]
+              }
+            ]
+          },
+          {
+            "package": {
+              "name": "com.fasterxml.jackson.core:jackson-databind",
+              "ecosystem": "Maven",
+              "purl": "pkg:maven/com.fasterxml.jackson.core/jackson-databind"
+            },
+            "ranges": [
+              {
+                "type": "ECOSYSTEM",
+                "events": [
+                  {
+                    "introduced": "2.7.0"
+                  },
+                  {
+                    "fixed": "2.8.11.5"
+                  }
+                ]
+              }
+            ]
+          },
+          {
+            "package": {
+              "name": "com.fasterxml.jackson.core:jackson-databind",
+              "ecosystem": "Maven",
+              "purl": "pkg:maven/com.fasterxml.jackson.core/jackson-databind"
+            },
+            "ranges": [
+              {
+                "type": "ECOSYSTEM",
+                "events": [
+                  {
+                    "introduced": "2.0.0"
+                  },
+                  {
+                    "fixed": "2.6.7.3"
+                  }
+                ]
+              }
+            ]
+          }
+        ]
+      },
+      {
+        "id": "GHSA-p43x-xfjf-5jhr",
+        "aliases": [
+          "CVE-2020-9548"
+        ],
+        "summary": "jackson-databind mishandles the interaction between serialization gadgets and typing",
+        "affected": [
+          {
+            "package": {
+              "name": "com.fasterxml.jackson.core:jackson-databind",
+              "ecosystem": "Maven",
+              "purl": "pkg:maven/com.fasterxml.jackson.core/jackson-databind"
+            },
+            "ranges": [
+              {
+                "type": "ECOSYSTEM",
+                "events": [
+                  {
+                    "introduced": "2.9.0"
+                  },
+                  {
+                    "fixed": "2.9.10.4"
+                  }
+                ]
+              }
+            ]
+          },
+          {
+            "package": {
+              "name": "com.fasterxml.jackson.core:jackson-databind",
+              "ecosystem": "Maven",
+              "purl": "pkg:maven/com.fasterxml.jackson.core/jackson-databind"
+            },
+            "ranges": [
+              {
+                "type": "ECOSYSTEM",
+                "events": [
+                  {
+                    "introduced": "2.8.0"
+                  },
+                  {
+                    "fixed": "2.8.11.6"
+                  }
+                ]
+              }
+            ]
+          },
+          {
+            "package": {
+              "name": "com.fasterxml.jackson.core:jackson-databind",
+              "ecosystem": "Maven",
+              "purl": "pkg:maven/com.fasterxml.jackson.core/jackson-databind"
+            },
+            "ranges": [
+              {
+                "type": "ECOSYSTEM",
+                "events": [
+                  {
+                    "introduced": "2.0.0"
+                  },
+                  {
+                    "fixed": "2.7.9.7"
+                  }
+                ]
+              }
+            ]
+          }
+        ]
+      },
+      {
+        "id": "GHSA-q93h-jc49-78gg",
+        "aliases": [
+          "CVE-2020-9547"
+        ],
+        "summary": "jackson-databind mishandles the interaction between serialization gadgets and typing",
+        "affected": [
+          {
+            "package": {
+              "name": "com.fasterxml.jackson.core:jackson-databind",
+              "ecosystem": "Maven",
+              "purl": "pkg:maven/com.fasterxml.jackson.core/jackson-databind"
+            },
+            "ranges": [
+              {
+                "type": "ECOSYSTEM",
+                "events": [
+                  {
+                    "introduced": "2.9.0"
+                  },
+                  {
+                    "fixed": "2.9.10.4"
+                  }
+                ]
+              }
+            ]
+          },
+          {
+            "package": {
+              "name": "com.fasterxml.jackson.core:jackson-databind",
+              "ecosystem": "Maven",
+              "purl": "pkg:maven/com.fasterxml.jackson.core/jackson-databind"
+            },
+            "ranges": [
+              {
+                "type": "ECOSYSTEM",
+                "events": [
+                  {
+                    "introduced": "2.8.0"
+                  },
+                  {
+                    "fixed": "2.8.11.6"
+                  }
+                ]
+              }
+            ]
+          },
+          {
+            "package": {
+              "name": "com.fasterxml.jackson.core:jackson-databind",
+              "ecosystem": "Maven",
+              "purl": "pkg:maven/com.fasterxml.jackson.core/jackson-databind"
+            },
+            "ranges": [
+              {
+                "type": "ECOSYSTEM",
+                "events": [
+                  {
+                    "introduced": "2.0.0"
+                  },
+                  {
+                    "fixed": "2.7.9.7"
+                  }
+                ]
+              }
+            ]
+          }
+        ]
+      },
+      {
+        "id": "GHSA-qjw2-hr98-qgfh",
+        "aliases": [
+          "CVE-2020-24750"
+        ],
+        "summary": "Unsafe Deserialization in jackson-databind",
+        "affected": [
+          {
+            "package": {
+              "name": "com.fasterxml.jackson.core:jackson-databind",
+              "ecosystem": "Maven",
+              "purl": "pkg:maven/com.fasterxml.jackson.core/jackson-databind"
+            },
+            "ranges": [
+              {
+                "type": "ECOSYSTEM",
+                "events": [
+                  {
+                    "introduced": "2.0"
+                  },
+                  {
+                    "fixed": "2.6.7.5"
+                  }
+                ]
+              }
+            ]
+          },
+          {
+            "package": {
+              "name": "com.fasterxml.jackson.core:jackson-databind",
+              "ecosystem": "Maven",
+              "purl": "pkg:maven/com.fasterxml.jackson.core/jackson-databind"
+            },
+            "ranges": [
+              {
+                "type": "ECOSYSTEM",
+                "events": [
+                  {
+                    "introduced": "2.7.0"
+                  },
+                  {
+                    "fixed": "2.9.10.6"
+                  }
+                ]
+              }
+            ]
+          }
+        ]
+      },
+      {
+        "id": "GHSA-r3gr-cxrf-hg25",
+        "aliases": [
+          "CVE-2020-35491"
+        ],
+        "summary": "Serialization gadgets exploit in jackson-databind",
+        "affected": [
+          {
+            "package": {
+              "name": "com.fasterxml.jackson.core:jackson-databind",
+              "ecosystem": "Maven",
+              "purl": "pkg:maven/com.fasterxml.jackson.core/jackson-databind"
+            },
+            "ranges": [
+              {
+                "type": "ECOSYSTEM",
+                "events": [
+                  {
+                    "introduced": "2.0.0"
+                  },
+                  {
+                    "fixed": "2.9.10.8"
+                  }
+                ]
+              }
+            ]
+          }
+        ]
+      },
+      {
+        "id": "GHSA-r695-7vr9-jgc2",
+        "aliases": [
+          "CVE-2020-36187"
+        ],
+        "summary": "Unsafe Deserialization in jackson-databind",
+        "affected": [
+          {
+            "package": {
+              "name": "com.fasterxml.jackson.core:jackson-databind",
+              "ecosystem": "Maven",
+              "purl": "pkg:maven/com.fasterxml.jackson.core/jackson-databind"
+            },
+            "ranges": [
+              {
+                "type": "ECOSYSTEM",
+                "events": [
+                  {
+                    "introduced": "2.0.0"
+                  },
+                  {
+                    "fixed": "2.9.10.8"
+                  }
+                ]
+              }
+            ]
+          }
+        ]
+      },
+      {
+        "id": "GHSA-rf6r-2c4q-2vwg",
+        "aliases": [
+          "CVE-2020-10968"
+        ],
+        "summary": "jackson-databind mishandles the interaction between serialization gadgets and typing",
+        "affected": [
+          {
+            "package": {
+              "name": "com.fasterxml.jackson.core:jackson-databind",
+              "ecosystem": "Maven",
+              "purl": "pkg:maven/com.fasterxml.jackson.core/jackson-databind"
+            },
+            "ranges": [
+              {
+                "type": "ECOSYSTEM",
+                "events": [
+                  {
+                    "introduced": "2.9.0"
+                  },
+                  {
+                    "fixed": "2.9.10.4"
+                  }
+                ]
+              }
+            ]
+          }
+        ]
+      },
+      {
+        "id": "GHSA-rgv9-q543-rqg4",
+        "aliases": [
+          "CVE-2022-42004"
+        ],
+        "summary": "Uncontrolled Resource Consumption in FasterXML jackson-databind",
+        "affected": [
+          {
+            "package": {
+              "name": "com.fasterxml.jackson.core:jackson-databind",
+              "ecosystem": "Maven",
+              "purl": "pkg:maven/com.fasterxml.jackson.core/jackson-databind"
+            },
+            "ranges": [
+              {
+                "type": "ECOSYSTEM",
+                "events": [
+                  {
+                    "introduced": "2.4.0-rc1"
+                  },
+                  {
+                    "fixed": "2.12.7.1"
+                  }
+                ]
+              }
+            ]
+          },
+          {
+            "package": {
+              "name": "com.fasterxml.jackson.core:jackson-databind",
+              "ecosystem": "Maven",
+              "purl": "pkg:maven/com.fasterxml.jackson.core/jackson-databind"
+            },
+            "ranges": [
+              {
+                "type": "ECOSYSTEM",
+                "events": [
+                  {
+                    "introduced": "2.13.0"
+                  },
+                  {
+                    "fixed": "2.13.4"
+                  }
+                ]
+              }
+            ]
+          }
+        ]
+      },
+      {
+        "id": "GHSA-rpr3-cw39-3pxh",
+        "aliases": [
+          "CVE-2020-10650"
+        ],
+        "summary": "jackson-databind vulnerable to unsafe deserialization",
+        "affected": [
+          {
+            "package": {
+              "name": "com.fasterxml.jackson.core:jackson-databind",
+              "ecosystem": "Maven",
+              "purl": "pkg:maven/com.fasterxml.jackson.core/jackson-databind"
+            },
+            "ranges": [
+              {
+                "type": "ECOSYSTEM",
+                "events": [
+                  {
+                    "introduced": "0"
+                  },
+                  {
+                    "fixed": "2.9.10.4"
+                  }
+                ]
+              }
+            ]
+          }
+        ]
+      },
+      {
+        "id": "GHSA-v3xw-c963-f5hc",
+        "aliases": [
+          "CVE-2020-11111"
+        ],
+        "summary": "jackson-databind mishandles the interaction between serialization gadgets and typing",
+        "affected": [
+          {
+            "package": {
+              "name": "com.fasterxml.jackson.core:jackson-databind",
+              "ecosystem": "Maven",
+              "purl": "pkg:maven/com.fasterxml.jackson.core/jackson-databind"
+            },
+            "ranges": [
+              {
+                "type": "ECOSYSTEM",
+                "events": [
+                  {
+                    "introduced": "2.9.0"
+                  },
+                  {
+                    "fixed": "2.9.10.4"
+                  }
+                ]
+              }
+            ]
+          }
+        ]
+      },
+      {
+        "id": "GHSA-v585-23hc-c647",
+        "aliases": [
+          "CVE-2020-36186"
+        ],
+        "summary": "Unsafe Deserialization in jackson-databind",
+        "affected": [
+          {
+            "package": {
+              "name": "com.fasterxml.jackson.core:jackson-databind",
+              "ecosystem": "Maven",
+              "purl": "pkg:maven/com.fasterxml.jackson.core/jackson-databind"
+            },
+            "ranges": [
+              {
+                "type": "ECOSYSTEM",
+                "events": [
+                  {
+                    "introduced": "2.0.0"
+                  },
+                  {
+                    "fixed": "2.9.10.8"
+                  }
+                ]
+              }
+            ]
+          }
+        ]
+      },
+      {
+        "id": "GHSA-vfqx-33qm-g869",
+        "aliases": [
+          "CVE-2020-36189"
+        ],
+        "summary": "Unsafe Deserialization in jackson-databind",
+        "affected": [
+          {
+            "package": {
+              "name": "com.fasterxml.jackson.core:jackson-databind",
+              "ecosystem": "Maven",
+              "purl": "pkg:maven/com.fasterxml.jackson.core/jackson-databind"
+            },
+            "ranges": [
+              {
+                "type": "ECOSYSTEM",
+                "events": [
+                  {
+                    "introduced": "2.7.0"
+                  },
+                  {
+                    "fixed": "2.9.10.8"
+                  }
+                ]
+              }
+            ]
+          },
+          {
+            "package": {
+              "name": "com.fasterxml.jackson.core:jackson-databind",
+              "ecosystem": "Maven",
+              "purl": "pkg:maven/com.fasterxml.jackson.core/jackson-databind"
+            },
+            "ranges": [
+              {
+                "type": "ECOSYSTEM",
+                "events": [
+                  {
+                    "introduced": "0"
+                  },
+                  {
+                    "fixed": "2.6.7.5"
+                  }
+                ]
+              }
+            ]
+          }
+        ]
+      },
+      {
+        "id": "GHSA-vvgp-rfg2-7rr6",
+        "aliases": [
+          "CVE-2026-77310"
+        ],
+        "summary": "jackson-databind: Incomplete fix for CVE-2026-54514: eager DNS resolution (SSRF) still present in InetAddress deserialization",
+        "affected": [
+          {
+            "package": {
+              "name": "com.fasterxml.jackson.core:jackson-databind",
+              "ecosystem": "Maven",
+              "purl": "pkg:maven/com.fasterxml.jackson.core/jackson-databind"
+            },
+            "ranges": [
+              {
+                "type": "ECOSYSTEM",
+                "events": [
+                  {
+                    "introduced": "2.0.0"
+                  },
+                  {
+                    "fixed": "2.18.9"
+                  }
+                ]
+              }
+            ]
+          },
+          {
+            "package": {
+              "name": "com.fasterxml.jackson.core:jackson-databind",
+              "ecosystem": "Maven",
+              "purl": "pkg:maven/com.fasterxml.jackson.core/jackson-databind"
+            },
+            "ranges": [
+              {
+                "type": "ECOSYSTEM",
+                "events": [
+                  {
+                    "introduced": "2.19.0"
+                  },
+                  {
+                    "fixed": "2.21.5"
+                  }
+                ]
+              }
+            ]
+          },
+          {
+            "package": {
+              "name": "com.fasterxml.jackson.core:jackson-databind",
+              "ecosystem": "Maven",
+              "purl": "pkg:maven/com.fasterxml.jackson.core/jackson-databind"
+            },
+            "ranges": [
+              {
+                "type": "ECOSYSTEM",
+                "events": [
+                  {
+                    "introduced": "2.22.0"
+                  },
+                  {
+                    "fixed": "2.22.1"
+                  }
+                ]
+              }
+            ]
+          },
+          {
+            "package": {
+              "name": "tools.jackson.core:jackson-databind",
+              "ecosystem": "Maven",
+              "purl": "pkg:maven/tools.jackson.core/jackson-databind"
+            },
+            "ranges": [
+              {
+                "type": "ECOSYSTEM",
+                "events": [
+                  {
+                    "introduced": "3.0.0"
+                  },
+                  {
+                    "fixed": "3.1.5"
+                  }
+                ]
+              }
+            ]
+          },
+          {
+            "package": {
+              "name": "tools.jackson.core:jackson-databind",
+              "ecosystem": "Maven",
+              "purl": "pkg:maven/tools.jackson.core/jackson-databind"
+            },
+            "ranges": [
+              {
+                "type": "ECOSYSTEM",
+                "events": [
+                  {
+                    "introduced": "3.2.0"
+                  },
+                  {
+                    "fixed": "3.2.1"
+                  }
+                ]
+              }
+            ]
+          }
+        ]
+      },
+      {
+        "id": "GHSA-wh8g-3j2c-rqj5",
+        "aliases": [
+          "CVE-2020-35490"
+        ],
+        "summary": "Serialization gadgets exploit in jackson-databind",
+        "affected": [
+          {
+            "package": {
+              "name": "com.fasterxml.jackson.core:jackson-databind",
+              "ecosystem": "Maven",
+              "purl": "pkg:maven/com.fasterxml.jackson.core/jackson-databind"
+            },
+            "ranges": [
+              {
+                "type": "ECOSYSTEM",
+                "events": [
+                  {
+                    "introduced": "2.0.0"
+                  },
+                  {
+                    "fixed": "2.9.10.8"
+                  }
+                ]
+              }
+            ]
+          }
+        ]
+      },
+      {
+        "id": "GHSA-wjgm-6hv5-3cvf",
+        "aliases": [
+          "CVE-2026-19032"
+        ],
+        "summary": "jackson-databind: Path Deserialization Missing Scheme Allowlist for FileSystemProvider Resolution",
+        "affected": [
+          {
+            "package": {
+              "name": "tools.jackson.core:jackson-databind",
+              "ecosystem": "Maven",
+              "purl": "pkg:maven/tools.jackson.core/jackson-databind"
+            },
+            "ranges": [
+              {
+                "type": "ECOSYSTEM",
+                "events": [
+                  {
+                    "introduced": "3.0.0"
+                  },
+                  {
+                    "fixed": "3.1.6"
+                  }
+                ]
+              }
+            ]
+          },
+          {
+            "package": {
+              "name": "tools.jackson.core:jackson-databind",
+              "ecosystem": "Maven",
+              "purl": "pkg:maven/tools.jackson.core/jackson-databind"
+            },
+            "ranges": [
+              {
+                "type": "ECOSYSTEM",
+                "events": [
+                  {
+                    "introduced": "3.2.0"
+                  },
+                  {
+                    "fixed": "3.2.2"
+                  }
+                ]
+              }
+            ]
+          },
+          {
+            "package": {
+              "name": "com.fasterxml.jackson.core:jackson-databind",
+              "ecosystem": "Maven",
+              "purl": "pkg:maven/com.fasterxml.jackson.core/jackson-databind"
+            },
+            "ranges": [
+              {
+                "type": "ECOSYSTEM",
+                "events": [
+                  {
+                    "introduced": "2.8.0"
+                  },
+                  {
+                    "fixed": "2.18.10"
+                  }
+                ]
+              }
+            ]
+          },
+          {
+            "package": {
+              "name": "com.fasterxml.jackson.core:jackson-databind",
+              "ecosystem": "Maven",
+              "purl": "pkg:maven/com.fasterxml.jackson.core/jackson-databind"
+            },
+            "ranges": [
+              {
+                "type": "ECOSYSTEM",
+                "events": [
+                  {
+                    "introduced": "2.19.0"
+                  },
+                  {
+                    "fixed": "2.21.6"
+                  }
+                ]
+              }
+            ]
+          },
+          {
+            "package": {
+              "name": "com.fasterxml.jackson.core:jackson-databind",
+              "ecosystem": "Maven",
+              "purl": "pkg:maven/com.fasterxml.jackson.core/jackson-databind"
+            },
+            "ranges": [
+              {
+                "type": "ECOSYSTEM",
+                "events": [
+                  {
+                    "introduced": "2.22.0"
+                  },
+                  {
+                    "fixed": "2.22.2"
+                  }
+                ]
+              }
+            ]
+          }
+        ]
+      },
+      {
+        "id": "GHSA-wv8q-qhhj-9h54",
+        "aliases": [
+          "CVE-2026-91776"
+        ],
+        "summary": "jackson-databind retains every unknown raw type ID ",
+        "affected": [
+          {
+            "package": {
+              "name": "com.fasterxml.jackson.core:jackson-databind",
+              "ecosystem": "Maven",
+              "purl": "pkg:maven/com.fasterxml.jackson.core/jackson-databind"
+            },
+            "ranges": [
+              {
+                "type": "ECOSYSTEM",
+                "events": [
+                  {
+                    "introduced": "2.0.0"
+                  },
+                  {
+                    "fixed": "2.18.11"
+                  }
+                ]
+              }
+            ]
+          },
+          {
+            "package": {
+              "name": "com.fasterxml.jackson.core:jackson-databind",
+              "ecosystem": "Maven",
+              "purl": "pkg:maven/com.fasterxml.jackson.core/jackson-databind"
+            },
+            "ranges": [
+              {
+                "type": "ECOSYSTEM",
+                "events": [
+                  {
+                    "introduced": "2.19.0"
+                  },
+                  {
+                    "fixed": "2.21.7"
+                  }
+                ]
+              }
+            ]
+          },
+          {
+            "package": {
+              "name": "com.fasterxml.jackson.core:jackson-databind",
+              "ecosystem": "Maven",
+              "purl": "pkg:maven/com.fasterxml.jackson.core/jackson-databind"
+            },
+            "ranges": [
+              {
+                "type": "ECOSYSTEM",
+                "events": [
+                  {
+                    "introduced": "2.22.0"
+                  },
+                  {
+                    "fixed": "2.22.3"
+                  }
+                ]
+              }
+            ]
+          },
+          {
+            "package": {
+              "name": "tools.jackson.core:jackson-databind",
+              "ecosystem": "Maven",
+              "purl": "pkg:maven/tools.jackson.core/jackson-databind"
+            },
+            "ranges": [
+              {
+                "type": "ECOSYSTEM",
+                "events": [
+                  {
+                    "introduced": "3.0.0"
+                  },
+                  {
+                    "fixed": "3.1.7"
+                  }
+                ]
+              }
+            ]
+          },
+          {
+            "package": {
+              "name": "tools.jackson.core:jackson-databind",
+              "ecosystem": "Maven",
+              "purl": "pkg:maven/tools.jackson.core/jackson-databind"
+            },
+            "ranges": [
+              {
+                "type": "ECOSYSTEM",
+                "events": [
+                  {
+                    "introduced": "3.2.0"
+                  },
+                  {
+                    "fixed": "3.2.3"
+                  }
+                ]
+              }
+            ]
+          }
+        ]
+      }
+    ]
+  }
+}

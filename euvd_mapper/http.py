@@ -64,12 +64,9 @@ class HttpCache:
             raise CacheMiss(url)
         status, payload = self._fetch(method, url, body)
         if status == 200 or status == 404:
-            stored = payload
-            if "api.osv.dev" in url and isinstance(payload, dict):
-                stored = trim_osv_response(payload)
+            stored = _trim_for_cache(url, payload)
             self._write(digest, {"status": status, "url": url, "method": method, "payload": stored})
-            if "api.osv.dev" in url:
-                payload = stored
+            payload = stored
         return status, payload
 
     def _read(self, digest: str) -> dict | None:
@@ -149,6 +146,54 @@ class HttpCache:
         if not isinstance(payload, dict):
             raise HttpError(status, url, "response was not a JSON object")
         return status, payload
+
+
+def _trim_for_cache(url: str, payload: dict) -> dict:
+    if not isinstance(payload, dict):
+        return payload
+    if "api.osv.dev" in url:
+        return trim_osv_response(payload)
+    if "euvdservices.enisa.europa.eu" in url:
+        return trim_euvd_response(payload)
+    return payload
+
+
+def trim_euvd_response(payload: dict) -> dict:
+    """Drop advisory blobs. Keep the fields the matcher and the page read."""
+    if not isinstance(payload, dict):
+        return payload
+    if "items" in payload:
+        return {
+            "items": [_trim_euvd_record(item) for item in payload.get("items") or []],
+            "total": payload.get("total"),
+        }
+    if payload.get("id"):
+        return _trim_euvd_record(payload)
+    return payload
+
+
+def _trim_euvd_record(record: dict) -> dict:
+    products = []
+    for entry in record.get("enisaIdProduct") or []:
+        product = entry.get("product") or {}
+        vendor = product.get("vendor") or {}
+        products.append(
+            {
+                "product_version": entry.get("product_version"),
+                "product": {
+                    "name": product.get("name"),
+                    "vendor": {"name": vendor.get("name")},
+                },
+            }
+        )
+    return {
+        "id": record.get("id"),
+        "description": record.get("description"),
+        "baseScore": record.get("baseScore"),
+        "epss": record.get("epss"),
+        "aliases": record.get("aliases"),
+        "enisaIdProduct": products,
+    }
 
 
 def trim_osv_response(payload: dict) -> dict:
