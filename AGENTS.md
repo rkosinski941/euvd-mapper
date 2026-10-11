@@ -23,7 +23,7 @@ Do not copy the local 10th-man SCA kit into this repo.
 - `index.html` — Pages UI and the current version filter
 - `scripts/lookup.ps1` — live API client (no CORS)
 - `data/catalog.json` + `data/products/` — snapshots the page reads
-- `.github/workflows/lookup.yml` — local draft of an on-demand snapshot refresh. Not on GitHub until the token has the `workflow` scope.
+- `.github/workflows/lookup.yml` — on-demand snapshot refresh (Actions → Lookup EUVD)
 
 ## Conventions
 

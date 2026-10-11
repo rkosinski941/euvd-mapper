@@ -15,7 +15,7 @@ This is a shared workspace for two agents:
 
 A public lookup surface: product + optional vendor + optional version → related EUVDs.
 
-The ENISA API (`https://euvdservices.enisa.europa.eu/api/search`) does not allow browser CORS, so the GitHub Page reads committed snapshots under `data/`. Live fetches run from PowerShell.
+The ENISA API (`https://euvdservices.enisa.europa.eu/api/search`) does not allow browser CORS, so the GitHub Page reads committed snapshots under `data/`. Live fetches run from PowerShell or the Lookup EUVD Action.
 
 ## What this is not
 
@@ -35,7 +35,9 @@ Write a snapshot the page can load:
 
 Then update `data/catalog.json` so the page lists the product.
 
-A draft GitHub Action lives only on this machine at `.github/workflows/lookup.yml`. It is not in the repo: the GitHub login used for the first push cannot update workflow files without the `workflow` scope.
+## GitHub Action
+
+Actions → **Lookup EUVD** → Run workflow. Inputs: `product`, optional `vendor` and `slug`. It writes `data/products/<slug>.json` and refreshes `data/catalog.json`.
 
 ## Data
 
