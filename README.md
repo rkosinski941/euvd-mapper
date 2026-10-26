@@ -8,6 +8,47 @@ Give it a package URL (or a name, plus an optional version). It asks [OSV](https
 
 This repo is shared by Grok Build (Enjoy), which owns the Pages shell and `scripts/lookup.ps1`, and 10thman-oss, which owns the matcher, aliases, fixtures, and the workbook enricher. See [AGENTS.md](AGENTS.md).
 
+## Black Duck project report
+
+The enricher writes a **new** workbook. It does not modify the input file.
+
+A Black Duck project report (template 6.1.0 style) is detected from two sheets:
+
+- **Bill of Materials**, headers on row 2: Component, Version, License, Usage, License Status, Security Status, Home Page, Ship Status, Code Match, Depends, Search, Multi-Licensing, Comment.
+- **Vulnerabilities**, 33 columns starting Severity, Component, Version, NVD CVE, Related BDSA. The BDSA temporal column is `BDSA  Overall (Temporal)` with the double space the export uses.
+
+On that layout the tool keeps every original sheet value-identical (the worksheet XML parts are copied unchanged) and inserts two sheets immediately after **Vulnerabilities**:
+
+1. **EUVD Vulnerabilities** — one row per BOM component hit. A CVE that is listed on three BOM rows becomes three rows. Columns: Severity, Component, Version, EUVD ID, NVD CVE, Related BDSA, EUVD Aliases (CVE/GHSA), EUVD Base Score, EUVD CVSS Version, EUVD CVSS Vector, EUVD EPSS, EUVD Published, EUVD Updated, EUVD Description, EUVD Link, Affected-Version Verdict, Match Basis, Notes. The sheet uses the report's own banner and header styles, freezes at A3, and filters on the header row. EUVD Link is a hyperlink; the EUVD ID cell uses the report's hyperlink style.
+2. **EUVD Run Summary** — counts, per-component search results, and product-search hits that were not written to the main tab.
+
+Severity comes from the EUVD base score: 9 and above Critical, 7 to 8.9 High, 4 to 6.9 Medium, below 4 Low, no score Not Yet Rated.
+
+Rows come from two paths:
+
+- Every CVE on the Vulnerabilities tab is looked up by alias on `GET /api/enisaid`. The match basis is `CVE alias (from Vulnerabilities tab)`.
+- Each BOM component whose Usage is not `Original Code` is searched with `GET /api/search?product=`. A hit is written when the BOM version falls inside a parsed EUVD `product_version`. The note is `Not in Black Duck Vulnerabilities tab; review`. Names such as `Widget :: Core` are queried as `Widget`, and a token subset can match an EUVD product such as `Apache Widget` (the basis says fuzzy). Out-of-range hits, and hits whose EUVD range does not parse, are listed on the run summary and are not given an affected verdict.
+
+A component or CVE with no row was not returned by this alias and product-name search. That still needs review. This is not a statement that the component has no vulnerabilities.
+
+From the repo root, with Python 3 and openpyxl (`pip install -e .`):
+
+```powershell
+python -m euvd_mapper enrich-xlsx .\report.xlsx -o .\report-euvd.xlsx --cache-dir .\.cache\euvd-mapper
+```
+
+```powershell
+.\scripts\enrich.ps1 -InputPath .\report.xlsx -Out .\report-euvd.xlsx -CacheDir .\.cache\euvd-mapper
+```
+
+Responses are cached under `--cache-dir` (default `.cache/euvd-mapper`). The client sends a User-Agent, waits between calls (`--interval`, default 0.35 seconds), and backs off on HTTP 429 and 5xx. Run the same command again to reuse the cache. Add `--offline` to read the cache only; a cache miss is written on the sheet and is not treated as "no EUVD record".
+
+```powershell
+python -m euvd_mapper enrich-xlsx .\report.xlsx -o .\report-euvd.xlsx --offline --cache-dir .\.cache\euvd-mapper
+```
+
+`--sheet`, `--name-column`, `--version-column`, and `--purl-column` force the column-append layout below, including on a project report.
+
 ## Two-minute demo
 
 The demo reads recorded public API responses, so it does not call the network. From the repo root, with Python 3 and `openpyxl` (`pip install -e .`):
@@ -65,7 +106,9 @@ python -m euvd_mapper lookup --purl "pkg:maven/org.apache.logging.log4j/log4j-co
 
 ## Workbook columns
 
-The enricher detects the header row and the sheet. It understands Black Duck style names (`Component name`, `Component version name`, `Version`, `Package URL`, `Origin id`) and CycloneDX style names (`Name`, `Version`, `PURL`). Override them with `--sheet`, `--name-column`, `--version-column`, and `--purl-column`. An origin id is used as a purl only when it starts with `pkg:`. Without a purl, the matcher uses name and version and says so in the basis.
+Project reports use the EUVD sheets described above. Other workbooks, including the samples under `examples/` and a CycloneDX Name / Version / PURL sheet, keep the column-append layout: the detected sheet gains EUVD IDs, CVE/GHSA aliases, max severity/score, version verdict, match basis, and evidence, plus **EUVD Detail** and **EUVD Run**.
+
+The enricher detects the header row and the sheet. It understands Black Duck component-report names (`Component name`, `Component version name`, `Version`, `Package URL`, `Origin id`) and CycloneDX style names (`Name`, `Version`, `PURL`). Override them with `--sheet`, `--name-column`, `--version-column`, and `--purl-column`. An origin id is used as a purl only when it starts with `pkg:`. Without a purl, the matcher uses name and version and says so in the basis.
 
 Identical purls, or identical name and version, are queried once. `--offline` reads only the cache. A cache miss is reported on EUVD Run and is not marked affected.
 
@@ -96,6 +139,10 @@ GitHub Actions workflow **Tests** runs both. The golden tests replay `tests/fixt
 
 ## Limitations
 
+- A project-report row is an EUVD match to review. Absence of a row, a product-search miss, or an offline cache miss is not a finding that a component has no vulnerabilities.
+- EUVD `product_version` strings are sometimes malformed (`2.0-beta9 <log4j-core*`, or a comma list such as `5.12.0, < 5.13.2`). Those stay `unknown`. The tool does not turn an unparsed string into an affected or not-affected verdict.
+- On a project report, product search keeps a row only when a parsed range includes the BOM version. Fuzzy name matches (every token of the query appears in the EUVD product name) can attach a record to a similarly named product. The match basis names the EUVD product, and the note asks for review.
+- The project-report path does not call OSV. The column-append path does, and it can disagree with EUVD. Those disagreements stay visible as `disagree`.
 - EUVD product data has gaps. Django records such as `EUVD-2021-0067` (CVE-2021-33203) have no product or version, so only the OSV alias path can call them affected, and the basis stays `osv-range`.
 - Some `product_version` strings are not ranges. Log4Shell's EUVD record stores `2.0-beta9 <log4j-core*`. That stays unknown. The affected verdict for log4j-core 2.14.1 comes from OSV, not from a guessed parse.
 - `EUVD-2020-0440` lists exact versions `2.9.10` and `2.10.0` while the description says the flaw is in versions before those. Those two signals are not merged into affected.

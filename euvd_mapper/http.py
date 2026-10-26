@@ -190,7 +190,11 @@ def _trim_euvd_record(record: dict) -> dict:
         "id": record.get("id"),
         "description": record.get("description"),
         "baseScore": record.get("baseScore"),
+        "baseScoreVersion": record.get("baseScoreVersion"),
+        "baseScoreVector": record.get("baseScoreVector"),
         "epss": record.get("epss"),
+        "datePublished": record.get("datePublished"),
+        "dateUpdated": record.get("dateUpdated"),
         "aliases": record.get("aliases"),
         "enisaIdProduct": products,
     }
