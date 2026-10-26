@@ -67,6 +67,11 @@
     .chips { display: flex; flex-wrap: wrap; gap: 0.3rem; }
     .chip { background: var(--chip); padding: 0.1rem 0.4rem; font-size: 0.78rem; }
     .chip.match { background: #d7eadb; color: var(--ok); }
+    .verdict { font-weight: 650; white-space: nowrap; }
+    .verdict.affected { color: var(--ok); }
+    .verdict.not_affected { color: var(--muted); }
+    .verdict.unknown { color: var(--warn); }
+    .basis { font-family: Consolas, "Cascadia Mono", monospace; font-size: 0.82rem; }
     footer { border-top: 1px solid var(--rule); padding: 1.25rem 1.25rem 2.5rem; color: var(--muted); font-size: 0.9rem; }
     footer a { color: var(--accent); }
     @media (max-width: 760px) {
@@ -78,7 +83,7 @@
 <body>
   <header>
     <h1><span>ENISA EUVD</span> Component lookup</h1>
-    <p>Enter an open source product and optional version. Results come from committed EUVD snapshots in this repo (the live ENISA API blocks browser calls).</p>
+    <p>Enter an open source product and optional version. Results come from committed EUVD snapshots in this repo (the live ENISA API blocks browser calls). Version verdicts use the same range parser as the command-line matcher.</p>
   </header>
   <main>
     <form id="lookup-form">
@@ -99,6 +104,7 @@
   <footer>
     <p>Shared workspace for Grok Build and 10thman-oss. Source: <a href="https://github.com/rkosinski941/euvd-mapper">github.com/rkosinski941/euvd-mapper</a>. Records: <a href="https://euvd.enisa.europa.eu/">ENISA EUVD</a>.</p>
   </footer>
+  <script src="js/versionrange.js"></script>
   <script>
     const statusEl = document.getElementById("status");
     const resultsEl = document.getElementById("results");
@@ -109,35 +115,49 @@
       statusEl.classList.toggle("error", !!isError);
     }
 
-    function parseVersion(text) {
-      const m = String(text || "").match(/(\d+)(?:\.(\d+))?(?:\.(\d+))?(?:\.(\d+))?/);
-      if (!m) return null;
-      return m.slice(1).map((n) => (n == null ? 0 : parseInt(n, 10)));
-    }
-
-    function cmpVer(a, b) {
-      for (let i = 0; i < 4; i++) {
-        const d = (a[i] || 0) - (b[i] || 0);
-        if (d) return d < 0 ? -1 : 1;
-      }
-      return 0;
-    }
-
-    // First-cut range check. 10thman-oss: replace with real matching.
     function versionMightMatch(rangeText, version) {
-      if (!version) return true;
-      if (!rangeText) return true;
-      const hay = String(rangeText);
-      if (hay.toLowerCase().includes(version.toLowerCase())) return true;
-      const target = parseVersion(version);
-      if (!target) return true;
-      const range = hay.match(/(\d+(?:\.\d+){0,3})\s*(?:to|-|–|—)\s*(\d+(?:\.\d+){0,3})/i);
-      if (range) {
-        const lo = parseVersion(range[1]);
-        const hi = parseVersion(range[2]);
-        if (lo && hi) return cmpVer(target, lo) >= 0 && cmpVer(target, hi) <= 0;
+      return EuvdRange.versionMightMatch(rangeText, version);
+    }
+
+    function vendorOk(wanted, found) {
+      const left = (wanted || "").trim().toLowerCase();
+      const right = (found || "").trim().toLowerCase();
+      if (!right || right === "n/a" || right === "na") return true;
+      if (!left) return true;
+      return left === right || right.includes(left) || left.includes(right);
+    }
+
+    function evaluateRecord(item, product, vendor, version) {
+      const ranges = [];
+      let matched = false;
+      for (const entry of productsOf(item)) {
+        const name = (entry.product && entry.product.name) || "";
+        const vend = (entry.product && entry.product.vendor && entry.product.vendor.name) || "";
+        if (!EuvdRange.namesMatch(product, name)) continue;
+        if (vendor && !vendorOk(vendor, vend)) continue;
+        matched = true;
+        ranges.push(entry.product_version || "");
       }
-      return false;
+      if (!matched) return null;
+      if (!version || !EuvdRange.parseUserVersion(version)) {
+        const evidence = version
+          ? "version '" + version + "' is not a comparable version"
+          : "no version supplied; not marked affected";
+        return { verdict: "unknown", basis: "name-only", evidence };
+      }
+      let unknown = null;
+      let excluded = null;
+      for (const text of ranges) {
+        const result = EuvdRange.evaluateProductVersion(text, version);
+        if (result.verdict === "affected") {
+          return { verdict: "affected", basis: "euvd-range", evidence: result.evidence };
+        }
+        if (result.verdict === "unknown") unknown = result;
+        else excluded = result;
+      }
+      if (unknown) return { verdict: "unknown", basis: "euvd-range", evidence: unknown.evidence };
+      if (excluded) return { verdict: "not_affected", basis: "euvd-range", evidence: excluded.evidence };
+      return { verdict: "unknown", basis: "euvd-range", evidence: "EUVD product_version is not a parseable range" };
     }
 
     function aliases(item) {
@@ -151,28 +171,6 @@
       return item.enisaIdProduct || item.vulnerabilityProduct || [];
     }
 
-    function recordMatches(item, product, vendor, version) {
-      const plist = productsOf(item);
-      const pLow = product.toLowerCase();
-      const vLow = (vendor || "").toLowerCase();
-      let anyProduct = false;
-      let versionHit = !version;
-      for (const entry of plist) {
-        const name = (entry.product && entry.product.name) || "";
-        const vend = (entry.product && entry.product.vendor && entry.product.vendor.name) || "";
-        const range = entry.product_version || "";
-        if (name.toLowerCase().includes(pLow) || pLow.includes(name.toLowerCase())) {
-          anyProduct = true;
-          if (vLow && vend && !vend.toLowerCase().includes(vLow) && vLow !== "n/a") continue;
-          if (versionMightMatch(range, version)) versionHit = true;
-        }
-      }
-      if (anyProduct) return version ? versionHit : true;
-      const blob = [item.description, item.aliases, item.id].join(" ").toLowerCase();
-      if (!blob.includes(pLow)) return false;
-      return version ? blob.includes(version.toLowerCase()) : true;
-    }
-
     function euvdUrl(id) {
       return "https://euvd.enisa.europa.eu/vulnerability/" + encodeURIComponent(id);
     }
@@ -182,26 +180,31 @@
         resultsEl.innerHTML = "";
         return;
       }
-      const rows = items.map((item) => {
+      const order = { affected: 0, disagree: 1, unknown: 2, not_affected: 3 };
+      const ranked = items.slice().sort((a, b) => (order[a._verdict.verdict] ?? 9) - (order[b._verdict.verdict] ?? 9));
+      const rows = ranked.map((item) => {
+        const judged = item._verdict;
         const plist = productsOf(item);
         const chips = plist.map((entry) => {
           const range = entry.product_version || (entry.product && entry.product.name) || "";
-          const hit = versionMightMatch(range, meta.version);
-          return `<span class="chip${hit && meta.version ? " match" : ""}">${escapeHtml(range)}</span>`;
+          const hit = meta.version && versionMightMatch(range, meta.version);
+          return `<span class="chip${hit ? " match" : ""}">${escapeHtml(range)}</span>`;
         }).join("");
         const als = aliases(item).map((a) => `<div>${escapeHtml(a)}</div>`).join("");
         const score = item.baseScore == null ? "—" : String(item.baseScore);
         const epss = item.epss == null ? "—" : String(item.epss);
         return `<tr>
           <td class="id"><a href="${euvdUrl(item.id)}" target="_blank" rel="noopener">${escapeHtml(item.id)}</a></td>
+          <td class="verdict ${escapeHtml(judged.verdict)}">${escapeHtml(judged.verdict)}</td>
+          <td class="basis">${escapeHtml(judged.basis)}</td>
           <td class="aliases">${als || "—"}</td>
           <td>${escapeHtml(score)}<div class="aliases">EPSS ${escapeHtml(epss)}</div></td>
           <td><div class="chips">${chips || "—"}</div></td>
-          <td class="desc">${escapeHtml(clip(item.description || "", 280))}</td>
+          <td class="desc">${escapeHtml(clip(judged.evidence || "", 180))}<div>${escapeHtml(clip(item.description || "", 180))}</div></td>
         </tr>`;
       }).join("");
       resultsEl.innerHTML = `<table>
-        <thead><tr><th>EUVD</th><th>Aliases</th><th>Score</th><th>Affected versions</th><th>Description</th></tr></thead>
+        <thead><tr><th>EUVD</th><th>Verdict</th><th>Basis</th><th>Aliases</th><th>Score</th><th>Affected versions</th><th>Evidence</th></tr></thead>
         <tbody>${rows}</tbody>
       </table>`;
     }
@@ -251,17 +254,21 @@
         const data = await res.json();
         combined = combined.concat(itemsFromSnapshot(data));
       }
-      const filtered = combined.filter((item) => recordMatches(item, product, vendor, version));
       const seen = new Set();
       const uniq = [];
-      for (const item of filtered) {
+      const counts = { affected: 0, not_affected: 0, unknown: 0, disagree: 0 };
+      for (const item of combined) {
         if (seen.has(item.id)) continue;
+        const judged = evaluateRecord(item, product, vendor, version);
+        if (!judged) continue;
         seen.add(item.id);
+        item._verdict = judged;
         uniq.push(item);
+        counts[judged.verdict] = (counts[judged.verdict] || 0) + 1;
       }
       setStatus(
         uniq.length
-          ? `${uniq.length} EUVD${uniq.length === 1 ? "" : "s"} for ${product}${version ? " " + version : ""} (from ${use.map((u) => u.name).join(", ")}).`
+          ? `${uniq.length} EUVD${uniq.length === 1 ? "" : "s"} for ${product}${version ? " " + version : ""} (affected ${counts.affected}, not_affected ${counts.not_affected}, unknown ${counts.unknown}).`
           : `No EUVDs in the local snapshots matched ${product}${version ? " " + version : ""}.`
       );
       render(uniq, { version });
@@ -277,7 +284,19 @@
       lookup(product, vendor, version).catch((err) => setStatus(err.message, true));
     });
 
-    loadCatalog().catch((err) => setStatus(err.message, true));
+    loadCatalog().then(() => {
+      const params = new URLSearchParams(location.search);
+      const product = (params.get("product") || "").trim();
+      if (!product) return null;
+      document.getElementById("product").value = product;
+      document.getElementById("vendor").value = params.get("vendor") || "";
+      document.getElementById("version").value = params.get("version") || "";
+      return lookup(
+        product,
+        document.getElementById("vendor").value.trim(),
+        document.getElementById("version").value.trim()
+      );
+    }).catch((err) => setStatus(err.message, true));
   </script>
 </body>
 </html>
