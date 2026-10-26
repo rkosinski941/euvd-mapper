@@ -187,7 +187,10 @@ def _insert_workbook(xml: str, after_sheet: str, sheets: tuple[tuple[str, str, s
     addition = []
     defined = []
     for offset, (name, rid, filter_ref) in enumerate(sheets):
-        addition.append(f'<sheet name="{_xml_attr(name)}" sheetId="{next_id + offset}" r:id="{rid}"/>')
+        addition.append(
+            '<sheet xmlns:r="http://schemas.openxmlformats.org/officeDocument/2006/relationships" '
+            f'name="{_xml_attr(name)}" sheetId="{next_id + offset}" r:id="{rid}"/>'
+        )
         if filter_ref:
             defined.append(
                 f'<definedName name="_xlnm._FilterDatabase" localSheetId="{position + offset}" hidden="1">{filter_ref}</definedName>'
