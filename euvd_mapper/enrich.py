@@ -66,14 +66,18 @@ def enrich_workbook(
     version_column: str | None = None,
     purl_column: str | None = None,
     matcher=match_component,
+    now=None,
 ) -> list[str]:
     source = Path(input_path)
     target = Path(output_path)
     if source.resolve() == target.resolve():
         raise WorkbookError("refusing to overwrite the input workbook")
+    if not any((sheet, name_column, version_column, purl_column)) and _is_project_report(source):
+        return _enrich_project_report(source, target, http, now)
     workbook = load_workbook(source)
-    worksheet = _choose_sheet(workbook, sheet)
-    header_row, headers = _header_row(worksheet)
+    explicit = tuple(item for item in (name_column, version_column, purl_column) if item)
+    worksheet = _choose_sheet(workbook, sheet, explicit)
+    header_row, headers = _header_row(worksheet, explicit)
     columns = _columns(headers, name_column, version_column, purl_column)
     if columns["name"] is None and columns["purl"] is None:
         raise WorkbookError(f"no component name or purl column on {worksheet.title}")
@@ -91,7 +95,48 @@ def enrich_workbook(
     return _summary(list(resolved.values()), unresolved, target)
 
 
-def _choose_sheet(workbook, sheet: str | None):
+def _is_project_report(source: Path) -> bool:
+    from euvd_mapper.bdreport import is_blackduck_project_report
+
+    workbook = load_workbook(source, data_only=False)
+    try:
+        return is_blackduck_project_report(workbook)
+    finally:
+        workbook.close()
+
+
+def _enrich_project_report(source: Path, target: Path, http, now) -> list[str]:
+    from euvd_mapper.bdreport import (
+        EUVD_HEADERS,
+        EUVD_SHEET,
+        SUMMARY_SHEET,
+        VULN_SHEET,
+        build_report,
+        read_bom,
+        read_vulnerabilities,
+    )
+    from euvd_mapper.xlsxinsert import insert_euvd_sheets
+
+    workbook = load_workbook(source)
+    try:
+        report = build_report(http, read_vulnerabilities(workbook), read_bom(workbook), now=now)
+    finally:
+        workbook.close()
+    insert_euvd_sheets(
+        source,
+        target,
+        report.banner,
+        list(EUVD_HEADERS),
+        report.euvd_rows,
+        report.summary_rows,
+        euvd_sheet=EUVD_SHEET,
+        summary_sheet=SUMMARY_SHEET,
+        after_sheet=VULN_SHEET,
+    )
+    return report.stdout + [f"wrote {target}"]
+
+
+def _choose_sheet(workbook, sheet: str | None, explicit: tuple[str, ...] = ()):
     if sheet:
         if sheet not in workbook.sheetnames:
             raise WorkbookError(f"sheet not found: {sheet}")
@@ -99,7 +144,7 @@ def _choose_sheet(workbook, sheet: str | None):
     ranked = []
     for worksheet in workbook.worksheets:
         try:
-            _row, headers = _header_row(worksheet)
+            _row, headers = _header_row(worksheet, explicit)
         except WorkbookError:
             continue
         score = _header_score(headers)
@@ -112,7 +157,7 @@ def _choose_sheet(workbook, sheet: str | None):
     return ranked[0][1]
 
 
-def _header_row(worksheet) -> tuple[int, dict[int, str]]:
+def _header_row(worksheet, explicit: tuple[str, ...] = ()) -> tuple[int, dict[int, str]]:
     best: tuple[float, int, dict[int, str]] | None = None
     last = min(HEADER_SCAN, worksheet.max_row or 1)
     for row in range(1, last + 1):
@@ -122,6 +167,9 @@ def _header_row(worksheet) -> tuple[int, dict[int, str]]:
             if isinstance(value, str) and value.strip():
                 headers[col] = value.strip()
         score = _header_score(headers)
+        names = {_norm_header(value) for value in headers.values()}
+        if names & {_norm_header(item) for item in explicit}:
+            score += 2
         if best is None or score > best[0]:
             best = (score, row, headers)
     if best is None or best[0] < 2:

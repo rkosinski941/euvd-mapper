@@ -22,7 +22,10 @@ def main(argv: list[str] | None = None) -> int:
     look.add_argument("--version", default="")
     _cache_args(look)
 
-    enrich = sub.add_parser("enrich-xlsx", help="Append EUVD columns to a BOM workbook")
+    enrich = sub.add_parser(
+        "enrich-xlsx",
+        help="Write a copy of a BOM workbook with EUVD matches. A Black Duck project report gains EUVD sheets; other workbooks gain EUVD columns.",
+    )
     enrich.add_argument("input")
     enrich.add_argument("-o", "--output", default="")
     enrich.add_argument("--sheet", default="")
