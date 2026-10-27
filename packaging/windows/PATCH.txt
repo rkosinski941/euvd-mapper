@@ -1,0 +1,6 @@
+Sandbox patch on top of dbd9036611e525bcb1abeb8fe8f97ba31dfd487a.
+
+euvd_mapper/xlsxinsert.py gives the inserted EUVD sheets numeric relationship
+ids (rId7, rId8, and so on). The pinned code used rIdEUVD1 and rIdEUVD2.
+Excel opens that file with zero worksheets. openpyxl still reads it.
+This package does not change the git checkout and it is not committed.
