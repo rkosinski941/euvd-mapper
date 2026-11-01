@@ -10,6 +10,8 @@ Set-StrictMode -Version 2
 $ErrorActionPreference = "Stop"
 . (Join-Path $PSScriptRoot "Invoke-Native.ps1")
 
+$EmbedZipName = "python-3.13.17-embed-amd64.zip"
+
 $env:PIP_DISABLE_PIP_VERSION_CHECK = "1"
 $env:PYTHONNOUSERSITE = "1"
 
@@ -161,7 +163,7 @@ function Install-PrivateVenv {
     $wheels = Join-Path $InstallRoot "wheels"
     Invoke-Native -FilePath $venvPy -ArgumentList @(
         "-m", "pip", "install", "--no-index", "--find-links", $wheels,
-        "--disable-pip-version-check", "openpyxl==3.1.5", "tzdata==2026.5", "euvd-mapper==0.2.0"
+        "--disable-pip-version-check", "et-xmlfile==2.0.0", "openpyxl==3.1.5", "tzdata==2026.5", "euvd-mapper==0.2.0"
     )
     Invoke-Native -FilePath $venvPy -ArgumentList @(
         "-c", "import openpyxl,euvd_mapper; raise SystemExit(0 if openpyxl.__version__=='3.1.5' else 1)"
@@ -192,7 +194,9 @@ function Install-EmbedPython {
     [IO.Compression.ZipFile]::ExtractToDirectory($ZipPath, $dest)
     $pth = @(Get-ChildItem $dest -Filter "python*._pth")
     if ($pth.Count -ne 1) { throw "Expected one python*._pth in the embeddable runtime" }
-    $zipLine = "python312.zip"
+    $pthSuffix = "._pth"
+    if (-not $pth[0].Name.EndsWith($pthSuffix)) { throw "Unexpected pth name: $($pth[0].Name)" }
+    $zipLine = $pth[0].Name.Substring(0, $pth[0].Name.Length - $pthSuffix.Length) + ".zip"
     foreach ($line in @(Get-Content $pth[0].FullName)) {
         $trim = $line.Trim()
         if ($trim -like "python*.zip") { $zipLine = $trim }
@@ -232,7 +236,7 @@ Copy-PayloadFile -Source (Join-Path $Payload "git-sha.txt") -DestRel "git-sha.tx
 
 $wheelsHash = Get-WheelsHash (Join-Path $InstallRoot "wheels")
 if ($ForceEmbed) {
-    $python = Install-EmbedPython -ZipPath (Join-Path $Payload "python-3.12.10-embed-amd64.zip") -WheelsHash $wheelsHash
+    $python = Install-EmbedPython -ZipPath (Join-Path $Payload $EmbedZipName) -WheelsHash $wheelsHash
     $pythonKind = "embed"
 } else {
     $base = Get-WorkingPython
@@ -241,7 +245,7 @@ if ($ForceEmbed) {
         $pythonKind = "venv"
     } else {
         Write-Host "No working Python 3.9+ found. Using the bundled runtime."
-        $python = Install-EmbedPython -ZipPath (Join-Path $Payload "python-3.12.10-embed-amd64.zip") -WheelsHash $wheelsHash
+        $python = Install-EmbedPython -ZipPath (Join-Path $Payload $EmbedZipName) -WheelsHash $wheelsHash
         $pythonKind = "embed"
     }
 }

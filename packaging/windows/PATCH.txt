@@ -1,4 +1,5 @@
 Sandbox patch on top of dbd9036611e525bcb1abeb8fe8f97ba31dfd487a.
+Embeddable runtime pin: CPython 3.13.17 win_amd64. This sheet patch is pure Python.
 
 euvd_mapper/xlsxinsert.py gives the inserted EUVD sheets numeric relationship
 ids (rId7, rId8, and so on). The pinned code used rIdEUVD1 and rIdEUVD2.
