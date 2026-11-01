@@ -6,7 +6,7 @@ import sys
 import zipfile
 from pathlib import Path
 
-REQUIRED = ("python.exe", "python312.dll", "python312.zip", "python312._pth")
+REQUIRED = ("python.exe", "python313.dll", "python313.zip", "python313._pth")
 
 
 def sha256_file(path):
@@ -28,6 +28,25 @@ def package_sha256(document, filename):
     return ""
 
 
+def member_name(archive, wanted):
+    for info in archive.infolist():
+        if info.filename.replace("\\", "/").lower() == wanted:
+            return info.filename
+    return ""
+
+
+def check_pth(archive):
+    member = member_name(archive, "python313._pth")
+    if not member:
+        raise SystemExit("missing in zip: python313._pth")
+    text = archive.read(member).decode("ascii")
+    lines = [line.strip() for line in text.splitlines() if line.strip()]
+    if not lines or lines[0] != "python313.zip":
+        raise SystemExit("python313._pth does not name python313.zip")
+    if "#import site" not in text:
+        raise SystemExit("python313._pth is missing the commented import site line")
+
+
 def main():
     zip_path = Path(sys.argv[1])
     spdx_path = Path(sys.argv[2])
@@ -43,7 +62,9 @@ def main():
         for required in REQUIRED:
             if required not in names:
                 raise SystemExit("missing in zip: " + required)
+        check_pth(archive)
     print("zip-sha256 " + actual)
+    print("pth python313.zip commented-import-site")
     return 0
 
 

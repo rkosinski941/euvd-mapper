@@ -3,11 +3,18 @@ Git pin: dbd9036611e525bcb1abeb8fe8f97ba31dfd487a
 Sandbox patch: see PATCH.txt. Inserted sheets use numeric rIds so Excel can open them.
 Package: euvd-mapper 0.2.0
 openpyxl pin: 3.1.5
+et-xmlfile pin: 2.0.0
 tzdata pin: 2026.5 (Windows zoneinfo data for America/New_York)
-CPython embed pin: 3.12.10 (Windows embeddable package, 64-bit)
-URL: https://www.python.org/ftp/python/3.12.10/python-3.12.10-embed-amd64.zip
-SHA-256: 4acbed6dd1c744b0376e3b1cf57ce906f9dc9e95e68824584c8099a63025a3c3
-Python 3.12.16 (2026-10-25) is the latest 3.12 security release. python.org publishes that release as source only. 3.12.10 is the newest 3.12 release with an official embeddable amd64 zip.
+pip pin: 26.2.2
+setuptools pin: 84.2.1
+wheel pin: 0.48.0
+packaging pin: 26.3 (dependency of wheel)
+Wheel hashes: wheel-pins.txt. Every pin is a py3-none-any or py2.py3-none-any wheel that installs on cp313 win_amd64.
+CPython embed pin: 3.13.17 (Windows embeddable package, 64-bit)
+URL: https://www.python.org/ftp/python/3.13.17/python-3.13.17-embed-amd64.zip
+SHA-256: 9e35319bffedab8b36ad44d8f377cb4f1733bcec257a0b6d04d94f01486ddb38
+Python 3.13.18 (2026-10-25) is source-only. 3.13.17 is the newest 3.13 release with an official embeddable amd64 zip.
+Install rewrites python313._pth so it keeps python313.zip, adds Lib\site-packages, and enables import site.
 
 This folder is the installer. It does not need administrator rights.
 The default install root is %LOCALAPPDATA%\EUVD-mapper.
