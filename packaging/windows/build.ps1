@@ -2,7 +2,7 @@
 Set-StrictMode -Version 2
 $ErrorActionPreference = "Stop"
 $Root = Join-Path $env:TEMP "euvd-mapper-build"
-$Repo = "C:\Users\kosin\Documents\EUVD-mapper\tomcat-vulns.html"
+$Repo = Join-Path $env:USERPROFILE "Documents\EUVD-mapper\tomcat-vulns.html"
 $Sha = "dbd9036611e525bcb1abeb8fe8f97ba31dfd487a"
 $Python = Join-Path $env:LOCALAPPDATA "Programs\Python\Python312\python.exe"
 Set-Location $Root
@@ -55,13 +55,20 @@ if ($pipWheel.Count -ne 1) { throw "Expected one pip wheel" }
 
 $download = Join-Path $Root "download"
 New-Item -ItemType Directory -Force -Path $download | Out-Null
-$embedName = "python-3.12.10-embed-amd64.zip"
+# 3.12.16 (2026-10-25) is the latest 3.12 security release and is source-only.
+# python.org last published an embeddable amd64 zip for 3.12.10.
+# SHA-256 is the package checksum in the official .spdx.json beside that zip.
+$embedVersion = "3.12.10"
+$embedName = "python-" + $embedVersion + "-embed-amd64.zip"
+$embedSha256 = "4acbed6dd1c744b0376e3b1cf57ce906f9dc9e95e68824584c8099a63025a3c3"
 $embedZip = Join-Path $download $embedName
 $embedSpdx = $embedZip + ".spdx.json"
-$embedUrl = "https://www.python.org/ftp/python/3.12.10/" + $embedName
+$embedUrl = "https://www.python.org/ftp/python/" + $embedVersion + "/" + $embedName
 if (-not (Test-Path $embedZip)) {
     Invoke-WebRequest -Uri $embedUrl -OutFile $embedZip
 }
+$actualSha = (Get-FileHash -Algorithm SHA256 -Path $embedZip).Hash.ToLower()
+if ($actualSha -ne $embedSha256) { throw "embed zip sha256 mismatch: $actualSha" }
 if (-not (Test-Path $embedSpdx)) {
     Invoke-WebRequest -Uri ($embedUrl + ".spdx.json") -OutFile $embedSpdx
 }
