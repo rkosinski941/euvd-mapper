@@ -4,6 +4,10 @@ Sandbox patch: see PATCH.txt. Inserted sheets use numeric rIds so Excel can open
 Package: euvd-mapper 0.2.0
 openpyxl pin: 3.1.5
 tzdata pin: 2026.5 (Windows zoneinfo data for America/New_York)
+CPython embed pin: 3.12.10 (Windows embeddable package, 64-bit)
+URL: https://www.python.org/ftp/python/3.12.10/python-3.12.10-embed-amd64.zip
+SHA-256: 4acbed6dd1c744b0376e3b1cf57ce906f9dc9e95e68824584c8099a63025a3c3
+Python 3.12.16 (2026-10-25) is the latest 3.12 security release. python.org publishes that release as source only. 3.12.10 is the newest 3.12 release with an official embeddable amd64 zip.
 
 This folder is the installer. It does not need administrator rights.
 The default install root is %LOCALAPPDATA%\EUVD-mapper.
